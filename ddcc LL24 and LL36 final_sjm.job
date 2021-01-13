@@ -1,0 +1,2041 @@
+log_dir /project/home/zyy126com/ddcc/Log
+job_begin
+	name rRNA_rm_d_36_3
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=9g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/rRNA_QC.py --fq1 /project/home/zyy126com/ddcc/d_36_3_1.fq.gz --name d_36_3 --r1 1 --pNum 3 --tool hisat2 --outDir /project/home/zyy126com/ddcc/Qc/rRNA/d_36_3 --fq2 /project/home/zyy126com/ddcc/d_36_3_2.fq.gz
+job_end
+
+job_begin
+	name rRNA_rm_d_36_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=9g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/rRNA_QC.py --fq1 /project/home/zyy126com/ddcc/d_36_1_1.fq.gz --name d_36_1 --r1 1 --pNum 3 --tool hisat2 --outDir /project/home/zyy126com/ddcc/Qc/rRNA/d_36_1 --fq2 /project/home/zyy126com/ddcc/d_36_1_2.fq.gz
+job_end
+
+job_begin
+	name rRNA_rm_C_36_3
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=9g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/rRNA_QC.py --fq1 /project/home/zyy126com/ddcc/C_36_3_1.fq.gz --name C_36_3 --r1 1 --pNum 3 --tool hisat2 --outDir /project/home/zyy126com/ddcc/Qc/rRNA/C_36_3 --fq2 /project/home/zyy126com/ddcc/C_36_3_2.fq.gz
+job_end
+
+job_begin
+	name rRNA_rm_C_36_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=9g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/rRNA_QC.py --fq1 /project/home/zyy126com/ddcc/C_36_1_1.fq.gz --name C_36_1 --r1 1 --pNum 3 --tool hisat2 --outDir /project/home/zyy126com/ddcc/Qc/rRNA/C_36_1 --fq2 /project/home/zyy126com/ddcc/C_36_1_2.fq.gz
+job_end
+
+job_begin
+	name rRNA_rm_C_24_3
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=9g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/rRNA_QC.py --fq1 /project/home/zyy126com/ddcc/C_24_3_1.fq.gz --name C_24_3 --r1 1 --pNum 3 --tool hisat2 --outDir /project/home/zyy126com/ddcc/Qc/rRNA/C_24_3 --fq2 /project/home/zyy126com/ddcc/C_24_3_2.fq.gz
+job_end
+
+job_begin
+	name rRNA_rm_C_24_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=9g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/rRNA_QC.py --fq1 /project/home/zyy126com/ddcc/C_24_1_1.fq.gz --name C_24_1 --r1 1 --pNum 3 --tool hisat2 --outDir /project/home/zyy126com/ddcc/Qc/rRNA/C_24_1 --fq2 /project/home/zyy126com/ddcc/C_24_1_2.fq.gz
+job_end
+
+job_begin
+	name rRNA_rm_d_24_3
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=9g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/rRNA_QC.py --fq1 /project/home/zyy126com/ddcc/d_24_3_1.fq.gz --name d_24_3 --r1 1 --pNum 3 --tool hisat2 --outDir /project/home/zyy126com/ddcc/Qc/rRNA/d_24_3 --fq2 /project/home/zyy126com/ddcc/d_24_3_2.fq.gz
+job_end
+
+job_begin
+	name rRNA_rm_d_24_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=9g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/rRNA_QC.py --fq1 /project/home/zyy126com/ddcc/d_24_1_1.fq.gz --name d_24_1 --r1 1 --pNum 3 --tool hisat2 --outDir /project/home/zyy126com/ddcc/Qc/rRNA/d_24_1 --fq2 /project/home/zyy126com/ddcc/d_24_1_2.fq.gz
+job_end
+
+job_begin
+	name adap_rm_d_36_3
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/adcut.py --fq1 /project/home/zyy126com/ddcc/Qc/rRNA/d_36_3/d_36_3_1.fq.gz --name d_36_3 --ad7 AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --ad5 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT --overlap 6 --err 0.1 --outDir /project/home/zyy126com/ddcc/Qc/adapter/d_36_3 --fq2 /project/home/zyy126com/ddcc/Qc/rRNA/d_36_3/d_36_3_2.fq.gz
+job_end
+
+job_begin
+	name adap_rm_d_36_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/adcut.py --fq1 /project/home/zyy126com/ddcc/Qc/rRNA/d_36_1/d_36_1_1.fq.gz --name d_36_1 --ad7 AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --ad5 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT --overlap 6 --err 0.1 --outDir /project/home/zyy126com/ddcc/Qc/adapter/d_36_1 --fq2 /project/home/zyy126com/ddcc/Qc/rRNA/d_36_1/d_36_1_2.fq.gz
+job_end
+
+job_begin
+	name adap_rm_C_36_3
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/adcut.py --fq1 /project/home/zyy126com/ddcc/Qc/rRNA/C_36_3/C_36_3_1.fq.gz --name C_36_3 --ad7 AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --ad5 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT --overlap 6 --err 0.1 --outDir /project/home/zyy126com/ddcc/Qc/adapter/C_36_3 --fq2 /project/home/zyy126com/ddcc/Qc/rRNA/C_36_3/C_36_3_2.fq.gz
+job_end
+
+job_begin
+	name adap_rm_C_36_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/adcut.py --fq1 /project/home/zyy126com/ddcc/Qc/rRNA/C_36_1/C_36_1_1.fq.gz --name C_36_1 --ad7 AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --ad5 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT --overlap 6 --err 0.1 --outDir /project/home/zyy126com/ddcc/Qc/adapter/C_36_1 --fq2 /project/home/zyy126com/ddcc/Qc/rRNA/C_36_1/C_36_1_2.fq.gz
+job_end
+
+job_begin
+	name adap_rm_C_24_3
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/adcut.py --fq1 /project/home/zyy126com/ddcc/Qc/rRNA/C_24_3/C_24_3_1.fq.gz --name C_24_3 --ad7 AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --ad5 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT --overlap 6 --err 0.1 --outDir /project/home/zyy126com/ddcc/Qc/adapter/C_24_3 --fq2 /project/home/zyy126com/ddcc/Qc/rRNA/C_24_3/C_24_3_2.fq.gz
+job_end
+
+job_begin
+	name adap_rm_C_24_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/adcut.py --fq1 /project/home/zyy126com/ddcc/Qc/rRNA/C_24_1/C_24_1_1.fq.gz --name C_24_1 --ad7 AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --ad5 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT --overlap 6 --err 0.1 --outDir /project/home/zyy126com/ddcc/Qc/adapter/C_24_1 --fq2 /project/home/zyy126com/ddcc/Qc/rRNA/C_24_1/C_24_1_2.fq.gz
+job_end
+
+job_begin
+	name adap_rm_d_24_3
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/adcut.py --fq1 /project/home/zyy126com/ddcc/Qc/rRNA/d_24_3/d_24_3_1.fq.gz --name d_24_3 --ad7 AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --ad5 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT --overlap 6 --err 0.1 --outDir /project/home/zyy126com/ddcc/Qc/adapter/d_24_3 --fq2 /project/home/zyy126com/ddcc/Qc/rRNA/d_24_3/d_24_3_2.fq.gz
+job_end
+
+job_begin
+	name adap_rm_d_24_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/adcut.py --fq1 /project/home/zyy126com/ddcc/Qc/rRNA/d_24_1/d_24_1_1.fq.gz --name d_24_1 --ad7 AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --ad5 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT --overlap 6 --err 0.1 --outDir /project/home/zyy126com/ddcc/Qc/adapter/d_24_1 --fq2 /project/home/zyy126com/ddcc/Qc/rRNA/d_24_1/d_24_1_2.fq.gz
+job_end
+
+job_begin
+	name tmkQC_d_36_3
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/tmkQC.py --fq1 /project/home/zyy126com/ddcc/Qc/adapter/d_36_3/d_36_3_adap_rm_1.fq.gz --name d_36_3 --lowQ 20 --lowP 0.1 --NP 0.15 --ncpu 2 --outDir /project/home/zyy126com/ddcc/Qc/tmkQC/d_36_3 --fq2 /project/home/zyy126com/ddcc/Qc/adapter/d_36_3/d_36_3_adap_rm_2.fq.gz
+job_end
+
+job_begin
+	name tmkQC_d_36_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/tmkQC.py --fq1 /project/home/zyy126com/ddcc/Qc/adapter/d_36_1/d_36_1_adap_rm_1.fq.gz --name d_36_1 --lowQ 20 --lowP 0.1 --NP 0.15 --ncpu 2 --outDir /project/home/zyy126com/ddcc/Qc/tmkQC/d_36_1 --fq2 /project/home/zyy126com/ddcc/Qc/adapter/d_36_1/d_36_1_adap_rm_2.fq.gz
+job_end
+
+job_begin
+	name tmkQC_C_36_3
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/tmkQC.py --fq1 /project/home/zyy126com/ddcc/Qc/adapter/C_36_3/C_36_3_adap_rm_1.fq.gz --name C_36_3 --lowQ 20 --lowP 0.1 --NP 0.15 --ncpu 2 --outDir /project/home/zyy126com/ddcc/Qc/tmkQC/C_36_3 --fq2 /project/home/zyy126com/ddcc/Qc/adapter/C_36_3/C_36_3_adap_rm_2.fq.gz
+job_end
+
+job_begin
+	name tmkQC_C_36_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/tmkQC.py --fq1 /project/home/zyy126com/ddcc/Qc/adapter/C_36_1/C_36_1_adap_rm_1.fq.gz --name C_36_1 --lowQ 20 --lowP 0.1 --NP 0.15 --ncpu 2 --outDir /project/home/zyy126com/ddcc/Qc/tmkQC/C_36_1 --fq2 /project/home/zyy126com/ddcc/Qc/adapter/C_36_1/C_36_1_adap_rm_2.fq.gz
+job_end
+
+job_begin
+	name tmkQC_C_24_3
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/tmkQC.py --fq1 /project/home/zyy126com/ddcc/Qc/adapter/C_24_3/C_24_3_adap_rm_1.fq.gz --name C_24_3 --lowQ 20 --lowP 0.1 --NP 0.15 --ncpu 2 --outDir /project/home/zyy126com/ddcc/Qc/tmkQC/C_24_3 --fq2 /project/home/zyy126com/ddcc/Qc/adapter/C_24_3/C_24_3_adap_rm_2.fq.gz
+job_end
+
+job_begin
+	name tmkQC_C_24_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/tmkQC.py --fq1 /project/home/zyy126com/ddcc/Qc/adapter/C_24_1/C_24_1_adap_rm_1.fq.gz --name C_24_1 --lowQ 20 --lowP 0.1 --NP 0.15 --ncpu 2 --outDir /project/home/zyy126com/ddcc/Qc/tmkQC/C_24_1 --fq2 /project/home/zyy126com/ddcc/Qc/adapter/C_24_1/C_24_1_adap_rm_2.fq.gz
+job_end
+
+job_begin
+	name tmkQC_d_24_3
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/tmkQC.py --fq1 /project/home/zyy126com/ddcc/Qc/adapter/d_24_3/d_24_3_adap_rm_1.fq.gz --name d_24_3 --lowQ 20 --lowP 0.1 --NP 0.15 --ncpu 2 --outDir /project/home/zyy126com/ddcc/Qc/tmkQC/d_24_3 --fq2 /project/home/zyy126com/ddcc/Qc/adapter/d_24_3/d_24_3_adap_rm_2.fq.gz
+job_end
+
+job_begin
+	name tmkQC_d_24_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/tmkQC.py --fq1 /project/home/zyy126com/ddcc/Qc/adapter/d_24_1/d_24_1_adap_rm_1.fq.gz --name d_24_1 --lowQ 20 --lowP 0.1 --NP 0.15 --ncpu 2 --outDir /project/home/zyy126com/ddcc/Qc/tmkQC/d_24_1 --fq2 /project/home/zyy126com/ddcc/Qc/adapter/d_24_1/d_24_1_adap_rm_2.fq.gz
+job_end
+
+job_begin
+	name FastQC_d_36_3
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd mkdir -p /project/home/zyy126com/ddcc/Qc/FastQC/d_36_3; perl /pipeline/refRNA_version2.0.1/software/FastQC/fastqc -t 2 -o /project/home/zyy126com/ddcc/Qc/FastQC/d_36_3 /project/home/zyy126com/ddcc/Qc/tmkQC/d_36_3/d_36_3_1.clean.fq.gz /project/home/zyy126com/ddcc/Qc/tmkQC/d_36_3/d_36_3_2.clean.fq.gz
+job_end
+
+job_begin
+	name FastQC_d_36_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd mkdir -p /project/home/zyy126com/ddcc/Qc/FastQC/d_36_1; perl /pipeline/refRNA_version2.0.1/software/FastQC/fastqc -t 2 -o /project/home/zyy126com/ddcc/Qc/FastQC/d_36_1 /project/home/zyy126com/ddcc/Qc/tmkQC/d_36_1/d_36_1_1.clean.fq.gz /project/home/zyy126com/ddcc/Qc/tmkQC/d_36_1/d_36_1_2.clean.fq.gz
+job_end
+
+job_begin
+	name FastQC_C_36_3
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd mkdir -p /project/home/zyy126com/ddcc/Qc/FastQC/C_36_3; perl /pipeline/refRNA_version2.0.1/software/FastQC/fastqc -t 2 -o /project/home/zyy126com/ddcc/Qc/FastQC/C_36_3 /project/home/zyy126com/ddcc/Qc/tmkQC/C_36_3/C_36_3_1.clean.fq.gz /project/home/zyy126com/ddcc/Qc/tmkQC/C_36_3/C_36_3_2.clean.fq.gz
+job_end
+
+job_begin
+	name FastQC_C_36_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd mkdir -p /project/home/zyy126com/ddcc/Qc/FastQC/C_36_1; perl /pipeline/refRNA_version2.0.1/software/FastQC/fastqc -t 2 -o /project/home/zyy126com/ddcc/Qc/FastQC/C_36_1 /project/home/zyy126com/ddcc/Qc/tmkQC/C_36_1/C_36_1_1.clean.fq.gz /project/home/zyy126com/ddcc/Qc/tmkQC/C_36_1/C_36_1_2.clean.fq.gz
+job_end
+
+job_begin
+	name FastQC_C_24_3
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd mkdir -p /project/home/zyy126com/ddcc/Qc/FastQC/C_24_3; perl /pipeline/refRNA_version2.0.1/software/FastQC/fastqc -t 2 -o /project/home/zyy126com/ddcc/Qc/FastQC/C_24_3 /project/home/zyy126com/ddcc/Qc/tmkQC/C_24_3/C_24_3_1.clean.fq.gz /project/home/zyy126com/ddcc/Qc/tmkQC/C_24_3/C_24_3_2.clean.fq.gz
+job_end
+
+job_begin
+	name FastQC_C_24_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd mkdir -p /project/home/zyy126com/ddcc/Qc/FastQC/C_24_1; perl /pipeline/refRNA_version2.0.1/software/FastQC/fastqc -t 2 -o /project/home/zyy126com/ddcc/Qc/FastQC/C_24_1 /project/home/zyy126com/ddcc/Qc/tmkQC/C_24_1/C_24_1_1.clean.fq.gz /project/home/zyy126com/ddcc/Qc/tmkQC/C_24_1/C_24_1_2.clean.fq.gz
+job_end
+
+job_begin
+	name FastQC_d_24_3
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd mkdir -p /project/home/zyy126com/ddcc/Qc/FastQC/d_24_3; perl /pipeline/refRNA_version2.0.1/software/FastQC/fastqc -t 2 -o /project/home/zyy126com/ddcc/Qc/FastQC/d_24_3 /project/home/zyy126com/ddcc/Qc/tmkQC/d_24_3/d_24_3_1.clean.fq.gz /project/home/zyy126com/ddcc/Qc/tmkQC/d_24_3/d_24_3_2.clean.fq.gz
+job_end
+
+job_begin
+	name FastQC_d_24_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd mkdir -p /project/home/zyy126com/ddcc/Qc/FastQC/d_24_1; perl /pipeline/refRNA_version2.0.1/software/FastQC/fastqc -t 2 -o /project/home/zyy126com/ddcc/Qc/FastQC/d_24_1 /project/home/zyy126com/ddcc/Qc/tmkQC/d_24_1/d_24_1_1.clean.fq.gz /project/home/zyy126com/ddcc/Qc/tmkQC/d_24_1/d_24_1_2.clean.fq.gz
+job_end
+
+job_begin
+	name qcReport
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/qcReport.py --samples d_36_3,d_36_1,C_36_3,C_36_1,C_24_3,C_24_1,d_24_3,d_24_1 --projectDir /project/home/zyy126com/ddcc --config /project/home/zyy126com/ddcc/config.json
+job_end
+job_begin
+	name align_d_36_3
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=6g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alignment/scripts/align_hisat2.py --index /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --ssLib NO --pNum 3 --name d_36_3 --outdir /project/home/zyy126com/ddcc/Align/d_36_3 --fq1 /project/home/zyy126com/ddcc/Qc/tmkQC/d_36_3/d_36_3_1.clean.fq.gz --fq2 /project/home/zyy126com/ddcc/Qc/tmkQC/d_36_3/d_36_3_2.clean.fq.gz --phred phred33
+job_end
+
+job_begin
+	name align_d_36_1
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=6g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alignment/scripts/align_hisat2.py --index /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --ssLib NO --pNum 3 --name d_36_1 --outdir /project/home/zyy126com/ddcc/Align/d_36_1 --fq1 /project/home/zyy126com/ddcc/Qc/tmkQC/d_36_1/d_36_1_1.clean.fq.gz --fq2 /project/home/zyy126com/ddcc/Qc/tmkQC/d_36_1/d_36_1_2.clean.fq.gz --phred phred33
+job_end
+
+job_begin
+	name align_C_36_3
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=6g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alignment/scripts/align_hisat2.py --index /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --ssLib NO --pNum 3 --name C_36_3 --outdir /project/home/zyy126com/ddcc/Align/C_36_3 --fq1 /project/home/zyy126com/ddcc/Qc/tmkQC/C_36_3/C_36_3_1.clean.fq.gz --fq2 /project/home/zyy126com/ddcc/Qc/tmkQC/C_36_3/C_36_3_2.clean.fq.gz --phred phred33
+job_end
+
+job_begin
+	name align_C_36_1
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=6g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alignment/scripts/align_hisat2.py --index /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --ssLib NO --pNum 3 --name C_36_1 --outdir /project/home/zyy126com/ddcc/Align/C_36_1 --fq1 /project/home/zyy126com/ddcc/Qc/tmkQC/C_36_1/C_36_1_1.clean.fq.gz --fq2 /project/home/zyy126com/ddcc/Qc/tmkQC/C_36_1/C_36_1_2.clean.fq.gz --phred phred33
+job_end
+
+job_begin
+	name align_C_24_3
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=6g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alignment/scripts/align_hisat2.py --index /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --ssLib NO --pNum 3 --name C_24_3 --outdir /project/home/zyy126com/ddcc/Align/C_24_3 --fq1 /project/home/zyy126com/ddcc/Qc/tmkQC/C_24_3/C_24_3_1.clean.fq.gz --fq2 /project/home/zyy126com/ddcc/Qc/tmkQC/C_24_3/C_24_3_2.clean.fq.gz --phred phred33
+job_end
+
+job_begin
+	name align_C_24_1
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=6g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alignment/scripts/align_hisat2.py --index /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --ssLib NO --pNum 3 --name C_24_1 --outdir /project/home/zyy126com/ddcc/Align/C_24_1 --fq1 /project/home/zyy126com/ddcc/Qc/tmkQC/C_24_1/C_24_1_1.clean.fq.gz --fq2 /project/home/zyy126com/ddcc/Qc/tmkQC/C_24_1/C_24_1_2.clean.fq.gz --phred phred33
+job_end
+
+job_begin
+	name align_d_24_3
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=6g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alignment/scripts/align_hisat2.py --index /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --ssLib NO --pNum 3 --name d_24_3 --outdir /project/home/zyy126com/ddcc/Align/d_24_3 --fq1 /project/home/zyy126com/ddcc/Qc/tmkQC/d_24_3/d_24_3_1.clean.fq.gz --fq2 /project/home/zyy126com/ddcc/Qc/tmkQC/d_24_3/d_24_3_2.clean.fq.gz --phred phred33
+job_end
+
+job_begin
+	name align_d_24_1
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=6g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alignment/scripts/align_hisat2.py --index /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --ssLib NO --pNum 3 --name d_24_1 --outdir /project/home/zyy126com/ddcc/Align/d_24_1 --fq1 /project/home/zyy126com/ddcc/Qc/tmkQC/d_24_1/d_24_1_1.clean.fq.gz --fq2 /project/home/zyy126com/ddcc/Qc/tmkQC/d_24_1/d_24_1_2.clean.fq.gz --phred phred33
+job_end
+
+job_begin
+	name bam_stat_d_36_3
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd bam_stat.py -i /project/home/zyy126com/ddcc/Align/d_36_3/d_36_3_sorted_addGroups.bam -q 30 > /project/home/zyy126com/ddcc/Align/d_36_3/d_36_3_align.txt
+job_end
+
+job_begin
+	name bam_stat_d_36_1
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd bam_stat.py -i /project/home/zyy126com/ddcc/Align/d_36_1/d_36_1_sorted_addGroups.bam -q 30 > /project/home/zyy126com/ddcc/Align/d_36_1/d_36_1_align.txt
+job_end
+
+job_begin
+	name bam_stat_C_36_3
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd bam_stat.py -i /project/home/zyy126com/ddcc/Align/C_36_3/C_36_3_sorted_addGroups.bam -q 30 > /project/home/zyy126com/ddcc/Align/C_36_3/C_36_3_align.txt
+job_end
+
+job_begin
+	name bam_stat_C_36_1
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd bam_stat.py -i /project/home/zyy126com/ddcc/Align/C_36_1/C_36_1_sorted_addGroups.bam -q 30 > /project/home/zyy126com/ddcc/Align/C_36_1/C_36_1_align.txt
+job_end
+
+job_begin
+	name bam_stat_C_24_3
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd bam_stat.py -i /project/home/zyy126com/ddcc/Align/C_24_3/C_24_3_sorted_addGroups.bam -q 30 > /project/home/zyy126com/ddcc/Align/C_24_3/C_24_3_align.txt
+job_end
+
+job_begin
+	name bam_stat_C_24_1
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd bam_stat.py -i /project/home/zyy126com/ddcc/Align/C_24_1/C_24_1_sorted_addGroups.bam -q 30 > /project/home/zyy126com/ddcc/Align/C_24_1/C_24_1_align.txt
+job_end
+
+job_begin
+	name bam_stat_d_24_3
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd bam_stat.py -i /project/home/zyy126com/ddcc/Align/d_24_3/d_24_3_sorted_addGroups.bam -q 30 > /project/home/zyy126com/ddcc/Align/d_24_3/d_24_3_align.txt
+job_end
+
+job_begin
+	name bam_stat_d_24_1
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd bam_stat.py -i /project/home/zyy126com/ddcc/Align/d_24_1/d_24_1_sorted_addGroups.bam -q 30 > /project/home/zyy126com/ddcc/Align/d_24_1/d_24_1_align.txt
+job_end
+
+job_begin
+	name alignReport
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alignment/alignReport.py --samples d_36_3,d_36_1,C_36_3,C_36_1,C_24_3,C_24_1,d_24_3,d_24_1 --projectDir /project/home/zyy126com/ddcc --config /project/home/zyy126com/ddcc/config.json
+job_end
+job_begin
+	name assembl_d_36_3
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=5g,p=4
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/stringtie.py --gtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --bam /project/home/zyy126com/ddcc/Align/d_36_3/d_36_3_sorted_addGroups.bam --ssLib NO --pNum 4 --out /project/home/zyy126com/ddcc/Assembl/d_36_3/d_36_3.gtf
+job_end
+
+job_begin
+	name assembl_d_36_1
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=5g,p=4
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/stringtie.py --gtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --bam /project/home/zyy126com/ddcc/Align/d_36_1/d_36_1_sorted_addGroups.bam --ssLib NO --pNum 4 --out /project/home/zyy126com/ddcc/Assembl/d_36_1/d_36_1.gtf
+job_end
+
+job_begin
+	name assembl_C_36_3
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=5g,p=4
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/stringtie.py --gtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --bam /project/home/zyy126com/ddcc/Align/C_36_3/C_36_3_sorted_addGroups.bam --ssLib NO --pNum 4 --out /project/home/zyy126com/ddcc/Assembl/C_36_3/C_36_3.gtf
+job_end
+
+job_begin
+	name assembl_C_36_1
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=5g,p=4
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/stringtie.py --gtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --bam /project/home/zyy126com/ddcc/Align/C_36_1/C_36_1_sorted_addGroups.bam --ssLib NO --pNum 4 --out /project/home/zyy126com/ddcc/Assembl/C_36_1/C_36_1.gtf
+job_end
+
+job_begin
+	name assembl_C_24_3
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=5g,p=4
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/stringtie.py --gtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --bam /project/home/zyy126com/ddcc/Align/C_24_3/C_24_3_sorted_addGroups.bam --ssLib NO --pNum 4 --out /project/home/zyy126com/ddcc/Assembl/C_24_3/C_24_3.gtf
+job_end
+
+job_begin
+	name assembl_C_24_1
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=5g,p=4
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/stringtie.py --gtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --bam /project/home/zyy126com/ddcc/Align/C_24_1/C_24_1_sorted_addGroups.bam --ssLib NO --pNum 4 --out /project/home/zyy126com/ddcc/Assembl/C_24_1/C_24_1.gtf
+job_end
+
+job_begin
+	name assembl_d_24_3
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=5g,p=4
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/stringtie.py --gtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --bam /project/home/zyy126com/ddcc/Align/d_24_3/d_24_3_sorted_addGroups.bam --ssLib NO --pNum 4 --out /project/home/zyy126com/ddcc/Assembl/d_24_3/d_24_3.gtf
+job_end
+
+job_begin
+	name assembl_d_24_1
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=5g,p=4
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/stringtie.py --gtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --bam /project/home/zyy126com/ddcc/Align/d_24_1/d_24_1_sorted_addGroups.bam --ssLib NO --pNum 4 --out /project/home/zyy126com/ddcc/Assembl/d_24_1/d_24_1.gtf
+job_end
+
+job_begin
+	name gffcompare_d_36_3
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/gffcompare.py --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --gtf /project/home/zyy126com/ddcc/Assembl/d_36_3/d_36_3.gtf --name d_36_3 --outdir /project/home/zyy126com/ddcc/Assembl/d_36_3
+job_end
+
+job_begin
+	name gffcompare_d_36_1
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/gffcompare.py --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --gtf /project/home/zyy126com/ddcc/Assembl/d_36_1/d_36_1.gtf --name d_36_1 --outdir /project/home/zyy126com/ddcc/Assembl/d_36_1
+job_end
+
+job_begin
+	name gffcompare_C_36_3
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/gffcompare.py --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --gtf /project/home/zyy126com/ddcc/Assembl/C_36_3/C_36_3.gtf --name C_36_3 --outdir /project/home/zyy126com/ddcc/Assembl/C_36_3
+job_end
+
+job_begin
+	name gffcompare_C_36_1
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/gffcompare.py --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --gtf /project/home/zyy126com/ddcc/Assembl/C_36_1/C_36_1.gtf --name C_36_1 --outdir /project/home/zyy126com/ddcc/Assembl/C_36_1
+job_end
+
+job_begin
+	name gffcompare_C_24_3
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/gffcompare.py --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --gtf /project/home/zyy126com/ddcc/Assembl/C_24_3/C_24_3.gtf --name C_24_3 --outdir /project/home/zyy126com/ddcc/Assembl/C_24_3
+job_end
+
+job_begin
+	name gffcompare_C_24_1
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/gffcompare.py --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --gtf /project/home/zyy126com/ddcc/Assembl/C_24_1/C_24_1.gtf --name C_24_1 --outdir /project/home/zyy126com/ddcc/Assembl/C_24_1
+job_end
+
+job_begin
+	name gffcompare_d_24_3
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/gffcompare.py --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --gtf /project/home/zyy126com/ddcc/Assembl/d_24_3/d_24_3.gtf --name d_24_3 --outdir /project/home/zyy126com/ddcc/Assembl/d_24_3
+job_end
+
+job_begin
+	name gffcompare_d_24_1
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/gffcompare.py --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --gtf /project/home/zyy126com/ddcc/Assembl/d_24_1/d_24_1.gtf --name d_24_1 --outdir /project/home/zyy126com/ddcc/Assembl/d_24_1
+job_end
+
+job_begin
+	name stringtie_merge
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/stringtie_merge.py --gtfs /project/home/zyy126com/ddcc/Assembl/d_36_3/d_36_3.gtf,/project/home/zyy126com/ddcc/Assembl/d_36_1/d_36_1.gtf,/project/home/zyy126com/ddcc/Assembl/C_36_3/C_36_3.gtf,/project/home/zyy126com/ddcc/Assembl/C_36_1/C_36_1.gtf,/project/home/zyy126com/ddcc/Assembl/C_24_3/C_24_3.gtf,/project/home/zyy126com/ddcc/Assembl/C_24_1/C_24_1.gtf,/project/home/zyy126com/ddcc/Assembl/d_24_3/d_24_3.gtf,/project/home/zyy126com/ddcc/Assembl/d_24_1/d_24_1.gtf --outGtf /project/home/zyy126com/ddcc/Assembl/Merge/merged.gtf
+job_end
+
+job_begin
+	name gffcompare_all
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/gffcompare.py --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --gtf /project/home/zyy126com/ddcc/Assembl/Merge/merged.gtf --name all_samples --outdir /project/home/zyy126com/ddcc/Assembl/Merge
+job_end
+
+job_begin
+	name novel
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/novel.py --gtf /project/home/zyy126com/ddcc/Assembl/Merge/all_samples.annotated.gtf --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --refFa /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --outdir /project/home/zyy126com/ddcc/Assembl/Novel
+job_end
+
+job_begin
+	name novel_go
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=2g,p=4
+	cmd /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/Fa2go/fa2go.sh -f /project/home/zyy126com/ddcc/Assembl/Novel/novelGene.fa -n 4 -o /project/home/zyy126com/ddcc/Assembl/Novel/Go
+job_end
+
+job_begin
+	name assemblReport
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/assemblReport.py --projectDir /project/home/zyy126com/ddcc --config /project/home/zyy126com/ddcc/config.json
+job_end
+job_begin
+	name htseq_count_C_24_1
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/scripts/htseq_count.py --bam /project/home/zyy126com/ddcc/Align/C_24_1/C_24_1_name_sorted.bam --gtf /project/home/zyy126com/ddcc/Assembl/Novel/novelRefCombined.gtf --ssLib NO --name C_24_1 --outdir /project/home/zyy126com/ddcc/Quantification/Readcount_FPKM/C_24_1
+job_end
+
+job_begin
+	name htseq_count_C_24_3
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/scripts/htseq_count.py --bam /project/home/zyy126com/ddcc/Align/C_24_3/C_24_3_name_sorted.bam --gtf /project/home/zyy126com/ddcc/Assembl/Novel/novelRefCombined.gtf --ssLib NO --name C_24_3 --outdir /project/home/zyy126com/ddcc/Quantification/Readcount_FPKM/C_24_3
+job_end
+
+job_begin
+	name htseq_count_C_36_1
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/scripts/htseq_count.py --bam /project/home/zyy126com/ddcc/Align/C_36_1/C_36_1_name_sorted.bam --gtf /project/home/zyy126com/ddcc/Assembl/Novel/novelRefCombined.gtf --ssLib NO --name C_36_1 --outdir /project/home/zyy126com/ddcc/Quantification/Readcount_FPKM/C_36_1
+job_end
+
+job_begin
+	name htseq_count_C_36_3
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/scripts/htseq_count.py --bam /project/home/zyy126com/ddcc/Align/C_36_3/C_36_3_name_sorted.bam --gtf /project/home/zyy126com/ddcc/Assembl/Novel/novelRefCombined.gtf --ssLib NO --name C_36_3 --outdir /project/home/zyy126com/ddcc/Quantification/Readcount_FPKM/C_36_3
+job_end
+
+job_begin
+	name htseq_count_d_24_1
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/scripts/htseq_count.py --bam /project/home/zyy126com/ddcc/Align/d_24_1/d_24_1_name_sorted.bam --gtf /project/home/zyy126com/ddcc/Assembl/Novel/novelRefCombined.gtf --ssLib NO --name d_24_1 --outdir /project/home/zyy126com/ddcc/Quantification/Readcount_FPKM/d_24_1
+job_end
+
+job_begin
+	name htseq_count_d_24_3
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/scripts/htseq_count.py --bam /project/home/zyy126com/ddcc/Align/d_24_3/d_24_3_name_sorted.bam --gtf /project/home/zyy126com/ddcc/Assembl/Novel/novelRefCombined.gtf --ssLib NO --name d_24_3 --outdir /project/home/zyy126com/ddcc/Quantification/Readcount_FPKM/d_24_3
+job_end
+
+job_begin
+	name htseq_count_d_36_1
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/scripts/htseq_count.py --bam /project/home/zyy126com/ddcc/Align/d_36_1/d_36_1_name_sorted.bam --gtf /project/home/zyy126com/ddcc/Assembl/Novel/novelRefCombined.gtf --ssLib NO --name d_36_1 --outdir /project/home/zyy126com/ddcc/Quantification/Readcount_FPKM/d_36_1
+job_end
+
+job_begin
+	name htseq_count_d_36_3
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/scripts/htseq_count.py --bam /project/home/zyy126com/ddcc/Align/d_36_3/d_36_3_name_sorted.bam --gtf /project/home/zyy126com/ddcc/Assembl/Novel/novelRefCombined.gtf --ssLib NO --name d_36_3 --outdir /project/home/zyy126com/ddcc/Quantification/Readcount_FPKM/d_36_3
+job_end
+
+job_begin
+	name count_stat
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/scripts/stat_count.py --fpkms C_24_1:/project/home/zyy126com/ddcc/Quantification/Readcount_FPKM/C_24_1/C_24_1_fpkm.xls,C_24_3:/project/home/zyy126com/ddcc/Quantification/Readcount_FPKM/C_24_3/C_24_3_fpkm.xls,C_36_1:/project/home/zyy126com/ddcc/Quantification/Readcount_FPKM/C_36_1/C_36_1_fpkm.xls,C_36_3:/project/home/zyy126com/ddcc/Quantification/Readcount_FPKM/C_36_3/C_36_3_fpkm.xls,d_24_1:/project/home/zyy126com/ddcc/Quantification/Readcount_FPKM/d_24_1/d_24_1_fpkm.xls,d_24_3:/project/home/zyy126com/ddcc/Quantification/Readcount_FPKM/d_24_3/d_24_3_fpkm.xls,d_36_1:/project/home/zyy126com/ddcc/Quantification/Readcount_FPKM/d_36_1/d_36_1_fpkm.xls,d_36_3:/project/home/zyy126com/ddcc/Quantification/Readcount_FPKM/d_36_3/d_36_3_fpkm.xls --gtf /project/home/zyy126com/ddcc/Assembl/Novel/novelRefCombined.gtf --groups 'd36:d_36_1,d_36_3|C36:C_36_1,C_36_3|d24:d_24_1,d_24_3|C24:C_24_1,C_24_3' --samples C_24_1,C_24_3,C_36_1,C_36_3,d_24_1,d_24_3,d_36_1,d_36_3 --outDir /project/home/zyy126com/ddcc/Quantification/Stat
+job_end
+
+job_begin
+	name countReport
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/countReport.py --projectDir /project/home/zyy126com/ddcc --config /project/home/zyy126com/ddcc/config.json
+job_end
+job_begin
+	name diff_analysis_36c24
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/diff.py --compares '36c24:C36,C24' --groups 'C36:C_36_1,C_36_3|C24:C_24_1,C_24_3' --input /project/home/zyy126com/ddcc/Quantification/Stat/readcount.xls --foldchange 1.1 --pType padj --pValue 0.05 --mod DESeq2 --outdir /project/home/zyy126com/ddcc/Diff/36c24/diff --annot /database/Reference/arabidopsis_thaliana/geneName.txt
+job_end
+
+job_begin
+	name extract_diff_seq_36c24
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/get_diff_seq.py --allseq /project/home/zyy126com/ddcc/Assembl/Novel/allseq.fa --geneID /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24.diffGeneID --outFile /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24_diff.fa
+job_end
+
+job_begin
+	name cluster_36c24
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/cluster.py --id /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24.diffGeneID --fpkm /project/home/zyy126com/ddcc/Quantification/Stat/fpkm_mean.xls --outDir /project/home/zyy126com/ddcc/Diff/36c24/cluster
+job_end
+
+job_begin
+	name diff_analysis_36d24
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/diff.py --compares '36d24:d36,d24' --groups 'd36:d_36_1,d_36_3|d24:d_24_1,d_24_3' --input /project/home/zyy126com/ddcc/Quantification/Stat/readcount.xls --foldchange 1.1 --pType padj --pValue 0.05 --mod DESeq2 --outdir /project/home/zyy126com/ddcc/Diff/36d24/diff --annot /database/Reference/arabidopsis_thaliana/geneName.txt
+job_end
+
+job_begin
+	name extract_diff_seq_36d24
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/get_diff_seq.py --allseq /project/home/zyy126com/ddcc/Assembl/Novel/allseq.fa --geneID /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24.diffGeneID --outFile /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24_diff.fa
+job_end
+
+job_begin
+	name cluster_36d24
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/cluster.py --id /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24.diffGeneID --fpkm /project/home/zyy126com/ddcc/Quantification/Stat/fpkm_mean.xls --outDir /project/home/zyy126com/ddcc/Diff/36d24/cluster
+job_end
+
+job_begin
+	name diff_analysis_ddcc24c
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/diff.py --compares 'ddcc24c:d24,C24' --groups 'd24:d_24_1,d_24_3|C24:C_24_1,C_24_3' --input /project/home/zyy126com/ddcc/Quantification/Stat/readcount.xls --foldchange 1.1 --pType padj --pValue 0.05 --mod DESeq2 --outdir /project/home/zyy126com/ddcc/Diff/ddcc24c/diff --annot /database/Reference/arabidopsis_thaliana/geneName.txt
+job_end
+
+job_begin
+	name extract_diff_seq_ddcc24c
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/get_diff_seq.py --allseq /project/home/zyy126com/ddcc/Assembl/Novel/allseq.fa --geneID /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c.diffGeneID --outFile /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c_diff.fa
+job_end
+
+job_begin
+	name cluster_ddcc24c
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/cluster.py --id /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c.diffGeneID --fpkm /project/home/zyy126com/ddcc/Quantification/Stat/fpkm_mean.xls --outDir /project/home/zyy126com/ddcc/Diff/ddcc24c/cluster
+job_end
+
+job_begin
+	name diff_analysis_ddcc36c
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/diff.py --compares 'ddcc36c:d36,C36' --groups 'd36:d_36_1,d_36_3|C36:C_36_1,C_36_3' --input /project/home/zyy126com/ddcc/Quantification/Stat/readcount.xls --foldchange 1.1 --pType padj --pValue 0.05 --mod DESeq2 --outdir /project/home/zyy126com/ddcc/Diff/ddcc36c/diff --annot /database/Reference/arabidopsis_thaliana/geneName.txt
+job_end
+
+job_begin
+	name extract_diff_seq_ddcc36c
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/get_diff_seq.py --allseq /project/home/zyy126com/ddcc/Assembl/Novel/allseq.fa --geneID /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c.diffGeneID --outFile /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c_diff.fa
+job_end
+
+job_begin
+	name cluster_ddcc36c
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/cluster.py --id /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c.diffGeneID --fpkm /project/home/zyy126com/ddcc/Quantification/Stat/fpkm_mean.xls --outDir /project/home/zyy126com/ddcc/Diff/ddcc36c/cluster
+job_end
+
+job_begin
+	name diffReport
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/diffReport.py --compares 36c24,36d24,ddcc24c,ddcc36c --projectDir /project/home/zyy126com/ddcc --config /project/home/zyy126com/ddcc/config.json
+job_end
+job_begin
+	name ppi_all_36c24
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=5g,p=5
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_blast.py --ppi 3702 --seq /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24_diff.fa --score 700 --evalue 1e-10 --identity 60 --ncpu 5 --outDir /project/home/zyy126com/ddcc/PPI/36c24 --name 36c24_all
+job_end
+
+job_begin
+	name ppi_up_36c24
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_select.py --links /project/home/zyy126com/ddcc/PPI/36c24/36c24_all_ppi.txt --geneID /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24.upGeneID --outFile /project/home/zyy126com/ddcc/PPI/36c24/36c24_up_ppi.txt 
+job_end
+
+job_begin
+	name ppi_down_36c24
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_select.py --links /project/home/zyy126com/ddcc/PPI/36c24/36c24_all_ppi.txt --geneID /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24.downGeneID --outFile /project/home/zyy126com/ddcc/PPI/36c24/36c24_down_ppi.txt 
+job_end
+
+job_begin
+	name ppi_all_36d24
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=5g,p=5
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_blast.py --ppi 3702 --seq /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24_diff.fa --score 700 --evalue 1e-10 --identity 60 --ncpu 5 --outDir /project/home/zyy126com/ddcc/PPI/36d24 --name 36d24_all
+job_end
+
+job_begin
+	name ppi_up_36d24
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_select.py --links /project/home/zyy126com/ddcc/PPI/36d24/36d24_all_ppi.txt --geneID /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24.upGeneID --outFile /project/home/zyy126com/ddcc/PPI/36d24/36d24_up_ppi.txt 
+job_end
+
+job_begin
+	name ppi_down_36d24
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_select.py --links /project/home/zyy126com/ddcc/PPI/36d24/36d24_all_ppi.txt --geneID /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24.downGeneID --outFile /project/home/zyy126com/ddcc/PPI/36d24/36d24_down_ppi.txt 
+job_end
+
+job_begin
+	name ppi_all_ddcc24c
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=5g,p=5
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_blast.py --ppi 3702 --seq /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c_diff.fa --score 700 --evalue 1e-10 --identity 60 --ncpu 5 --outDir /project/home/zyy126com/ddcc/PPI/ddcc24c --name ddcc24c_all
+job_end
+
+job_begin
+	name ppi_up_ddcc24c
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_select.py --links /project/home/zyy126com/ddcc/PPI/ddcc24c/ddcc24c_all_ppi.txt --geneID /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c.upGeneID --outFile /project/home/zyy126com/ddcc/PPI/ddcc24c/ddcc24c_up_ppi.txt 
+job_end
+
+job_begin
+	name ppi_down_ddcc24c
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_select.py --links /project/home/zyy126com/ddcc/PPI/ddcc24c/ddcc24c_all_ppi.txt --geneID /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c.downGeneID --outFile /project/home/zyy126com/ddcc/PPI/ddcc24c/ddcc24c_down_ppi.txt 
+job_end
+
+job_begin
+	name ppi_all_ddcc36c
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=5g,p=5
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_blast.py --ppi 3702 --seq /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c_diff.fa --score 700 --evalue 1e-10 --identity 60 --ncpu 5 --outDir /project/home/zyy126com/ddcc/PPI/ddcc36c --name ddcc36c_all
+job_end
+
+job_begin
+	name ppi_up_ddcc36c
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_select.py --links /project/home/zyy126com/ddcc/PPI/ddcc36c/ddcc36c_all_ppi.txt --geneID /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c.upGeneID --outFile /project/home/zyy126com/ddcc/PPI/ddcc36c/ddcc36c_up_ppi.txt 
+job_end
+
+job_begin
+	name ppi_down_ddcc36c
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_select.py --links /project/home/zyy126com/ddcc/PPI/ddcc36c/ddcc36c_all_ppi.txt --geneID /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c.downGeneID --outFile /project/home/zyy126com/ddcc/PPI/ddcc36c/ddcc36c_down_ppi.txt 
+job_end
+
+job_begin
+	name ppiReport
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/ppiReport.py --compares 36c24,36d24,ddcc24c,ddcc36c --projectDir /project/home/zyy126com/ddcc --config /project/home/zyy126com/ddcc/config.json
+job_end
+job_begin
+	name go_pre
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go_pre.py --refGO /database/Reference/arabidopsis_thaliana/go.txt  --outDir /project/home/zyy126com/ddcc/GO --novelGO /project/home/zyy126com/ddcc/Assembl/Novel/go.txt
+job_end
+
+job_begin
+	name go_all_36c24
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/ddcc/GO/Rdata --geneLen /project/home/zyy126com/ddcc/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24.diffGeneID --goGene /project/home/zyy126com/ddcc/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/ddcc/GO/36c24/ALL 
+job_end
+
+job_begin
+	name goPlot_36c24
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go_plot.py --upIds /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24.upGeneID --downIds /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24.downGeneID --goResult /project/home/zyy126com/ddcc/GO/36c24/ALL/go_enrich_result.xls --Name 36c24 --outDir /project/home/zyy126com/ddcc/GO/36c24/ALL --Flag y
+job_end
+
+job_begin
+	name go_up_36c24
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/ddcc/GO/Rdata --geneLen /project/home/zyy126com/ddcc/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24.upGeneID --goGene /project/home/zyy126com/ddcc/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/ddcc/GO/36c24/UP 
+job_end
+
+job_begin
+	name go_down_36c24
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/ddcc/GO/Rdata --geneLen /project/home/zyy126com/ddcc/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24.downGeneID --goGene /project/home/zyy126com/ddcc/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/ddcc/GO/36c24/DOWN 
+job_end
+
+job_begin
+	name go_all_36d24
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/ddcc/GO/Rdata --geneLen /project/home/zyy126com/ddcc/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24.diffGeneID --goGene /project/home/zyy126com/ddcc/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/ddcc/GO/36d24/ALL 
+job_end
+
+job_begin
+	name goPlot_36d24
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go_plot.py --upIds /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24.upGeneID --downIds /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24.downGeneID --goResult /project/home/zyy126com/ddcc/GO/36d24/ALL/go_enrich_result.xls --Name 36d24 --outDir /project/home/zyy126com/ddcc/GO/36d24/ALL --Flag y
+job_end
+
+job_begin
+	name go_up_36d24
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/ddcc/GO/Rdata --geneLen /project/home/zyy126com/ddcc/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24.upGeneID --goGene /project/home/zyy126com/ddcc/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/ddcc/GO/36d24/UP 
+job_end
+
+job_begin
+	name go_down_36d24
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/ddcc/GO/Rdata --geneLen /project/home/zyy126com/ddcc/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24.downGeneID --goGene /project/home/zyy126com/ddcc/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/ddcc/GO/36d24/DOWN 
+job_end
+
+job_begin
+	name go_all_ddcc24c
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/ddcc/GO/Rdata --geneLen /project/home/zyy126com/ddcc/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c.diffGeneID --goGene /project/home/zyy126com/ddcc/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/ddcc/GO/ddcc24c/ALL 
+job_end
+
+job_begin
+	name goPlot_ddcc24c
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go_plot.py --upIds /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c.upGeneID --downIds /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c.downGeneID --goResult /project/home/zyy126com/ddcc/GO/ddcc24c/ALL/go_enrich_result.xls --Name ddcc24c --outDir /project/home/zyy126com/ddcc/GO/ddcc24c/ALL --Flag y
+job_end
+
+job_begin
+	name go_up_ddcc24c
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/ddcc/GO/Rdata --geneLen /project/home/zyy126com/ddcc/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c.upGeneID --goGene /project/home/zyy126com/ddcc/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/ddcc/GO/ddcc24c/UP 
+job_end
+
+job_begin
+	name go_down_ddcc24c
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/ddcc/GO/Rdata --geneLen /project/home/zyy126com/ddcc/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c.downGeneID --goGene /project/home/zyy126com/ddcc/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/ddcc/GO/ddcc24c/DOWN 
+job_end
+
+job_begin
+	name go_all_ddcc36c
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/ddcc/GO/Rdata --geneLen /project/home/zyy126com/ddcc/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c.diffGeneID --goGene /project/home/zyy126com/ddcc/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/ddcc/GO/ddcc36c/ALL 
+job_end
+
+job_begin
+	name goPlot_ddcc36c
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go_plot.py --upIds /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c.upGeneID --downIds /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c.downGeneID --goResult /project/home/zyy126com/ddcc/GO/ddcc36c/ALL/go_enrich_result.xls --Name ddcc36c --outDir /project/home/zyy126com/ddcc/GO/ddcc36c/ALL --Flag y
+job_end
+
+job_begin
+	name go_up_ddcc36c
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/ddcc/GO/Rdata --geneLen /project/home/zyy126com/ddcc/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c.upGeneID --goGene /project/home/zyy126com/ddcc/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/ddcc/GO/ddcc36c/UP 
+job_end
+
+job_begin
+	name go_down_ddcc36c
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/ddcc/GO/Rdata --geneLen /project/home/zyy126com/ddcc/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c.downGeneID --goGene /project/home/zyy126com/ddcc/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/ddcc/GO/ddcc36c/DOWN 
+job_end
+
+job_begin
+	name goReport
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/goReport.py --compares 36c24,36d24,ddcc24c,ddcc36c --projectDir /project/home/zyy126com/ddcc --config /project/home/zyy126com/ddcc/config.json
+job_end
+job_begin
+	name kegg_all_36c24
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=5g,p=8
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24_diff.fa --intype fasta:nuc --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/ddcc/KEGG/36c24/ALL --name 36c24 --ncpu 8
+job_end
+
+job_begin
+	name kegg_all_html_36c24
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/ddcc/KEGG/36c24/ALL/36c24_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/ddcc/KEGG/36c24/ALL --upIDs /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24.upGeneID --downIDs /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24.downGeneID
+job_end
+
+job_begin
+	name kegg_up_36c24
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/ddcc/KEGG/36c24/ALL/36c24_blast_out.xls --intype blast:tab --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/ddcc/KEGG/36c24/UP --name 36c24 --idFile /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24.upGeneID
+job_end
+
+job_begin
+	name kegg_up_html_36c24
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/ddcc/KEGG/36c24/UP/36c24_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/ddcc/KEGG/36c24/UP --upIDs /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24.upGeneID --downIDs /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24.downGeneID
+job_end
+
+job_begin
+	name kegg_down_36c24
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/ddcc/KEGG/36c24/ALL/36c24_blast_out.xls --intype blast:tab --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/ddcc/KEGG/36c24/DOWN --name 36c24 --idFile /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24.downGeneID
+job_end
+
+job_begin
+	name kegg_down_html_36c24
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/ddcc/KEGG/36c24/DOWN/36c24_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/ddcc/KEGG/36c24/DOWN --upIDs /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24.upGeneID --downIDs /project/home/zyy126com/ddcc/Diff/36c24/diff/36c24.downGeneID
+job_end
+
+job_begin
+	name kegg_all_36d24
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=5g,p=8
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24_diff.fa --intype fasta:nuc --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/ddcc/KEGG/36d24/ALL --name 36d24 --ncpu 8
+job_end
+
+job_begin
+	name kegg_all_html_36d24
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/ddcc/KEGG/36d24/ALL/36d24_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/ddcc/KEGG/36d24/ALL --upIDs /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24.upGeneID --downIDs /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24.downGeneID
+job_end
+
+job_begin
+	name kegg_up_36d24
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/ddcc/KEGG/36d24/ALL/36d24_blast_out.xls --intype blast:tab --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/ddcc/KEGG/36d24/UP --name 36d24 --idFile /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24.upGeneID
+job_end
+
+job_begin
+	name kegg_up_html_36d24
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/ddcc/KEGG/36d24/UP/36d24_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/ddcc/KEGG/36d24/UP --upIDs /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24.upGeneID --downIDs /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24.downGeneID
+job_end
+
+job_begin
+	name kegg_down_36d24
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/ddcc/KEGG/36d24/ALL/36d24_blast_out.xls --intype blast:tab --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/ddcc/KEGG/36d24/DOWN --name 36d24 --idFile /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24.downGeneID
+job_end
+
+job_begin
+	name kegg_down_html_36d24
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/ddcc/KEGG/36d24/DOWN/36d24_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/ddcc/KEGG/36d24/DOWN --upIDs /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24.upGeneID --downIDs /project/home/zyy126com/ddcc/Diff/36d24/diff/36d24.downGeneID
+job_end
+
+job_begin
+	name kegg_all_ddcc24c
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=5g,p=8
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c_diff.fa --intype fasta:nuc --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/ddcc/KEGG/ddcc24c/ALL --name ddcc24c --ncpu 8
+job_end
+
+job_begin
+	name kegg_all_html_ddcc24c
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/ddcc/KEGG/ddcc24c/ALL/ddcc24c_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/ddcc/KEGG/ddcc24c/ALL --upIDs /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c.upGeneID --downIDs /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c.downGeneID
+job_end
+
+job_begin
+	name kegg_up_ddcc24c
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/ddcc/KEGG/ddcc24c/ALL/ddcc24c_blast_out.xls --intype blast:tab --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/ddcc/KEGG/ddcc24c/UP --name ddcc24c --idFile /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c.upGeneID
+job_end
+
+job_begin
+	name kegg_up_html_ddcc24c
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/ddcc/KEGG/ddcc24c/UP/ddcc24c_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/ddcc/KEGG/ddcc24c/UP --upIDs /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c.upGeneID --downIDs /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c.downGeneID
+job_end
+
+job_begin
+	name kegg_down_ddcc24c
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/ddcc/KEGG/ddcc24c/ALL/ddcc24c_blast_out.xls --intype blast:tab --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/ddcc/KEGG/ddcc24c/DOWN --name ddcc24c --idFile /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c.downGeneID
+job_end
+
+job_begin
+	name kegg_down_html_ddcc24c
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/ddcc/KEGG/ddcc24c/DOWN/ddcc24c_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/ddcc/KEGG/ddcc24c/DOWN --upIDs /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c.upGeneID --downIDs /project/home/zyy126com/ddcc/Diff/ddcc24c/diff/ddcc24c.downGeneID
+job_end
+
+job_begin
+	name kegg_all_ddcc36c
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=5g,p=8
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c_diff.fa --intype fasta:nuc --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/ddcc/KEGG/ddcc36c/ALL --name ddcc36c --ncpu 8
+job_end
+
+job_begin
+	name kegg_all_html_ddcc36c
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/ddcc/KEGG/ddcc36c/ALL/ddcc36c_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/ddcc/KEGG/ddcc36c/ALL --upIDs /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c.upGeneID --downIDs /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c.downGeneID
+job_end
+
+job_begin
+	name kegg_up_ddcc36c
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/ddcc/KEGG/ddcc36c/ALL/ddcc36c_blast_out.xls --intype blast:tab --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/ddcc/KEGG/ddcc36c/UP --name ddcc36c --idFile /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c.upGeneID
+job_end
+
+job_begin
+	name kegg_up_html_ddcc36c
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/ddcc/KEGG/ddcc36c/UP/ddcc36c_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/ddcc/KEGG/ddcc36c/UP --upIDs /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c.upGeneID --downIDs /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c.downGeneID
+job_end
+
+job_begin
+	name kegg_down_ddcc36c
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/ddcc/KEGG/ddcc36c/ALL/ddcc36c_blast_out.xls --intype blast:tab --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/ddcc/KEGG/ddcc36c/DOWN --name ddcc36c --idFile /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c.downGeneID
+job_end
+
+job_begin
+	name kegg_down_html_ddcc36c
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/ddcc/KEGG/ddcc36c/DOWN/ddcc36c_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/ddcc/KEGG/ddcc36c/DOWN --upIDs /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c.upGeneID --downIDs /project/home/zyy126com/ddcc/Diff/ddcc36c/diff/ddcc36c.downGeneID
+job_end
+
+job_begin
+	name keggReport
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/keggReport.py --compares 36c24,36d24,ddcc24c,ddcc36c --projectDir /project/home/zyy126com/ddcc --config /project/home/zyy126com/ddcc/config.json
+job_end
+job_begin
+	name as_pre
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd perl /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/calBasesNum.pl /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa /project/home/zyy126com/ddcc/As/ref.hdrs
+job_end
+
+job_begin
+	name as_C_24_1
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/as.py --inGtf /project/home/zyy126com/ddcc/Assembl/C_24_1/transcripts.gtf --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --tmap /project/home/zyy126com/ddcc/Assembl/C_24_1/C_24_1.C_24_1.gtf.tmap --hdrs /project/home/zyy126com/ddcc/As/ref.hdrs --name C_24_1 --outDir /project/home/zyy126com/ddcc/As/C_24_1
+job_end
+
+job_begin
+	name as_C_24_3
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/as.py --inGtf /project/home/zyy126com/ddcc/Assembl/C_24_3/transcripts.gtf --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --tmap /project/home/zyy126com/ddcc/Assembl/C_24_3/C_24_3.C_24_3.gtf.tmap --hdrs /project/home/zyy126com/ddcc/As/ref.hdrs --name C_24_3 --outDir /project/home/zyy126com/ddcc/As/C_24_3
+job_end
+
+job_begin
+	name as_C_36_1
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/as.py --inGtf /project/home/zyy126com/ddcc/Assembl/C_36_1/transcripts.gtf --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --tmap /project/home/zyy126com/ddcc/Assembl/C_36_1/C_36_1.C_36_1.gtf.tmap --hdrs /project/home/zyy126com/ddcc/As/ref.hdrs --name C_36_1 --outDir /project/home/zyy126com/ddcc/As/C_36_1
+job_end
+
+job_begin
+	name as_C_36_3
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/as.py --inGtf /project/home/zyy126com/ddcc/Assembl/C_36_3/transcripts.gtf --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --tmap /project/home/zyy126com/ddcc/Assembl/C_36_3/C_36_3.C_36_3.gtf.tmap --hdrs /project/home/zyy126com/ddcc/As/ref.hdrs --name C_36_3 --outDir /project/home/zyy126com/ddcc/As/C_36_3
+job_end
+
+job_begin
+	name as_d_24_1
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/as.py --inGtf /project/home/zyy126com/ddcc/Assembl/d_24_1/transcripts.gtf --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --tmap /project/home/zyy126com/ddcc/Assembl/d_24_1/d_24_1.d_24_1.gtf.tmap --hdrs /project/home/zyy126com/ddcc/As/ref.hdrs --name d_24_1 --outDir /project/home/zyy126com/ddcc/As/d_24_1
+job_end
+
+job_begin
+	name as_d_24_3
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/as.py --inGtf /project/home/zyy126com/ddcc/Assembl/d_24_3/transcripts.gtf --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --tmap /project/home/zyy126com/ddcc/Assembl/d_24_3/d_24_3.d_24_3.gtf.tmap --hdrs /project/home/zyy126com/ddcc/As/ref.hdrs --name d_24_3 --outDir /project/home/zyy126com/ddcc/As/d_24_3
+job_end
+
+job_begin
+	name as_d_36_1
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/as.py --inGtf /project/home/zyy126com/ddcc/Assembl/d_36_1/transcripts.gtf --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --tmap /project/home/zyy126com/ddcc/Assembl/d_36_1/d_36_1.d_36_1.gtf.tmap --hdrs /project/home/zyy126com/ddcc/As/ref.hdrs --name d_36_1 --outDir /project/home/zyy126com/ddcc/As/d_36_1
+job_end
+
+job_begin
+	name as_d_36_3
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/as.py --inGtf /project/home/zyy126com/ddcc/Assembl/d_36_3/transcripts.gtf --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --tmap /project/home/zyy126com/ddcc/Assembl/d_36_3/d_36_3.d_36_3.gtf.tmap --hdrs /project/home/zyy126com/ddcc/As/ref.hdrs --name d_36_3 --outDir /project/home/zyy126com/ddcc/As/d_36_3
+job_end
+
+job_begin
+	name as_sum
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/as_sum.py --files /project/home/zyy126com/ddcc/As/C_24_1/C_24_1.stat,/project/home/zyy126com/ddcc/As/C_24_3/C_24_3.stat,/project/home/zyy126com/ddcc/As/C_36_1/C_36_1.stat,/project/home/zyy126com/ddcc/As/C_36_3/C_36_3.stat,/project/home/zyy126com/ddcc/As/d_24_1/d_24_1.stat,/project/home/zyy126com/ddcc/As/d_24_3/d_24_3.stat,/project/home/zyy126com/ddcc/As/d_36_1/d_36_1.stat,/project/home/zyy126com/ddcc/As/d_36_3/d_36_3.stat --name C_24_1,C_24_3,C_36_1,C_36_3,d_24_1,d_24_3,d_36_1,d_36_3 --outDir /project/home/zyy126com/ddcc/As
+job_end
+
+job_begin
+	name asReport
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/asReport.py --samples C_24_1,C_24_3,C_36_1,C_36_3,d_24_1,d_24_3,d_36_1,d_36_3 --projectDir /project/home/zyy126com/ddcc --config /project/home/zyy126com/ddcc/config.json
+job_end
+job_begin
+	name prepare_bam_C_24_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/prepare_bam.py --bam /project/home/zyy126com/ddcc/Align/C_24_1/C_24_1_sorted_addGroups.bam --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --name C_24_1 --outDir /project/home/zyy126com/ddcc/CallVariation/bam/C_24_1
+job_end
+
+job_begin
+	name prepare_bam_C_24_3
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/prepare_bam.py --bam /project/home/zyy126com/ddcc/Align/C_24_3/C_24_3_sorted_addGroups.bam --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --name C_24_3 --outDir /project/home/zyy126com/ddcc/CallVariation/bam/C_24_3
+job_end
+
+job_begin
+	name prepare_bam_C_36_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/prepare_bam.py --bam /project/home/zyy126com/ddcc/Align/C_36_1/C_36_1_sorted_addGroups.bam --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --name C_36_1 --outDir /project/home/zyy126com/ddcc/CallVariation/bam/C_36_1
+job_end
+
+job_begin
+	name prepare_bam_C_36_3
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/prepare_bam.py --bam /project/home/zyy126com/ddcc/Align/C_36_3/C_36_3_sorted_addGroups.bam --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --name C_36_3 --outDir /project/home/zyy126com/ddcc/CallVariation/bam/C_36_3
+job_end
+
+job_begin
+	name prepare_bam_d_24_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/prepare_bam.py --bam /project/home/zyy126com/ddcc/Align/d_24_1/d_24_1_sorted_addGroups.bam --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --name d_24_1 --outDir /project/home/zyy126com/ddcc/CallVariation/bam/d_24_1
+job_end
+
+job_begin
+	name prepare_bam_d_24_3
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/prepare_bam.py --bam /project/home/zyy126com/ddcc/Align/d_24_3/d_24_3_sorted_addGroups.bam --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --name d_24_3 --outDir /project/home/zyy126com/ddcc/CallVariation/bam/d_24_3
+job_end
+
+job_begin
+	name prepare_bam_d_36_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/prepare_bam.py --bam /project/home/zyy126com/ddcc/Align/d_36_1/d_36_1_sorted_addGroups.bam --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --name d_36_1 --outDir /project/home/zyy126com/ddcc/CallVariation/bam/d_36_1
+job_end
+
+job_begin
+	name prepare_bam_d_36_3
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/prepare_bam.py --bam /project/home/zyy126com/ddcc/Align/d_36_3/d_36_3_sorted_addGroups.bam --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --name d_36_3 --outDir /project/home/zyy126com/ddcc/CallVariation/bam/d_36_3
+job_end
+
+job_begin
+	name HaplotypeCaller_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=9g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/HaplotypeCaller.py --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --bams /project/home/zyy126com/ddcc/CallVariation/bam/C_24_1/C_24_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/C_24_3/C_24_3_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/C_36_1/C_36_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/C_36_3/C_36_3_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_24_1/d_24_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_24_3/d_24_3_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_36_1/d_36_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_36_3/d_36_3_md_split.bam --bed /project/home/zyy126com/ddcc/Log/.tmp/chr_split1.bed --name 1 --outDir /project/home/zyy126com/ddcc/CallVariation/vcf
+job_end
+
+job_begin
+	name HaplotypeCaller_2
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=9g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/HaplotypeCaller.py --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --bams /project/home/zyy126com/ddcc/CallVariation/bam/C_24_1/C_24_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/C_24_3/C_24_3_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/C_36_1/C_36_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/C_36_3/C_36_3_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_24_1/d_24_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_24_3/d_24_3_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_36_1/d_36_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_36_3/d_36_3_md_split.bam --bed /project/home/zyy126com/ddcc/Log/.tmp/chr_split2.bed --name 2 --outDir /project/home/zyy126com/ddcc/CallVariation/vcf
+job_end
+
+job_begin
+	name HaplotypeCaller_3
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=9g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/HaplotypeCaller.py --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --bams /project/home/zyy126com/ddcc/CallVariation/bam/C_24_1/C_24_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/C_24_3/C_24_3_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/C_36_1/C_36_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/C_36_3/C_36_3_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_24_1/d_24_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_24_3/d_24_3_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_36_1/d_36_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_36_3/d_36_3_md_split.bam --bed /project/home/zyy126com/ddcc/Log/.tmp/chr_split3.bed --name 3 --outDir /project/home/zyy126com/ddcc/CallVariation/vcf
+job_end
+
+job_begin
+	name HaplotypeCaller_4
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=9g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/HaplotypeCaller.py --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --bams /project/home/zyy126com/ddcc/CallVariation/bam/C_24_1/C_24_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/C_24_3/C_24_3_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/C_36_1/C_36_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/C_36_3/C_36_3_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_24_1/d_24_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_24_3/d_24_3_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_36_1/d_36_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_36_3/d_36_3_md_split.bam --bed /project/home/zyy126com/ddcc/Log/.tmp/chr_split4.bed --name 4 --outDir /project/home/zyy126com/ddcc/CallVariation/vcf
+job_end
+
+job_begin
+	name HaplotypeCaller_5
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=9g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/HaplotypeCaller.py --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --bams /project/home/zyy126com/ddcc/CallVariation/bam/C_24_1/C_24_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/C_24_3/C_24_3_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/C_36_1/C_36_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/C_36_3/C_36_3_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_24_1/d_24_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_24_3/d_24_3_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_36_1/d_36_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_36_3/d_36_3_md_split.bam --bed /project/home/zyy126com/ddcc/Log/.tmp/chr_split5.bed --name 5 --outDir /project/home/zyy126com/ddcc/CallVariation/vcf
+job_end
+
+job_begin
+	name HaplotypeCaller_6
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=9g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/HaplotypeCaller.py --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --bams /project/home/zyy126com/ddcc/CallVariation/bam/C_24_1/C_24_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/C_24_3/C_24_3_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/C_36_1/C_36_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/C_36_3/C_36_3_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_24_1/d_24_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_24_3/d_24_3_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_36_1/d_36_1_md_split.bam,/project/home/zyy126com/ddcc/CallVariation/bam/d_36_3/d_36_3_md_split.bam --bed /project/home/zyy126com/ddcc/Log/.tmp/chr_split6.bed --name 6 --outDir /project/home/zyy126com/ddcc/CallVariation/vcf
+job_end
+
+job_begin
+	name merge_SNP
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/merge_vcf.py --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --vcfList /project/home/zyy126com/ddcc/Log/.tmp/SNPList.txt --outvcf /project/home/zyy126com/ddcc/CallVariation/vcf/merged_SNP.vcf
+job_end
+
+job_begin
+	name merge_InDel
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/merge_vcf.py --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --vcfList /project/home/zyy126com/ddcc/Log/.tmp/InDelList.txt --outvcf /project/home/zyy126com/ddcc/CallVariation/vcf/merged_InDel.vcf
+job_end
+
+job_begin
+	name split_SNP
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/split_vcf.py --vcf /project/home/zyy126com/ddcc/CallVariation/vcf/merged_SNP.vcf --outprefix /project/home/zyy126com/ddcc/CallVariation/vcf/SNP
+job_end
+
+job_begin
+	name split_InDel
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/split_vcf.py --vcf /project/home/zyy126com/ddcc/CallVariation/vcf/merged_InDel.vcf --outprefix /project/home/zyy126com/ddcc/CallVariation/vcf/InDel
+job_end
+
+job_begin
+	name annot_SNP_C_24_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/ddcc/CallVariation/vcf/SNP.C_24_1.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/ddcc/CallVariation/Annot/C_24_1_SNP
+job_end
+
+job_begin
+	name annot_SNP_C_24_3
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/ddcc/CallVariation/vcf/SNP.C_24_3.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/ddcc/CallVariation/Annot/C_24_3_SNP
+job_end
+
+job_begin
+	name annot_SNP_C_36_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/ddcc/CallVariation/vcf/SNP.C_36_1.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/ddcc/CallVariation/Annot/C_36_1_SNP
+job_end
+
+job_begin
+	name annot_SNP_C_36_3
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/ddcc/CallVariation/vcf/SNP.C_36_3.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/ddcc/CallVariation/Annot/C_36_3_SNP
+job_end
+
+job_begin
+	name annot_SNP_d_24_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/ddcc/CallVariation/vcf/SNP.d_24_1.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/ddcc/CallVariation/Annot/d_24_1_SNP
+job_end
+
+job_begin
+	name annot_SNP_d_24_3
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/ddcc/CallVariation/vcf/SNP.d_24_3.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/ddcc/CallVariation/Annot/d_24_3_SNP
+job_end
+
+job_begin
+	name annot_SNP_d_36_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/ddcc/CallVariation/vcf/SNP.d_36_1.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/ddcc/CallVariation/Annot/d_36_1_SNP
+job_end
+
+job_begin
+	name annot_SNP_d_36_3
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/ddcc/CallVariation/vcf/SNP.d_36_3.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/ddcc/CallVariation/Annot/d_36_3_SNP
+job_end
+
+job_begin
+	name annot_InDel_C_24_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/ddcc/CallVariation/vcf/InDel.C_24_1.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/ddcc/CallVariation/Annot/C_24_1_InDel
+job_end
+
+job_begin
+	name annot_InDel_C_24_3
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/ddcc/CallVariation/vcf/InDel.C_24_3.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/ddcc/CallVariation/Annot/C_24_3_InDel
+job_end
+
+job_begin
+	name annot_InDel_C_36_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/ddcc/CallVariation/vcf/InDel.C_36_1.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/ddcc/CallVariation/Annot/C_36_1_InDel
+job_end
+
+job_begin
+	name annot_InDel_C_36_3
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/ddcc/CallVariation/vcf/InDel.C_36_3.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/ddcc/CallVariation/Annot/C_36_3_InDel
+job_end
+
+job_begin
+	name annot_InDel_d_24_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/ddcc/CallVariation/vcf/InDel.d_24_1.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/ddcc/CallVariation/Annot/d_24_1_InDel
+job_end
+
+job_begin
+	name annot_InDel_d_24_3
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/ddcc/CallVariation/vcf/InDel.d_24_3.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/ddcc/CallVariation/Annot/d_24_3_InDel
+job_end
+
+job_begin
+	name annot_InDel_d_36_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/ddcc/CallVariation/vcf/InDel.d_36_1.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/ddcc/CallVariation/Annot/d_36_1_InDel
+job_end
+
+job_begin
+	name annot_InDel_d_36_3
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/ddcc/CallVariation/vcf/InDel.d_36_3.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/ddcc/CallVariation/Annot/d_36_3_InDel
+job_end
+
+job_begin
+	name variationReport
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/variationReport.py --samples C_24_1,C_24_3,C_36_1,C_36_3,d_24_1,d_24_3,d_36_1,d_36_3 --projectDir /project/home/zyy126com/ddcc --config /project/home/zyy126com/ddcc/config.json
+job_end
+job_begin
+	name prepare_gtf
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/gtf_pre.py --gtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --outDir /project/home/zyy126com/ddcc/BamQc
+job_end
+
+job_begin
+	name mapping_region_C_24_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/mappingRegion.py --gtfFlag /project/home/zyy126com/ddcc/BamQc/gtfFlag.gtf --bam /project/home/zyy126com/ddcc/Align/C_24_1/C_24_1_name_sorted.bam --ssLib NO --outDir /project/home/zyy126com/ddcc/BamQc/MappingRegion/C_24_1 --name C_24_1
+job_end
+
+job_begin
+	name mapping_region_C_24_3
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/mappingRegion.py --gtfFlag /project/home/zyy126com/ddcc/BamQc/gtfFlag.gtf --bam /project/home/zyy126com/ddcc/Align/C_24_3/C_24_3_name_sorted.bam --ssLib NO --outDir /project/home/zyy126com/ddcc/BamQc/MappingRegion/C_24_3 --name C_24_3
+job_end
+
+job_begin
+	name mapping_region_C_36_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/mappingRegion.py --gtfFlag /project/home/zyy126com/ddcc/BamQc/gtfFlag.gtf --bam /project/home/zyy126com/ddcc/Align/C_36_1/C_36_1_name_sorted.bam --ssLib NO --outDir /project/home/zyy126com/ddcc/BamQc/MappingRegion/C_36_1 --name C_36_1
+job_end
+
+job_begin
+	name mapping_region_C_36_3
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/mappingRegion.py --gtfFlag /project/home/zyy126com/ddcc/BamQc/gtfFlag.gtf --bam /project/home/zyy126com/ddcc/Align/C_36_3/C_36_3_name_sorted.bam --ssLib NO --outDir /project/home/zyy126com/ddcc/BamQc/MappingRegion/C_36_3 --name C_36_3
+job_end
+
+job_begin
+	name mapping_region_d_24_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/mappingRegion.py --gtfFlag /project/home/zyy126com/ddcc/BamQc/gtfFlag.gtf --bam /project/home/zyy126com/ddcc/Align/d_24_1/d_24_1_name_sorted.bam --ssLib NO --outDir /project/home/zyy126com/ddcc/BamQc/MappingRegion/d_24_1 --name d_24_1
+job_end
+
+job_begin
+	name mapping_region_d_24_3
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/mappingRegion.py --gtfFlag /project/home/zyy126com/ddcc/BamQc/gtfFlag.gtf --bam /project/home/zyy126com/ddcc/Align/d_24_3/d_24_3_name_sorted.bam --ssLib NO --outDir /project/home/zyy126com/ddcc/BamQc/MappingRegion/d_24_3 --name d_24_3
+job_end
+
+job_begin
+	name mapping_region_d_36_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/mappingRegion.py --gtfFlag /project/home/zyy126com/ddcc/BamQc/gtfFlag.gtf --bam /project/home/zyy126com/ddcc/Align/d_36_1/d_36_1_name_sorted.bam --ssLib NO --outDir /project/home/zyy126com/ddcc/BamQc/MappingRegion/d_36_1 --name d_36_1
+job_end
+
+job_begin
+	name mapping_region_d_36_3
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/mappingRegion.py --gtfFlag /project/home/zyy126com/ddcc/BamQc/gtfFlag.gtf --bam /project/home/zyy126com/ddcc/Align/d_36_3/d_36_3_name_sorted.bam --ssLib NO --outDir /project/home/zyy126com/ddcc/BamQc/MappingRegion/d_36_3 --name d_36_3
+job_end
+
+job_begin
+	name saturation_C_24_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=15g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/saturation.py --bed /project/home/zyy126com/ddcc/BamQc/sorted.bed --bam /project/home/zyy126com/ddcc/Align/C_24_1/C_24_1_sorted_addGroups.bam --name C_24_1 --outDir /project/home/zyy126com/ddcc/BamQc/Saturation/C_24_1
+job_end
+
+job_begin
+	name saturation_C_24_3
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=15g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/saturation.py --bed /project/home/zyy126com/ddcc/BamQc/sorted.bed --bam /project/home/zyy126com/ddcc/Align/C_24_3/C_24_3_sorted_addGroups.bam --name C_24_3 --outDir /project/home/zyy126com/ddcc/BamQc/Saturation/C_24_3
+job_end
+
+job_begin
+	name saturation_C_36_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=15g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/saturation.py --bed /project/home/zyy126com/ddcc/BamQc/sorted.bed --bam /project/home/zyy126com/ddcc/Align/C_36_1/C_36_1_sorted_addGroups.bam --name C_36_1 --outDir /project/home/zyy126com/ddcc/BamQc/Saturation/C_36_1
+job_end
+
+job_begin
+	name saturation_C_36_3
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=15g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/saturation.py --bed /project/home/zyy126com/ddcc/BamQc/sorted.bed --bam /project/home/zyy126com/ddcc/Align/C_36_3/C_36_3_sorted_addGroups.bam --name C_36_3 --outDir /project/home/zyy126com/ddcc/BamQc/Saturation/C_36_3
+job_end
+
+job_begin
+	name saturation_d_24_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=15g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/saturation.py --bed /project/home/zyy126com/ddcc/BamQc/sorted.bed --bam /project/home/zyy126com/ddcc/Align/d_24_1/d_24_1_sorted_addGroups.bam --name d_24_1 --outDir /project/home/zyy126com/ddcc/BamQc/Saturation/d_24_1
+job_end
+
+job_begin
+	name saturation_d_24_3
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=15g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/saturation.py --bed /project/home/zyy126com/ddcc/BamQc/sorted.bed --bam /project/home/zyy126com/ddcc/Align/d_24_3/d_24_3_sorted_addGroups.bam --name d_24_3 --outDir /project/home/zyy126com/ddcc/BamQc/Saturation/d_24_3
+job_end
+
+job_begin
+	name saturation_d_36_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=15g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/saturation.py --bed /project/home/zyy126com/ddcc/BamQc/sorted.bed --bam /project/home/zyy126com/ddcc/Align/d_36_1/d_36_1_sorted_addGroups.bam --name d_36_1 --outDir /project/home/zyy126com/ddcc/BamQc/Saturation/d_36_1
+job_end
+
+job_begin
+	name saturation_d_36_3
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=15g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/saturation.py --bed /project/home/zyy126com/ddcc/BamQc/sorted.bed --bam /project/home/zyy126com/ddcc/Align/d_36_3/d_36_3_sorted_addGroups.bam --name d_36_3 --outDir /project/home/zyy126com/ddcc/BamQc/Saturation/d_36_3
+job_end
+
+job_begin
+	name reads_density_C_24_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=8g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/chromo_depth.py --bam /project/home/zyy126com/ddcc/Align/C_24_1/C_24_1_sorted_addGroups.bam --species /database/Reference/arabidopsis_thaliana --fai /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa.fai --pNum 2 --sampleName C_24_1 --outDir /project/home/zyy126com/ddcc/BamQc/ReadsDensity/C_24_1
+job_end
+
+job_begin
+	name reads_density_C_24_3
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=8g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/chromo_depth.py --bam /project/home/zyy126com/ddcc/Align/C_24_3/C_24_3_sorted_addGroups.bam --species /database/Reference/arabidopsis_thaliana --fai /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa.fai --pNum 2 --sampleName C_24_3 --outDir /project/home/zyy126com/ddcc/BamQc/ReadsDensity/C_24_3
+job_end
+
+job_begin
+	name reads_density_C_36_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=8g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/chromo_depth.py --bam /project/home/zyy126com/ddcc/Align/C_36_1/C_36_1_sorted_addGroups.bam --species /database/Reference/arabidopsis_thaliana --fai /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa.fai --pNum 2 --sampleName C_36_1 --outDir /project/home/zyy126com/ddcc/BamQc/ReadsDensity/C_36_1
+job_end
+
+job_begin
+	name reads_density_C_36_3
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=8g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/chromo_depth.py --bam /project/home/zyy126com/ddcc/Align/C_36_3/C_36_3_sorted_addGroups.bam --species /database/Reference/arabidopsis_thaliana --fai /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa.fai --pNum 2 --sampleName C_36_3 --outDir /project/home/zyy126com/ddcc/BamQc/ReadsDensity/C_36_3
+job_end
+
+job_begin
+	name reads_density_d_24_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=8g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/chromo_depth.py --bam /project/home/zyy126com/ddcc/Align/d_24_1/d_24_1_sorted_addGroups.bam --species /database/Reference/arabidopsis_thaliana --fai /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa.fai --pNum 2 --sampleName d_24_1 --outDir /project/home/zyy126com/ddcc/BamQc/ReadsDensity/d_24_1
+job_end
+
+job_begin
+	name reads_density_d_24_3
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=8g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/chromo_depth.py --bam /project/home/zyy126com/ddcc/Align/d_24_3/d_24_3_sorted_addGroups.bam --species /database/Reference/arabidopsis_thaliana --fai /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa.fai --pNum 2 --sampleName d_24_3 --outDir /project/home/zyy126com/ddcc/BamQc/ReadsDensity/d_24_3
+job_end
+
+job_begin
+	name reads_density_d_36_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=8g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/chromo_depth.py --bam /project/home/zyy126com/ddcc/Align/d_36_1/d_36_1_sorted_addGroups.bam --species /database/Reference/arabidopsis_thaliana --fai /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa.fai --pNum 2 --sampleName d_36_1 --outDir /project/home/zyy126com/ddcc/BamQc/ReadsDensity/d_36_1
+job_end
+
+job_begin
+	name reads_density_d_36_3
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=8g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/chromo_depth.py --bam /project/home/zyy126com/ddcc/Align/d_36_3/d_36_3_sorted_addGroups.bam --species /database/Reference/arabidopsis_thaliana --fai /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa.fai --pNum 2 --sampleName d_36_3 --outDir /project/home/zyy126com/ddcc/BamQc/ReadsDensity/d_36_3
+job_end
+
+job_begin
+	name bamQcReport
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/bamQcReport.py --samples C_24_1,C_24_3,C_36_1,C_36_3,d_24_1,d_24_3,d_36_1,d_36_3 --projectDir /project/home/zyy126com/ddcc --config /project/home/zyy126com/ddcc/config.json
+job_end
+
+order adap_rm_d_36_3 after rRNA_rm_d_36_3
+order adap_rm_d_36_1 after rRNA_rm_d_36_1
+order adap_rm_C_36_3 after rRNA_rm_C_36_3
+order adap_rm_C_36_1 after rRNA_rm_C_36_1
+order adap_rm_C_24_3 after rRNA_rm_C_24_3
+order adap_rm_C_24_1 after rRNA_rm_C_24_1
+order adap_rm_d_24_3 after rRNA_rm_d_24_3
+order adap_rm_d_24_1 after rRNA_rm_d_24_1
+order tmkQC_d_36_3 after adap_rm_d_36_3
+order tmkQC_d_36_1 after adap_rm_d_36_1
+order tmkQC_C_36_3 after adap_rm_C_36_3
+order tmkQC_C_36_1 after adap_rm_C_36_1
+order tmkQC_C_24_3 after adap_rm_C_24_3
+order tmkQC_C_24_1 after adap_rm_C_24_1
+order tmkQC_d_24_3 after adap_rm_d_24_3
+order tmkQC_d_24_1 after adap_rm_d_24_1
+order FastQC_d_36_3 after tmkQC_d_36_3
+order FastQC_d_36_1 after tmkQC_d_36_1
+order FastQC_C_36_3 after tmkQC_C_36_3
+order FastQC_C_36_1 after tmkQC_C_36_1
+order FastQC_C_24_3 after tmkQC_C_24_3
+order FastQC_C_24_1 after tmkQC_C_24_1
+order FastQC_d_24_3 after tmkQC_d_24_3
+order FastQC_d_24_1 after tmkQC_d_24_1
+order qcReport after FastQC_d_36_3
+order qcReport after FastQC_d_36_1
+order qcReport after FastQC_C_36_3
+order qcReport after FastQC_C_36_1
+order qcReport after FastQC_C_24_3
+order qcReport after FastQC_C_24_1
+order qcReport after FastQC_d_24_3
+order qcReport after FastQC_d_24_1
+order align_d_36_3 after qcReport
+order align_d_36_1 after qcReport
+order align_C_36_3 after qcReport
+order align_C_36_1 after qcReport
+order align_C_24_3 after qcReport
+order align_C_24_1 after qcReport
+order align_d_24_3 after qcReport
+order align_d_24_1 after qcReport
+order bam_stat_d_36_3 after qcReport
+order bam_stat_d_36_1 after qcReport
+order bam_stat_C_36_3 after qcReport
+order bam_stat_C_36_1 after qcReport
+order bam_stat_C_24_3 after qcReport
+order bam_stat_C_24_1 after qcReport
+order bam_stat_d_24_3 after qcReport
+order bam_stat_d_24_1 after qcReport
+order bam_stat_d_36_3 after align_d_36_3
+order bam_stat_d_36_1 after align_d_36_1
+order bam_stat_C_36_3 after align_C_36_3
+order bam_stat_C_36_1 after align_C_36_1
+order bam_stat_C_24_3 after align_C_24_3
+order bam_stat_C_24_1 after align_C_24_1
+order bam_stat_d_24_3 after align_d_24_3
+order bam_stat_d_24_1 after align_d_24_1
+order alignReport after bam_stat_d_36_3
+order alignReport after bam_stat_d_36_1
+order alignReport after bam_stat_C_36_3
+order alignReport after bam_stat_C_36_1
+order alignReport after bam_stat_C_24_3
+order alignReport after bam_stat_C_24_1
+order alignReport after bam_stat_d_24_3
+order alignReport after bam_stat_d_24_1
+order assembl_d_36_3 after alignReport
+order assembl_d_36_1 after alignReport
+order assembl_C_36_3 after alignReport
+order assembl_C_36_1 after alignReport
+order assembl_C_24_3 after alignReport
+order assembl_C_24_1 after alignReport
+order assembl_d_24_3 after alignReport
+order assembl_d_24_1 after alignReport
+order stringtie_merge after alignReport
+order gffcompare_all after alignReport
+order novel after alignReport
+order novel_go after alignReport
+order gffcompare_d_36_3 after assembl_d_36_3
+order gffcompare_d_36_1 after assembl_d_36_1
+order gffcompare_C_36_3 after assembl_C_36_3
+order gffcompare_C_36_1 after assembl_C_36_1
+order gffcompare_C_24_3 after assembl_C_24_3
+order gffcompare_C_24_1 after assembl_C_24_1
+order gffcompare_d_24_3 after assembl_d_24_3
+order gffcompare_d_24_1 after assembl_d_24_1
+order stringtie_merge after assembl_d_36_3
+order stringtie_merge after assembl_d_36_1
+order stringtie_merge after assembl_C_36_3
+order stringtie_merge after assembl_C_36_1
+order stringtie_merge after assembl_C_24_3
+order stringtie_merge after assembl_C_24_1
+order stringtie_merge after assembl_d_24_3
+order stringtie_merge after assembl_d_24_1
+order gffcompare_all after stringtie_merge
+order novel after gffcompare_all
+order novel_go after novel
+order assemblReport after novel_go
+order htseq_count_C_24_1 after assemblReport
+order htseq_count_C_24_3 after assemblReport
+order htseq_count_C_36_1 after assemblReport
+order htseq_count_C_36_3 after assemblReport
+order htseq_count_d_24_1 after assemblReport
+order htseq_count_d_24_3 after assemblReport
+order htseq_count_d_36_1 after assemblReport
+order htseq_count_d_36_3 after assemblReport
+order count_stat after assemblReport
+order count_stat after htseq_count_C_24_1
+order count_stat after htseq_count_C_24_3
+order count_stat after htseq_count_C_36_1
+order count_stat after htseq_count_C_36_3
+order count_stat after htseq_count_d_24_1
+order count_stat after htseq_count_d_24_3
+order count_stat after htseq_count_d_36_1
+order count_stat after htseq_count_d_36_3
+order countReport after count_stat
+order diff_analysis_36c24 after countReport
+order diff_analysis_36d24 after countReport
+order diff_analysis_ddcc24c after countReport
+order diff_analysis_ddcc36c after countReport
+order extract_diff_seq_36c24 after countReport
+order extract_diff_seq_36d24 after countReport
+order extract_diff_seq_ddcc24c after countReport
+order extract_diff_seq_ddcc36c after countReport
+order cluster_36c24 after countReport
+order cluster_36d24 after countReport
+order cluster_ddcc24c after countReport
+order cluster_ddcc36c after countReport
+order extract_diff_seq_36c24 after diff_analysis_36c24
+order cluster_36c24 after diff_analysis_36c24
+order extract_diff_seq_36d24 after diff_analysis_36d24
+order cluster_36d24 after diff_analysis_36d24
+order extract_diff_seq_ddcc24c after diff_analysis_ddcc24c
+order cluster_ddcc24c after diff_analysis_ddcc24c
+order extract_diff_seq_ddcc36c after diff_analysis_ddcc36c
+order cluster_ddcc36c after diff_analysis_ddcc36c
+order diffReport after extract_diff_seq_36c24
+order diffReport after extract_diff_seq_36d24
+order diffReport after extract_diff_seq_ddcc24c
+order diffReport after extract_diff_seq_ddcc36c
+order diffReport after cluster_36c24
+order diffReport after cluster_36d24
+order diffReport after cluster_ddcc24c
+order diffReport after cluster_ddcc36c
+order ppi_all_36c24 after diffReport
+order ppi_all_36d24 after diffReport
+order ppi_all_ddcc24c after diffReport
+order ppi_all_ddcc36c after diffReport
+order ppi_up_36c24 after diffReport
+order ppi_down_36c24 after diffReport
+order ppi_up_36d24 after diffReport
+order ppi_down_36d24 after diffReport
+order ppi_up_ddcc24c after diffReport
+order ppi_down_ddcc24c after diffReport
+order ppi_up_ddcc36c after diffReport
+order ppi_down_ddcc36c after diffReport
+order ppi_up_36c24 after ppi_all_36c24
+order ppi_down_36c24 after ppi_all_36c24
+order ppi_up_36d24 after ppi_all_36d24
+order ppi_down_36d24 after ppi_all_36d24
+order ppi_up_ddcc24c after ppi_all_ddcc24c
+order ppi_down_ddcc24c after ppi_all_ddcc24c
+order ppi_up_ddcc36c after ppi_all_ddcc36c
+order ppi_down_ddcc36c after ppi_all_ddcc36c
+order ppiReport after ppi_up_36c24
+order ppiReport after ppi_down_36c24
+order ppiReport after ppi_up_36d24
+order ppiReport after ppi_down_36d24
+order ppiReport after ppi_up_ddcc24c
+order ppiReport after ppi_down_ddcc24c
+order ppiReport after ppi_up_ddcc36c
+order ppiReport after ppi_down_ddcc36c
+order go_pre after diffReport
+order go_all_36c24 after diffReport
+order go_all_36d24 after diffReport
+order go_all_ddcc24c after diffReport
+order go_all_ddcc36c after diffReport
+order go_up_36c24 after diffReport
+order go_down_36c24 after diffReport
+order go_up_36d24 after diffReport
+order go_down_36d24 after diffReport
+order go_up_ddcc24c after diffReport
+order go_down_ddcc24c after diffReport
+order go_up_ddcc36c after diffReport
+order go_down_ddcc36c after diffReport
+order goPlot_36c24 after diffReport
+order goPlot_36d24 after diffReport
+order goPlot_ddcc24c after diffReport
+order goPlot_ddcc36c after diffReport
+order go_all_36c24 after go_pre
+order goPlot_36c24 after go_all_36c24
+order go_up_36c24 after go_pre
+order go_down_36c24 after go_pre
+order go_all_36d24 after go_pre
+order goPlot_36d24 after go_all_36d24
+order go_up_36d24 after go_pre
+order go_down_36d24 after go_pre
+order go_all_ddcc24c after go_pre
+order goPlot_ddcc24c after go_all_ddcc24c
+order go_up_ddcc24c after go_pre
+order go_down_ddcc24c after go_pre
+order go_all_ddcc36c after go_pre
+order goPlot_ddcc36c after go_all_ddcc36c
+order go_up_ddcc36c after go_pre
+order go_down_ddcc36c after go_pre
+order goReport after go_all_36c24
+order goReport after go_up_36c24
+order goReport after go_down_36c24
+order goReport after go_all_36d24
+order goReport after go_up_36d24
+order goReport after go_down_36d24
+order goReport after go_all_ddcc24c
+order goReport after go_up_ddcc24c
+order goReport after go_down_ddcc24c
+order goReport after go_all_ddcc36c
+order goReport after go_up_ddcc36c
+order goReport after go_down_ddcc36c
+order goReport after goPlot_36c24
+order goReport after goPlot_36d24
+order goReport after goPlot_ddcc24c
+order goReport after goPlot_ddcc36c
+order kegg_all_36c24 after diffReport
+order kegg_up_36c24 after diffReport
+order kegg_down_36c24 after diffReport
+order kegg_all_36d24 after diffReport
+order kegg_up_36d24 after diffReport
+order kegg_down_36d24 after diffReport
+order kegg_all_ddcc24c after diffReport
+order kegg_up_ddcc24c after diffReport
+order kegg_down_ddcc24c after diffReport
+order kegg_all_ddcc36c after diffReport
+order kegg_up_ddcc36c after diffReport
+order kegg_down_ddcc36c after diffReport
+order kegg_all_html_36c24 after diffReport
+order kegg_up_html_36c24 after diffReport
+order kegg_down_html_36c24 after diffReport
+order kegg_all_html_36d24 after diffReport
+order kegg_up_html_36d24 after diffReport
+order kegg_down_html_36d24 after diffReport
+order kegg_all_html_ddcc24c after diffReport
+order kegg_up_html_ddcc24c after diffReport
+order kegg_down_html_ddcc24c after diffReport
+order kegg_all_html_ddcc36c after diffReport
+order kegg_up_html_ddcc36c after diffReport
+order kegg_down_html_ddcc36c after diffReport
+order kegg_all_html_36c24 after kegg_all_36c24
+order kegg_up_36c24 after kegg_all_36c24
+order kegg_up_html_36c24 after kegg_up_36c24
+order kegg_down_36c24 after kegg_all_36c24
+order kegg_down_html_36c24 after kegg_down_36c24
+order kegg_all_html_36d24 after kegg_all_36d24
+order kegg_up_36d24 after kegg_all_36d24
+order kegg_up_html_36d24 after kegg_up_36d24
+order kegg_down_36d24 after kegg_all_36d24
+order kegg_down_html_36d24 after kegg_down_36d24
+order kegg_all_html_ddcc24c after kegg_all_ddcc24c
+order kegg_up_ddcc24c after kegg_all_ddcc24c
+order kegg_up_html_ddcc24c after kegg_up_ddcc24c
+order kegg_down_ddcc24c after kegg_all_ddcc24c
+order kegg_down_html_ddcc24c after kegg_down_ddcc24c
+order kegg_all_html_ddcc36c after kegg_all_ddcc36c
+order kegg_up_ddcc36c after kegg_all_ddcc36c
+order kegg_up_html_ddcc36c after kegg_up_ddcc36c
+order kegg_down_ddcc36c after kegg_all_ddcc36c
+order kegg_down_html_ddcc36c after kegg_down_ddcc36c
+order keggReport after kegg_all_html_36c24
+order keggReport after kegg_up_html_36c24
+order keggReport after kegg_down_html_36c24
+order keggReport after kegg_all_html_36d24
+order keggReport after kegg_up_html_36d24
+order keggReport after kegg_down_html_36d24
+order keggReport after kegg_all_html_ddcc24c
+order keggReport after kegg_up_html_ddcc24c
+order keggReport after kegg_down_html_ddcc24c
+order keggReport after kegg_all_html_ddcc36c
+order keggReport after kegg_up_html_ddcc36c
+order keggReport after kegg_down_html_ddcc36c
+order as_pre after assemblReport
+order as_C_24_1 after assemblReport
+order as_C_24_3 after assemblReport
+order as_C_36_1 after assemblReport
+order as_C_36_3 after assemblReport
+order as_d_24_1 after assemblReport
+order as_d_24_3 after assemblReport
+order as_d_36_1 after assemblReport
+order as_d_36_3 after assemblReport
+order as_sum after assemblReport
+order as_C_24_1 after as_pre
+order as_C_24_3 after as_pre
+order as_C_36_1 after as_pre
+order as_C_36_3 after as_pre
+order as_d_24_1 after as_pre
+order as_d_24_3 after as_pre
+order as_d_36_1 after as_pre
+order as_d_36_3 after as_pre
+order as_sum after as_C_24_1
+order as_sum after as_C_24_3
+order as_sum after as_C_36_1
+order as_sum after as_C_36_3
+order as_sum after as_d_24_1
+order as_sum after as_d_24_3
+order as_sum after as_d_36_1
+order as_sum after as_d_36_3
+order asReport after as_sum
+order prepare_bam_C_24_1 after alignReport
+order prepare_bam_C_24_3 after alignReport
+order prepare_bam_C_36_1 after alignReport
+order prepare_bam_C_36_3 after alignReport
+order prepare_bam_d_24_1 after alignReport
+order prepare_bam_d_24_3 after alignReport
+order prepare_bam_d_36_1 after alignReport
+order prepare_bam_d_36_3 after alignReport
+order HaplotypeCaller_1 after alignReport
+order HaplotypeCaller_2 after alignReport
+order HaplotypeCaller_3 after alignReport
+order HaplotypeCaller_4 after alignReport
+order HaplotypeCaller_5 after alignReport
+order HaplotypeCaller_6 after alignReport
+order merge_SNP after alignReport
+order merge_InDel after alignReport
+order split_SNP after alignReport
+order split_InDel after alignReport
+order annot_SNP_C_24_1 after alignReport
+order annot_SNP_C_24_3 after alignReport
+order annot_SNP_C_36_1 after alignReport
+order annot_SNP_C_36_3 after alignReport
+order annot_SNP_d_24_1 after alignReport
+order annot_SNP_d_24_3 after alignReport
+order annot_SNP_d_36_1 after alignReport
+order annot_SNP_d_36_3 after alignReport
+order annot_InDel_C_24_1 after alignReport
+order annot_InDel_C_24_3 after alignReport
+order annot_InDel_C_36_1 after alignReport
+order annot_InDel_C_36_3 after alignReport
+order annot_InDel_d_24_1 after alignReport
+order annot_InDel_d_24_3 after alignReport
+order annot_InDel_d_36_1 after alignReport
+order annot_InDel_d_36_3 after alignReport
+order HaplotypeCaller_1 after prepare_bam_C_24_1
+order HaplotypeCaller_1 after prepare_bam_C_24_3
+order HaplotypeCaller_1 after prepare_bam_C_36_1
+order HaplotypeCaller_1 after prepare_bam_C_36_3
+order HaplotypeCaller_1 after prepare_bam_d_24_1
+order HaplotypeCaller_1 after prepare_bam_d_24_3
+order HaplotypeCaller_1 after prepare_bam_d_36_1
+order HaplotypeCaller_1 after prepare_bam_d_36_3
+order HaplotypeCaller_2 after prepare_bam_C_24_1
+order HaplotypeCaller_2 after prepare_bam_C_24_3
+order HaplotypeCaller_2 after prepare_bam_C_36_1
+order HaplotypeCaller_2 after prepare_bam_C_36_3
+order HaplotypeCaller_2 after prepare_bam_d_24_1
+order HaplotypeCaller_2 after prepare_bam_d_24_3
+order HaplotypeCaller_2 after prepare_bam_d_36_1
+order HaplotypeCaller_2 after prepare_bam_d_36_3
+order HaplotypeCaller_3 after prepare_bam_C_24_1
+order HaplotypeCaller_3 after prepare_bam_C_24_3
+order HaplotypeCaller_3 after prepare_bam_C_36_1
+order HaplotypeCaller_3 after prepare_bam_C_36_3
+order HaplotypeCaller_3 after prepare_bam_d_24_1
+order HaplotypeCaller_3 after prepare_bam_d_24_3
+order HaplotypeCaller_3 after prepare_bam_d_36_1
+order HaplotypeCaller_3 after prepare_bam_d_36_3
+order HaplotypeCaller_4 after prepare_bam_C_24_1
+order HaplotypeCaller_4 after prepare_bam_C_24_3
+order HaplotypeCaller_4 after prepare_bam_C_36_1
+order HaplotypeCaller_4 after prepare_bam_C_36_3
+order HaplotypeCaller_4 after prepare_bam_d_24_1
+order HaplotypeCaller_4 after prepare_bam_d_24_3
+order HaplotypeCaller_4 after prepare_bam_d_36_1
+order HaplotypeCaller_4 after prepare_bam_d_36_3
+order HaplotypeCaller_5 after prepare_bam_C_24_1
+order HaplotypeCaller_5 after prepare_bam_C_24_3
+order HaplotypeCaller_5 after prepare_bam_C_36_1
+order HaplotypeCaller_5 after prepare_bam_C_36_3
+order HaplotypeCaller_5 after prepare_bam_d_24_1
+order HaplotypeCaller_5 after prepare_bam_d_24_3
+order HaplotypeCaller_5 after prepare_bam_d_36_1
+order HaplotypeCaller_5 after prepare_bam_d_36_3
+order HaplotypeCaller_6 after prepare_bam_C_24_1
+order HaplotypeCaller_6 after prepare_bam_C_24_3
+order HaplotypeCaller_6 after prepare_bam_C_36_1
+order HaplotypeCaller_6 after prepare_bam_C_36_3
+order HaplotypeCaller_6 after prepare_bam_d_24_1
+order HaplotypeCaller_6 after prepare_bam_d_24_3
+order HaplotypeCaller_6 after prepare_bam_d_36_1
+order HaplotypeCaller_6 after prepare_bam_d_36_3
+order merge_SNP after HaplotypeCaller_1
+order merge_SNP after HaplotypeCaller_2
+order merge_SNP after HaplotypeCaller_3
+order merge_SNP after HaplotypeCaller_4
+order merge_SNP after HaplotypeCaller_5
+order merge_SNP after HaplotypeCaller_6
+order merge_InDel after HaplotypeCaller_1
+order merge_InDel after HaplotypeCaller_2
+order merge_InDel after HaplotypeCaller_3
+order merge_InDel after HaplotypeCaller_4
+order merge_InDel after HaplotypeCaller_5
+order merge_InDel after HaplotypeCaller_6
+order split_SNP after merge_SNP
+order split_InDel after merge_InDel
+order annot_SNP_C_24_1 after split_SNP
+order annot_SNP_C_24_3 after split_SNP
+order annot_SNP_C_36_1 after split_SNP
+order annot_SNP_C_36_3 after split_SNP
+order annot_SNP_d_24_1 after split_SNP
+order annot_SNP_d_24_3 after split_SNP
+order annot_SNP_d_36_1 after split_SNP
+order annot_SNP_d_36_3 after split_SNP
+order annot_InDel_C_24_1 after split_InDel
+order annot_InDel_C_24_3 after split_InDel
+order annot_InDel_C_36_1 after split_InDel
+order annot_InDel_C_36_3 after split_InDel
+order annot_InDel_d_24_1 after split_InDel
+order annot_InDel_d_24_3 after split_InDel
+order annot_InDel_d_36_1 after split_InDel
+order annot_InDel_d_36_3 after split_InDel
+order variationReport after annot_SNP_C_24_1
+order variationReport after annot_SNP_C_24_3
+order variationReport after annot_SNP_C_36_1
+order variationReport after annot_SNP_C_36_3
+order variationReport after annot_SNP_d_24_1
+order variationReport after annot_SNP_d_24_3
+order variationReport after annot_SNP_d_36_1
+order variationReport after annot_SNP_d_36_3
+order variationReport after annot_InDel_C_24_1
+order variationReport after annot_InDel_C_24_3
+order variationReport after annot_InDel_C_36_1
+order variationReport after annot_InDel_C_36_3
+order variationReport after annot_InDel_d_24_1
+order variationReport after annot_InDel_d_24_3
+order variationReport after annot_InDel_d_36_1
+order variationReport after annot_InDel_d_36_3
+order prepare_gtf after alignReport
+order mapping_region_C_24_1 after alignReport
+order mapping_region_C_24_3 after alignReport
+order mapping_region_C_36_1 after alignReport
+order mapping_region_C_36_3 after alignReport
+order mapping_region_d_24_1 after alignReport
+order mapping_region_d_24_3 after alignReport
+order mapping_region_d_36_1 after alignReport
+order mapping_region_d_36_3 after alignReport
+order saturation_C_24_1 after alignReport
+order saturation_C_24_3 after alignReport
+order saturation_C_36_1 after alignReport
+order saturation_C_36_3 after alignReport
+order saturation_d_24_1 after alignReport
+order saturation_d_24_3 after alignReport
+order saturation_d_36_1 after alignReport
+order saturation_d_36_3 after alignReport
+order reads_density_C_24_1 after alignReport
+order reads_density_C_24_3 after alignReport
+order reads_density_C_36_1 after alignReport
+order reads_density_C_36_3 after alignReport
+order reads_density_d_24_1 after alignReport
+order reads_density_d_24_3 after alignReport
+order reads_density_d_36_1 after alignReport
+order reads_density_d_36_3 after alignReport
+order mapping_region_C_24_1 after prepare_gtf
+order mapping_region_C_24_3 after prepare_gtf
+order mapping_region_C_36_1 after prepare_gtf
+order mapping_region_C_36_3 after prepare_gtf
+order mapping_region_d_24_1 after prepare_gtf
+order mapping_region_d_24_3 after prepare_gtf
+order mapping_region_d_36_1 after prepare_gtf
+order mapping_region_d_36_3 after prepare_gtf
+order saturation_C_24_1 after prepare_gtf
+order saturation_C_24_3 after prepare_gtf
+order saturation_C_36_1 after prepare_gtf
+order saturation_C_36_3 after prepare_gtf
+order saturation_d_24_1 after prepare_gtf
+order saturation_d_24_3 after prepare_gtf
+order saturation_d_36_1 after prepare_gtf
+order saturation_d_36_3 after prepare_gtf
+order bamQcReport after mapping_region_C_24_1
+order bamQcReport after mapping_region_C_24_3
+order bamQcReport after mapping_region_C_36_1
+order bamQcReport after mapping_region_C_36_3
+order bamQcReport after mapping_region_d_24_1
+order bamQcReport after mapping_region_d_24_3
+order bamQcReport after mapping_region_d_36_1
+order bamQcReport after mapping_region_d_36_3
+order bamQcReport after saturation_C_24_1
+order bamQcReport after saturation_C_24_3
+order bamQcReport after saturation_C_36_1
+order bamQcReport after saturation_C_36_3
+order bamQcReport after saturation_d_24_1
+order bamQcReport after saturation_d_24_3
+order bamQcReport after saturation_d_36_1
+order bamQcReport after saturation_d_36_3
+order bamQcReport after reads_density_C_24_1
+order bamQcReport after reads_density_C_24_3
+order bamQcReport after reads_density_C_36_1
+order bamQcReport after reads_density_C_36_3
+order bamQcReport after reads_density_d_24_1
+order bamQcReport after reads_density_d_24_3
+order bamQcReport after reads_density_d_36_1
+order bamQcReport after reads_density_d_36_3
+
