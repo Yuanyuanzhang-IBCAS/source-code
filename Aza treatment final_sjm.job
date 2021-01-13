@@ -1,0 +1,2041 @@
+log_dir /project/home/zyy126com/raw_data/Log
+job_begin
+	name rRNA_rm_AZT1_2
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=9g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/rRNA_QC.py --fq1 /project/home/zyy126com/raw_data/AZT1_2_1.fq.gz --name AZT1_2 --r1 1 --pNum 3 --tool hisat2 --outDir /project/home/zyy126com/raw_data/Qc/rRNA/AZT1_2 --fq2 /project/home/zyy126com/raw_data/AZT1_2_2.fq.gz
+job_end
+
+job_begin
+	name rRNA_rm_AZT1_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=9g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/rRNA_QC.py --fq1 /project/home/zyy126com/raw_data/AZT1_1_1.fq.gz --name AZT1_1 --r1 1 --pNum 3 --tool hisat2 --outDir /project/home/zyy126com/raw_data/Qc/rRNA/AZT1_1 --fq2 /project/home/zyy126com/raw_data/AZT1_1_2.fq.gz
+job_end
+
+job_begin
+	name rRNA_rm_MZT1_2
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=9g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/rRNA_QC.py --fq1 /project/home/zyy126com/raw_data/MZT1_2_1.fq.gz --name MZT1_2 --r1 1 --pNum 3 --tool hisat2 --outDir /project/home/zyy126com/raw_data/Qc/rRNA/MZT1_2 --fq2 /project/home/zyy126com/raw_data/MZT1_2_2.fq.gz
+job_end
+
+job_begin
+	name rRNA_rm_MZT1_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=9g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/rRNA_QC.py --fq1 /project/home/zyy126com/raw_data/MZT1_1_1.fq.gz --name MZT1_1 --r1 1 --pNum 3 --tool hisat2 --outDir /project/home/zyy126com/raw_data/Qc/rRNA/MZT1_1 --fq2 /project/home/zyy126com/raw_data/MZT1_1_2.fq.gz
+job_end
+
+job_begin
+	name rRNA_rm_AZT13_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=9g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/rRNA_QC.py --fq1 /project/home/zyy126com/raw_data/AZT13_1_1.fq.gz --name AZT13_1 --r1 1 --pNum 3 --tool hisat2 --outDir /project/home/zyy126com/raw_data/Qc/rRNA/AZT13_1 --fq2 /project/home/zyy126com/raw_data/AZT13_1_2.fq.gz
+job_end
+
+job_begin
+	name rRNA_rm_AZT13_2
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=9g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/rRNA_QC.py --fq1 /project/home/zyy126com/raw_data/AZT13_2_1.fq.gz --name AZT13_2 --r1 1 --pNum 3 --tool hisat2 --outDir /project/home/zyy126com/raw_data/Qc/rRNA/AZT13_2 --fq2 /project/home/zyy126com/raw_data/AZT13_2_2.fq.gz
+job_end
+
+job_begin
+	name rRNA_rm_MZT13_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=9g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/rRNA_QC.py --fq1 /project/home/zyy126com/raw_data/MZT13_1_1.fq.gz --name MZT13_1 --r1 1 --pNum 3 --tool hisat2 --outDir /project/home/zyy126com/raw_data/Qc/rRNA/MZT13_1 --fq2 /project/home/zyy126com/raw_data/MZT13_1_2.fq.gz
+job_end
+
+job_begin
+	name rRNA_rm_MZT13_2
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=9g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/rRNA_QC.py --fq1 /project/home/zyy126com/raw_data/MZT13_2_1.fq.gz --name MZT13_2 --r1 1 --pNum 3 --tool hisat2 --outDir /project/home/zyy126com/raw_data/Qc/rRNA/MZT13_2 --fq2 /project/home/zyy126com/raw_data/MZT13_2_2.fq.gz
+job_end
+
+job_begin
+	name adap_rm_AZT1_2
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/adcut.py --fq1 /project/home/zyy126com/raw_data/Qc/rRNA/AZT1_2/AZT1_2_1.fq.gz --name AZT1_2 --ad7 AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --ad5 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT --overlap 6 --err 0.1 --outDir /project/home/zyy126com/raw_data/Qc/adapter/AZT1_2 --fq2 /project/home/zyy126com/raw_data/Qc/rRNA/AZT1_2/AZT1_2_2.fq.gz
+job_end
+
+job_begin
+	name adap_rm_AZT1_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/adcut.py --fq1 /project/home/zyy126com/raw_data/Qc/rRNA/AZT1_1/AZT1_1_1.fq.gz --name AZT1_1 --ad7 AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --ad5 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT --overlap 6 --err 0.1 --outDir /project/home/zyy126com/raw_data/Qc/adapter/AZT1_1 --fq2 /project/home/zyy126com/raw_data/Qc/rRNA/AZT1_1/AZT1_1_2.fq.gz
+job_end
+
+job_begin
+	name adap_rm_MZT1_2
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/adcut.py --fq1 /project/home/zyy126com/raw_data/Qc/rRNA/MZT1_2/MZT1_2_1.fq.gz --name MZT1_2 --ad7 AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --ad5 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT --overlap 6 --err 0.1 --outDir /project/home/zyy126com/raw_data/Qc/adapter/MZT1_2 --fq2 /project/home/zyy126com/raw_data/Qc/rRNA/MZT1_2/MZT1_2_2.fq.gz
+job_end
+
+job_begin
+	name adap_rm_MZT1_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/adcut.py --fq1 /project/home/zyy126com/raw_data/Qc/rRNA/MZT1_1/MZT1_1_1.fq.gz --name MZT1_1 --ad7 AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --ad5 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT --overlap 6 --err 0.1 --outDir /project/home/zyy126com/raw_data/Qc/adapter/MZT1_1 --fq2 /project/home/zyy126com/raw_data/Qc/rRNA/MZT1_1/MZT1_1_2.fq.gz
+job_end
+
+job_begin
+	name adap_rm_AZT13_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/adcut.py --fq1 /project/home/zyy126com/raw_data/Qc/rRNA/AZT13_1/AZT13_1_1.fq.gz --name AZT13_1 --ad7 AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --ad5 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT --overlap 6 --err 0.1 --outDir /project/home/zyy126com/raw_data/Qc/adapter/AZT13_1 --fq2 /project/home/zyy126com/raw_data/Qc/rRNA/AZT13_1/AZT13_1_2.fq.gz
+job_end
+
+job_begin
+	name adap_rm_AZT13_2
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/adcut.py --fq1 /project/home/zyy126com/raw_data/Qc/rRNA/AZT13_2/AZT13_2_1.fq.gz --name AZT13_2 --ad7 AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --ad5 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT --overlap 6 --err 0.1 --outDir /project/home/zyy126com/raw_data/Qc/adapter/AZT13_2 --fq2 /project/home/zyy126com/raw_data/Qc/rRNA/AZT13_2/AZT13_2_2.fq.gz
+job_end
+
+job_begin
+	name adap_rm_MZT13_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/adcut.py --fq1 /project/home/zyy126com/raw_data/Qc/rRNA/MZT13_1/MZT13_1_1.fq.gz --name MZT13_1 --ad7 AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --ad5 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT --overlap 6 --err 0.1 --outDir /project/home/zyy126com/raw_data/Qc/adapter/MZT13_1 --fq2 /project/home/zyy126com/raw_data/Qc/rRNA/MZT13_1/MZT13_1_2.fq.gz
+job_end
+
+job_begin
+	name adap_rm_MZT13_2
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/adcut.py --fq1 /project/home/zyy126com/raw_data/Qc/rRNA/MZT13_2/MZT13_2_1.fq.gz --name MZT13_2 --ad7 AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC --ad5 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT --overlap 6 --err 0.1 --outDir /project/home/zyy126com/raw_data/Qc/adapter/MZT13_2 --fq2 /project/home/zyy126com/raw_data/Qc/rRNA/MZT13_2/MZT13_2_2.fq.gz
+job_end
+
+job_begin
+	name tmkQC_AZT1_2
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/tmkQC.py --fq1 /project/home/zyy126com/raw_data/Qc/adapter/AZT1_2/AZT1_2_adap_rm_1.fq.gz --name AZT1_2 --lowQ 20 --lowP 0.1 --NP 0.15 --ncpu 2 --outDir /project/home/zyy126com/raw_data/Qc/tmkQC/AZT1_2 --fq2 /project/home/zyy126com/raw_data/Qc/adapter/AZT1_2/AZT1_2_adap_rm_2.fq.gz
+job_end
+
+job_begin
+	name tmkQC_AZT1_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/tmkQC.py --fq1 /project/home/zyy126com/raw_data/Qc/adapter/AZT1_1/AZT1_1_adap_rm_1.fq.gz --name AZT1_1 --lowQ 20 --lowP 0.1 --NP 0.15 --ncpu 2 --outDir /project/home/zyy126com/raw_data/Qc/tmkQC/AZT1_1 --fq2 /project/home/zyy126com/raw_data/Qc/adapter/AZT1_1/AZT1_1_adap_rm_2.fq.gz
+job_end
+
+job_begin
+	name tmkQC_MZT1_2
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/tmkQC.py --fq1 /project/home/zyy126com/raw_data/Qc/adapter/MZT1_2/MZT1_2_adap_rm_1.fq.gz --name MZT1_2 --lowQ 20 --lowP 0.1 --NP 0.15 --ncpu 2 --outDir /project/home/zyy126com/raw_data/Qc/tmkQC/MZT1_2 --fq2 /project/home/zyy126com/raw_data/Qc/adapter/MZT1_2/MZT1_2_adap_rm_2.fq.gz
+job_end
+
+job_begin
+	name tmkQC_MZT1_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/tmkQC.py --fq1 /project/home/zyy126com/raw_data/Qc/adapter/MZT1_1/MZT1_1_adap_rm_1.fq.gz --name MZT1_1 --lowQ 20 --lowP 0.1 --NP 0.15 --ncpu 2 --outDir /project/home/zyy126com/raw_data/Qc/tmkQC/MZT1_1 --fq2 /project/home/zyy126com/raw_data/Qc/adapter/MZT1_1/MZT1_1_adap_rm_2.fq.gz
+job_end
+
+job_begin
+	name tmkQC_AZT13_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/tmkQC.py --fq1 /project/home/zyy126com/raw_data/Qc/adapter/AZT13_1/AZT13_1_adap_rm_1.fq.gz --name AZT13_1 --lowQ 20 --lowP 0.1 --NP 0.15 --ncpu 2 --outDir /project/home/zyy126com/raw_data/Qc/tmkQC/AZT13_1 --fq2 /project/home/zyy126com/raw_data/Qc/adapter/AZT13_1/AZT13_1_adap_rm_2.fq.gz
+job_end
+
+job_begin
+	name tmkQC_AZT13_2
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/tmkQC.py --fq1 /project/home/zyy126com/raw_data/Qc/adapter/AZT13_2/AZT13_2_adap_rm_1.fq.gz --name AZT13_2 --lowQ 20 --lowP 0.1 --NP 0.15 --ncpu 2 --outDir /project/home/zyy126com/raw_data/Qc/tmkQC/AZT13_2 --fq2 /project/home/zyy126com/raw_data/Qc/adapter/AZT13_2/AZT13_2_adap_rm_2.fq.gz
+job_end
+
+job_begin
+	name tmkQC_MZT13_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/tmkQC.py --fq1 /project/home/zyy126com/raw_data/Qc/adapter/MZT13_1/MZT13_1_adap_rm_1.fq.gz --name MZT13_1 --lowQ 20 --lowP 0.1 --NP 0.15 --ncpu 2 --outDir /project/home/zyy126com/raw_data/Qc/tmkQC/MZT13_1 --fq2 /project/home/zyy126com/raw_data/Qc/adapter/MZT13_1/MZT13_1_adap_rm_2.fq.gz
+job_end
+
+job_begin
+	name tmkQC_MZT13_2
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/scripts/tmkQC.py --fq1 /project/home/zyy126com/raw_data/Qc/adapter/MZT13_2/MZT13_2_adap_rm_1.fq.gz --name MZT13_2 --lowQ 20 --lowP 0.1 --NP 0.15 --ncpu 2 --outDir /project/home/zyy126com/raw_data/Qc/tmkQC/MZT13_2 --fq2 /project/home/zyy126com/raw_data/Qc/adapter/MZT13_2/MZT13_2_adap_rm_2.fq.gz
+job_end
+
+job_begin
+	name FastQC_AZT1_2
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd mkdir -p /project/home/zyy126com/raw_data/Qc/FastQC/AZT1_2; perl /pipeline/refRNA_version2.0.1/software/FastQC/fastqc -t 2 -o /project/home/zyy126com/raw_data/Qc/FastQC/AZT1_2 /project/home/zyy126com/raw_data/Qc/tmkQC/AZT1_2/AZT1_2_1.clean.fq.gz /project/home/zyy126com/raw_data/Qc/tmkQC/AZT1_2/AZT1_2_2.clean.fq.gz
+job_end
+
+job_begin
+	name FastQC_AZT1_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd mkdir -p /project/home/zyy126com/raw_data/Qc/FastQC/AZT1_1; perl /pipeline/refRNA_version2.0.1/software/FastQC/fastqc -t 2 -o /project/home/zyy126com/raw_data/Qc/FastQC/AZT1_1 /project/home/zyy126com/raw_data/Qc/tmkQC/AZT1_1/AZT1_1_1.clean.fq.gz /project/home/zyy126com/raw_data/Qc/tmkQC/AZT1_1/AZT1_1_2.clean.fq.gz
+job_end
+
+job_begin
+	name FastQC_MZT1_2
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd mkdir -p /project/home/zyy126com/raw_data/Qc/FastQC/MZT1_2; perl /pipeline/refRNA_version2.0.1/software/FastQC/fastqc -t 2 -o /project/home/zyy126com/raw_data/Qc/FastQC/MZT1_2 /project/home/zyy126com/raw_data/Qc/tmkQC/MZT1_2/MZT1_2_1.clean.fq.gz /project/home/zyy126com/raw_data/Qc/tmkQC/MZT1_2/MZT1_2_2.clean.fq.gz
+job_end
+
+job_begin
+	name FastQC_MZT1_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd mkdir -p /project/home/zyy126com/raw_data/Qc/FastQC/MZT1_1; perl /pipeline/refRNA_version2.0.1/software/FastQC/fastqc -t 2 -o /project/home/zyy126com/raw_data/Qc/FastQC/MZT1_1 /project/home/zyy126com/raw_data/Qc/tmkQC/MZT1_1/MZT1_1_1.clean.fq.gz /project/home/zyy126com/raw_data/Qc/tmkQC/MZT1_1/MZT1_1_2.clean.fq.gz
+job_end
+
+job_begin
+	name FastQC_AZT13_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd mkdir -p /project/home/zyy126com/raw_data/Qc/FastQC/AZT13_1; perl /pipeline/refRNA_version2.0.1/software/FastQC/fastqc -t 2 -o /project/home/zyy126com/raw_data/Qc/FastQC/AZT13_1 /project/home/zyy126com/raw_data/Qc/tmkQC/AZT13_1/AZT13_1_1.clean.fq.gz /project/home/zyy126com/raw_data/Qc/tmkQC/AZT13_1/AZT13_1_2.clean.fq.gz
+job_end
+
+job_begin
+	name FastQC_AZT13_2
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd mkdir -p /project/home/zyy126com/raw_data/Qc/FastQC/AZT13_2; perl /pipeline/refRNA_version2.0.1/software/FastQC/fastqc -t 2 -o /project/home/zyy126com/raw_data/Qc/FastQC/AZT13_2 /project/home/zyy126com/raw_data/Qc/tmkQC/AZT13_2/AZT13_2_1.clean.fq.gz /project/home/zyy126com/raw_data/Qc/tmkQC/AZT13_2/AZT13_2_2.clean.fq.gz
+job_end
+
+job_begin
+	name FastQC_MZT13_1
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd mkdir -p /project/home/zyy126com/raw_data/Qc/FastQC/MZT13_1; perl /pipeline/refRNA_version2.0.1/software/FastQC/fastqc -t 2 -o /project/home/zyy126com/raw_data/Qc/FastQC/MZT13_1 /project/home/zyy126com/raw_data/Qc/tmkQC/MZT13_1/MZT13_1_1.clean.fq.gz /project/home/zyy126com/raw_data/Qc/tmkQC/MZT13_1/MZT13_1_2.clean.fq.gz
+job_end
+
+job_begin
+	name FastQC_MZT13_2
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=2
+	cmd mkdir -p /project/home/zyy126com/raw_data/Qc/FastQC/MZT13_2; perl /pipeline/refRNA_version2.0.1/software/FastQC/fastqc -t 2 -o /project/home/zyy126com/raw_data/Qc/FastQC/MZT13_2 /project/home/zyy126com/raw_data/Qc/tmkQC/MZT13_2/MZT13_2_1.clean.fq.gz /project/home/zyy126com/raw_data/Qc/tmkQC/MZT13_2/MZT13_2_2.clean.fq.gz
+job_end
+
+job_begin
+	name qcReport
+	anamod QC_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quality_control/qcReport.py --samples AZT1_2,AZT1_1,MZT1_2,MZT1_1,AZT13_1,AZT13_2,MZT13_1,MZT13_2 --projectDir /project/home/zyy126com/raw_data --config /project/home/zyy126com/raw_data/config.json
+job_end
+job_begin
+	name align_AZT1_2
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=6g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alignment/scripts/align_hisat2.py --index /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --ssLib NO --pNum 3 --name AZT1_2 --outdir /project/home/zyy126com/raw_data/Align/AZT1_2 --fq1 /project/home/zyy126com/raw_data/Qc/tmkQC/AZT1_2/AZT1_2_1.clean.fq.gz --fq2 /project/home/zyy126com/raw_data/Qc/tmkQC/AZT1_2/AZT1_2_2.clean.fq.gz --phred phred33
+job_end
+
+job_begin
+	name align_AZT1_1
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=6g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alignment/scripts/align_hisat2.py --index /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --ssLib NO --pNum 3 --name AZT1_1 --outdir /project/home/zyy126com/raw_data/Align/AZT1_1 --fq1 /project/home/zyy126com/raw_data/Qc/tmkQC/AZT1_1/AZT1_1_1.clean.fq.gz --fq2 /project/home/zyy126com/raw_data/Qc/tmkQC/AZT1_1/AZT1_1_2.clean.fq.gz --phred phred33
+job_end
+
+job_begin
+	name align_MZT1_2
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=6g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alignment/scripts/align_hisat2.py --index /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --ssLib NO --pNum 3 --name MZT1_2 --outdir /project/home/zyy126com/raw_data/Align/MZT1_2 --fq1 /project/home/zyy126com/raw_data/Qc/tmkQC/MZT1_2/MZT1_2_1.clean.fq.gz --fq2 /project/home/zyy126com/raw_data/Qc/tmkQC/MZT1_2/MZT1_2_2.clean.fq.gz --phred phred33
+job_end
+
+job_begin
+	name align_MZT1_1
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=6g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alignment/scripts/align_hisat2.py --index /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --ssLib NO --pNum 3 --name MZT1_1 --outdir /project/home/zyy126com/raw_data/Align/MZT1_1 --fq1 /project/home/zyy126com/raw_data/Qc/tmkQC/MZT1_1/MZT1_1_1.clean.fq.gz --fq2 /project/home/zyy126com/raw_data/Qc/tmkQC/MZT1_1/MZT1_1_2.clean.fq.gz --phred phred33
+job_end
+
+job_begin
+	name align_AZT13_1
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=6g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alignment/scripts/align_hisat2.py --index /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --ssLib NO --pNum 3 --name AZT13_1 --outdir /project/home/zyy126com/raw_data/Align/AZT13_1 --fq1 /project/home/zyy126com/raw_data/Qc/tmkQC/AZT13_1/AZT13_1_1.clean.fq.gz --fq2 /project/home/zyy126com/raw_data/Qc/tmkQC/AZT13_1/AZT13_1_2.clean.fq.gz --phred phred33
+job_end
+
+job_begin
+	name align_AZT13_2
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=6g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alignment/scripts/align_hisat2.py --index /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --ssLib NO --pNum 3 --name AZT13_2 --outdir /project/home/zyy126com/raw_data/Align/AZT13_2 --fq1 /project/home/zyy126com/raw_data/Qc/tmkQC/AZT13_2/AZT13_2_1.clean.fq.gz --fq2 /project/home/zyy126com/raw_data/Qc/tmkQC/AZT13_2/AZT13_2_2.clean.fq.gz --phred phred33
+job_end
+
+job_begin
+	name align_MZT13_1
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=6g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alignment/scripts/align_hisat2.py --index /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --ssLib NO --pNum 3 --name MZT13_1 --outdir /project/home/zyy126com/raw_data/Align/MZT13_1 --fq1 /project/home/zyy126com/raw_data/Qc/tmkQC/MZT13_1/MZT13_1_1.clean.fq.gz --fq2 /project/home/zyy126com/raw_data/Qc/tmkQC/MZT13_1/MZT13_1_2.clean.fq.gz --phred phred33
+job_end
+
+job_begin
+	name align_MZT13_2
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=6g,p=3
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alignment/scripts/align_hisat2.py --index /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --ssLib NO --pNum 3 --name MZT13_2 --outdir /project/home/zyy126com/raw_data/Align/MZT13_2 --fq1 /project/home/zyy126com/raw_data/Qc/tmkQC/MZT13_2/MZT13_2_1.clean.fq.gz --fq2 /project/home/zyy126com/raw_data/Qc/tmkQC/MZT13_2/MZT13_2_2.clean.fq.gz --phred phred33
+job_end
+
+job_begin
+	name bam_stat_AZT1_2
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd bam_stat.py -i /project/home/zyy126com/raw_data/Align/AZT1_2/AZT1_2_sorted_addGroups.bam -q 30 > /project/home/zyy126com/raw_data/Align/AZT1_2/AZT1_2_align.txt
+job_end
+
+job_begin
+	name bam_stat_AZT1_1
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd bam_stat.py -i /project/home/zyy126com/raw_data/Align/AZT1_1/AZT1_1_sorted_addGroups.bam -q 30 > /project/home/zyy126com/raw_data/Align/AZT1_1/AZT1_1_align.txt
+job_end
+
+job_begin
+	name bam_stat_MZT1_2
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd bam_stat.py -i /project/home/zyy126com/raw_data/Align/MZT1_2/MZT1_2_sorted_addGroups.bam -q 30 > /project/home/zyy126com/raw_data/Align/MZT1_2/MZT1_2_align.txt
+job_end
+
+job_begin
+	name bam_stat_MZT1_1
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd bam_stat.py -i /project/home/zyy126com/raw_data/Align/MZT1_1/MZT1_1_sorted_addGroups.bam -q 30 > /project/home/zyy126com/raw_data/Align/MZT1_1/MZT1_1_align.txt
+job_end
+
+job_begin
+	name bam_stat_AZT13_1
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd bam_stat.py -i /project/home/zyy126com/raw_data/Align/AZT13_1/AZT13_1_sorted_addGroups.bam -q 30 > /project/home/zyy126com/raw_data/Align/AZT13_1/AZT13_1_align.txt
+job_end
+
+job_begin
+	name bam_stat_AZT13_2
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd bam_stat.py -i /project/home/zyy126com/raw_data/Align/AZT13_2/AZT13_2_sorted_addGroups.bam -q 30 > /project/home/zyy126com/raw_data/Align/AZT13_2/AZT13_2_align.txt
+job_end
+
+job_begin
+	name bam_stat_MZT13_1
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd bam_stat.py -i /project/home/zyy126com/raw_data/Align/MZT13_1/MZT13_1_sorted_addGroups.bam -q 30 > /project/home/zyy126com/raw_data/Align/MZT13_1/MZT13_1_align.txt
+job_end
+
+job_begin
+	name bam_stat_MZT13_2
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd bam_stat.py -i /project/home/zyy126com/raw_data/Align/MZT13_2/MZT13_2_sorted_addGroups.bam -q 30 > /project/home/zyy126com/raw_data/Align/MZT13_2/MZT13_2_align.txt
+job_end
+
+job_begin
+	name alignReport
+	anamod Align_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alignment/alignReport.py --samples AZT1_2,AZT1_1,MZT1_2,MZT1_1,AZT13_1,AZT13_2,MZT13_1,MZT13_2 --projectDir /project/home/zyy126com/raw_data --config /project/home/zyy126com/raw_data/config.json
+job_end
+job_begin
+	name assembl_AZT1_2
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=5g,p=4
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/stringtie.py --gtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --bam /project/home/zyy126com/raw_data/Align/AZT1_2/AZT1_2_sorted_addGroups.bam --ssLib NO --pNum 4 --out /project/home/zyy126com/raw_data/Assembl/AZT1_2/AZT1_2.gtf
+job_end
+
+job_begin
+	name assembl_AZT1_1
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=5g,p=4
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/stringtie.py --gtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --bam /project/home/zyy126com/raw_data/Align/AZT1_1/AZT1_1_sorted_addGroups.bam --ssLib NO --pNum 4 --out /project/home/zyy126com/raw_data/Assembl/AZT1_1/AZT1_1.gtf
+job_end
+
+job_begin
+	name assembl_MZT1_2
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=5g,p=4
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/stringtie.py --gtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --bam /project/home/zyy126com/raw_data/Align/MZT1_2/MZT1_2_sorted_addGroups.bam --ssLib NO --pNum 4 --out /project/home/zyy126com/raw_data/Assembl/MZT1_2/MZT1_2.gtf
+job_end
+
+job_begin
+	name assembl_MZT1_1
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=5g,p=4
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/stringtie.py --gtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --bam /project/home/zyy126com/raw_data/Align/MZT1_1/MZT1_1_sorted_addGroups.bam --ssLib NO --pNum 4 --out /project/home/zyy126com/raw_data/Assembl/MZT1_1/MZT1_1.gtf
+job_end
+
+job_begin
+	name assembl_AZT13_1
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=5g,p=4
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/stringtie.py --gtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --bam /project/home/zyy126com/raw_data/Align/AZT13_1/AZT13_1_sorted_addGroups.bam --ssLib NO --pNum 4 --out /project/home/zyy126com/raw_data/Assembl/AZT13_1/AZT13_1.gtf
+job_end
+
+job_begin
+	name assembl_AZT13_2
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=5g,p=4
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/stringtie.py --gtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --bam /project/home/zyy126com/raw_data/Align/AZT13_2/AZT13_2_sorted_addGroups.bam --ssLib NO --pNum 4 --out /project/home/zyy126com/raw_data/Assembl/AZT13_2/AZT13_2.gtf
+job_end
+
+job_begin
+	name assembl_MZT13_1
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=5g,p=4
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/stringtie.py --gtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --bam /project/home/zyy126com/raw_data/Align/MZT13_1/MZT13_1_sorted_addGroups.bam --ssLib NO --pNum 4 --out /project/home/zyy126com/raw_data/Assembl/MZT13_1/MZT13_1.gtf
+job_end
+
+job_begin
+	name assembl_MZT13_2
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=5g,p=4
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/stringtie.py --gtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --bam /project/home/zyy126com/raw_data/Align/MZT13_2/MZT13_2_sorted_addGroups.bam --ssLib NO --pNum 4 --out /project/home/zyy126com/raw_data/Assembl/MZT13_2/MZT13_2.gtf
+job_end
+
+job_begin
+	name gffcompare_AZT1_2
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/gffcompare.py --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --gtf /project/home/zyy126com/raw_data/Assembl/AZT1_2/AZT1_2.gtf --name AZT1_2 --outdir /project/home/zyy126com/raw_data/Assembl/AZT1_2
+job_end
+
+job_begin
+	name gffcompare_AZT1_1
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/gffcompare.py --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --gtf /project/home/zyy126com/raw_data/Assembl/AZT1_1/AZT1_1.gtf --name AZT1_1 --outdir /project/home/zyy126com/raw_data/Assembl/AZT1_1
+job_end
+
+job_begin
+	name gffcompare_MZT1_2
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/gffcompare.py --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --gtf /project/home/zyy126com/raw_data/Assembl/MZT1_2/MZT1_2.gtf --name MZT1_2 --outdir /project/home/zyy126com/raw_data/Assembl/MZT1_2
+job_end
+
+job_begin
+	name gffcompare_MZT1_1
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/gffcompare.py --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --gtf /project/home/zyy126com/raw_data/Assembl/MZT1_1/MZT1_1.gtf --name MZT1_1 --outdir /project/home/zyy126com/raw_data/Assembl/MZT1_1
+job_end
+
+job_begin
+	name gffcompare_AZT13_1
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/gffcompare.py --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --gtf /project/home/zyy126com/raw_data/Assembl/AZT13_1/AZT13_1.gtf --name AZT13_1 --outdir /project/home/zyy126com/raw_data/Assembl/AZT13_1
+job_end
+
+job_begin
+	name gffcompare_AZT13_2
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/gffcompare.py --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --gtf /project/home/zyy126com/raw_data/Assembl/AZT13_2/AZT13_2.gtf --name AZT13_2 --outdir /project/home/zyy126com/raw_data/Assembl/AZT13_2
+job_end
+
+job_begin
+	name gffcompare_MZT13_1
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/gffcompare.py --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --gtf /project/home/zyy126com/raw_data/Assembl/MZT13_1/MZT13_1.gtf --name MZT13_1 --outdir /project/home/zyy126com/raw_data/Assembl/MZT13_1
+job_end
+
+job_begin
+	name gffcompare_MZT13_2
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/gffcompare.py --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --gtf /project/home/zyy126com/raw_data/Assembl/MZT13_2/MZT13_2.gtf --name MZT13_2 --outdir /project/home/zyy126com/raw_data/Assembl/MZT13_2
+job_end
+
+job_begin
+	name stringtie_merge
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/stringtie_merge.py --gtfs /project/home/zyy126com/raw_data/Assembl/AZT1_2/AZT1_2.gtf,/project/home/zyy126com/raw_data/Assembl/AZT1_1/AZT1_1.gtf,/project/home/zyy126com/raw_data/Assembl/MZT1_2/MZT1_2.gtf,/project/home/zyy126com/raw_data/Assembl/MZT1_1/MZT1_1.gtf,/project/home/zyy126com/raw_data/Assembl/AZT13_1/AZT13_1.gtf,/project/home/zyy126com/raw_data/Assembl/AZT13_2/AZT13_2.gtf,/project/home/zyy126com/raw_data/Assembl/MZT13_1/MZT13_1.gtf,/project/home/zyy126com/raw_data/Assembl/MZT13_2/MZT13_2.gtf --outGtf /project/home/zyy126com/raw_data/Assembl/Merge/merged.gtf
+job_end
+
+job_begin
+	name gffcompare_all
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/gffcompare.py --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --gtf /project/home/zyy126com/raw_data/Assembl/Merge/merged.gtf --name all_samples --outdir /project/home/zyy126com/raw_data/Assembl/Merge
+job_end
+
+job_begin
+	name novel
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/novel.py --gtf /project/home/zyy126com/raw_data/Assembl/Merge/all_samples.annotated.gtf --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --refFa /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --outdir /project/home/zyy126com/raw_data/Assembl/Novel
+job_end
+
+job_begin
+	name novel_go
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=2g,p=4
+	cmd /data1/pipeline/refRNA_version2.0.1/modules/assembl/scripts/Fa2go/fa2go.sh -f /project/home/zyy126com/raw_data/Assembl/Novel/novelGene.fa -n 4 -o /project/home/zyy126com/raw_data/Assembl/Novel/Go
+job_end
+
+job_begin
+	name assemblReport
+	anamod Assembl_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/assembl/assemblReport.py --projectDir /project/home/zyy126com/raw_data --config /project/home/zyy126com/raw_data/config.json
+job_end
+job_begin
+	name htseq_count_AZT13_1
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/scripts/htseq_count.py --bam /project/home/zyy126com/raw_data/Align/AZT13_1/AZT13_1_name_sorted.bam --gtf /project/home/zyy126com/raw_data/Assembl/Novel/novelRefCombined.gtf --ssLib NO --name AZT13_1 --outdir /project/home/zyy126com/raw_data/Quantification/Readcount_FPKM/AZT13_1
+job_end
+
+job_begin
+	name htseq_count_AZT13_2
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/scripts/htseq_count.py --bam /project/home/zyy126com/raw_data/Align/AZT13_2/AZT13_2_name_sorted.bam --gtf /project/home/zyy126com/raw_data/Assembl/Novel/novelRefCombined.gtf --ssLib NO --name AZT13_2 --outdir /project/home/zyy126com/raw_data/Quantification/Readcount_FPKM/AZT13_2
+job_end
+
+job_begin
+	name htseq_count_AZT1_1
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/scripts/htseq_count.py --bam /project/home/zyy126com/raw_data/Align/AZT1_1/AZT1_1_name_sorted.bam --gtf /project/home/zyy126com/raw_data/Assembl/Novel/novelRefCombined.gtf --ssLib NO --name AZT1_1 --outdir /project/home/zyy126com/raw_data/Quantification/Readcount_FPKM/AZT1_1
+job_end
+
+job_begin
+	name htseq_count_AZT1_2
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/scripts/htseq_count.py --bam /project/home/zyy126com/raw_data/Align/AZT1_2/AZT1_2_name_sorted.bam --gtf /project/home/zyy126com/raw_data/Assembl/Novel/novelRefCombined.gtf --ssLib NO --name AZT1_2 --outdir /project/home/zyy126com/raw_data/Quantification/Readcount_FPKM/AZT1_2
+job_end
+
+job_begin
+	name htseq_count_MZT13_1
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/scripts/htseq_count.py --bam /project/home/zyy126com/raw_data/Align/MZT13_1/MZT13_1_name_sorted.bam --gtf /project/home/zyy126com/raw_data/Assembl/Novel/novelRefCombined.gtf --ssLib NO --name MZT13_1 --outdir /project/home/zyy126com/raw_data/Quantification/Readcount_FPKM/MZT13_1
+job_end
+
+job_begin
+	name htseq_count_MZT13_2
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/scripts/htseq_count.py --bam /project/home/zyy126com/raw_data/Align/MZT13_2/MZT13_2_name_sorted.bam --gtf /project/home/zyy126com/raw_data/Assembl/Novel/novelRefCombined.gtf --ssLib NO --name MZT13_2 --outdir /project/home/zyy126com/raw_data/Quantification/Readcount_FPKM/MZT13_2
+job_end
+
+job_begin
+	name htseq_count_MZT1_1
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/scripts/htseq_count.py --bam /project/home/zyy126com/raw_data/Align/MZT1_1/MZT1_1_name_sorted.bam --gtf /project/home/zyy126com/raw_data/Assembl/Novel/novelRefCombined.gtf --ssLib NO --name MZT1_1 --outdir /project/home/zyy126com/raw_data/Quantification/Readcount_FPKM/MZT1_1
+job_end
+
+job_begin
+	name htseq_count_MZT1_2
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/scripts/htseq_count.py --bam /project/home/zyy126com/raw_data/Align/MZT1_2/MZT1_2_name_sorted.bam --gtf /project/home/zyy126com/raw_data/Assembl/Novel/novelRefCombined.gtf --ssLib NO --name MZT1_2 --outdir /project/home/zyy126com/raw_data/Quantification/Readcount_FPKM/MZT1_2
+job_end
+
+job_begin
+	name count_stat
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/scripts/stat_count.py --fpkms AZT13_1:/project/home/zyy126com/raw_data/Quantification/Readcount_FPKM/AZT13_1/AZT13_1_fpkm.xls,AZT13_2:/project/home/zyy126com/raw_data/Quantification/Readcount_FPKM/AZT13_2/AZT13_2_fpkm.xls,AZT1_1:/project/home/zyy126com/raw_data/Quantification/Readcount_FPKM/AZT1_1/AZT1_1_fpkm.xls,AZT1_2:/project/home/zyy126com/raw_data/Quantification/Readcount_FPKM/AZT1_2/AZT1_2_fpkm.xls,MZT13_1:/project/home/zyy126com/raw_data/Quantification/Readcount_FPKM/MZT13_1/MZT13_1_fpkm.xls,MZT13_2:/project/home/zyy126com/raw_data/Quantification/Readcount_FPKM/MZT13_2/MZT13_2_fpkm.xls,MZT1_1:/project/home/zyy126com/raw_data/Quantification/Readcount_FPKM/MZT1_1/MZT1_1_fpkm.xls,MZT1_2:/project/home/zyy126com/raw_data/Quantification/Readcount_FPKM/MZT1_2/MZT1_2_fpkm.xls --gtf /project/home/zyy126com/raw_data/Assembl/Novel/novelRefCombined.gtf --groups 'AZT1:AZT1_1,AZT1_2|AZT13:AZT13_1,AZT13_2|MZT1:MZT1_1,MZT1_2|MZT13:MZT13_1,MZT13_2' --samples AZT13_1,AZT13_2,AZT1_1,AZT1_2,MZT13_1,MZT13_2,MZT1_1,MZT1_2 --outDir /project/home/zyy126com/raw_data/Quantification/Stat
+job_end
+
+job_begin
+	name countReport
+	anamod Quantification_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/quantification/countReport.py --projectDir /project/home/zyy126com/raw_data --config /project/home/zyy126com/raw_data/config.json
+job_end
+job_begin
+	name diff_analysis_AZ13_Z1
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/diff.py --compares 'AZ13_Z1:AZT13,AZT1' --groups 'AZT13:AZT13_1,AZT13_2|AZT1:AZT1_1,AZT1_2' --input /project/home/zyy126com/raw_data/Quantification/Stat/readcount.xls --foldchange 2 --pType padj --pValue 0.05 --mod DESeq2 --outdir /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff --annot /database/Reference/arabidopsis_thaliana/geneName.txt
+job_end
+
+job_begin
+	name extract_diff_seq_AZ13_Z1
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/get_diff_seq.py --allseq /project/home/zyy126com/raw_data/Assembl/Novel/allseq.fa --geneID /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1.diffGeneID --outFile /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1_diff.fa
+job_end
+
+job_begin
+	name cluster_AZ13_Z1
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/cluster.py --id /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1.diffGeneID --fpkm /project/home/zyy126com/raw_data/Quantification/Stat/fpkm_mean.xls --outDir /project/home/zyy126com/raw_data/Diff/AZ13_Z1/cluster
+job_end
+
+job_begin
+	name diff_analysis_M13_M1
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/diff.py --compares 'M13_M1:MZT13,MZT1' --groups 'MZT13:MZT13_1,MZT13_2|MZT1:MZT1_1,MZT1_2' --input /project/home/zyy126com/raw_data/Quantification/Stat/readcount.xls --foldchange 2 --pType padj --pValue 0.05 --mod DESeq2 --outdir /project/home/zyy126com/raw_data/Diff/M13_M1/diff --annot /database/Reference/arabidopsis_thaliana/geneName.txt
+job_end
+
+job_begin
+	name extract_diff_seq_M13_M1
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/get_diff_seq.py --allseq /project/home/zyy126com/raw_data/Assembl/Novel/allseq.fa --geneID /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1.diffGeneID --outFile /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1_diff.fa
+job_end
+
+job_begin
+	name cluster_M13_M1
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/cluster.py --id /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1.diffGeneID --fpkm /project/home/zyy126com/raw_data/Quantification/Stat/fpkm_mean.xls --outDir /project/home/zyy126com/raw_data/Diff/M13_M1/cluster
+job_end
+
+job_begin
+	name diff_analysis_A1_M1
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/diff.py --compares 'A1_M1:AZT1,MZT1' --groups 'AZT1:AZT1_1,AZT1_2|MZT1:MZT1_1,MZT1_2' --input /project/home/zyy126com/raw_data/Quantification/Stat/readcount.xls --foldchange 2 --pType padj --pValue 0.05 --mod DESeq2 --outdir /project/home/zyy126com/raw_data/Diff/A1_M1/diff --annot /database/Reference/arabidopsis_thaliana/geneName.txt
+job_end
+
+job_begin
+	name extract_diff_seq_A1_M1
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/get_diff_seq.py --allseq /project/home/zyy126com/raw_data/Assembl/Novel/allseq.fa --geneID /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1.diffGeneID --outFile /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1_diff.fa
+job_end
+
+job_begin
+	name cluster_A1_M1
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/cluster.py --id /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1.diffGeneID --fpkm /project/home/zyy126com/raw_data/Quantification/Stat/fpkm_mean.xls --outDir /project/home/zyy126com/raw_data/Diff/A1_M1/cluster
+job_end
+
+job_begin
+	name diff_analysis_A13_M13
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/diff.py --compares 'A13_M13:AZT13,MZT13' --groups 'AZT13:AZT13_1,AZT13_2|MZT13:MZT13_1,MZT13_2' --input /project/home/zyy126com/raw_data/Quantification/Stat/readcount.xls --foldchange 2 --pType padj --pValue 0.05 --mod DESeq2 --outdir /project/home/zyy126com/raw_data/Diff/A13_M13/diff --annot /database/Reference/arabidopsis_thaliana/geneName.txt
+job_end
+
+job_begin
+	name extract_diff_seq_A13_M13
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/get_diff_seq.py --allseq /project/home/zyy126com/raw_data/Assembl/Novel/allseq.fa --geneID /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13.diffGeneID --outFile /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13_diff.fa
+job_end
+
+job_begin
+	name cluster_A13_M13
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/scripts/cluster.py --id /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13.diffGeneID --fpkm /project/home/zyy126com/raw_data/Quantification/Stat/fpkm_mean.xls --outDir /project/home/zyy126com/raw_data/Diff/A13_M13/cluster
+job_end
+
+job_begin
+	name diffReport
+	anamod Diff_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/diff/diffReport.py --compares A13_M13,A1_M1,AZ13_Z1,M13_M1 --projectDir /project/home/zyy126com/raw_data --config /project/home/zyy126com/raw_data/config.json
+job_end
+job_begin
+	name ppi_all_AZ13_Z1
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=5g,p=5
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_blast.py --ppi 3702 --seq /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1_diff.fa --score 700 --evalue 1e-10 --identity 60 --ncpu 5 --outDir /project/home/zyy126com/raw_data/PPI/AZ13_Z1 --name AZ13_Z1_all
+job_end
+
+job_begin
+	name ppi_up_AZ13_Z1
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_select.py --links /project/home/zyy126com/raw_data/PPI/AZ13_Z1/AZ13_Z1_all_ppi.txt --geneID /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1.upGeneID --outFile /project/home/zyy126com/raw_data/PPI/AZ13_Z1/AZ13_Z1_up_ppi.txt 
+job_end
+
+job_begin
+	name ppi_down_AZ13_Z1
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_select.py --links /project/home/zyy126com/raw_data/PPI/AZ13_Z1/AZ13_Z1_all_ppi.txt --geneID /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1.downGeneID --outFile /project/home/zyy126com/raw_data/PPI/AZ13_Z1/AZ13_Z1_down_ppi.txt 
+job_end
+
+job_begin
+	name ppi_all_M13_M1
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=5g,p=5
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_blast.py --ppi 3702 --seq /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1_diff.fa --score 700 --evalue 1e-10 --identity 60 --ncpu 5 --outDir /project/home/zyy126com/raw_data/PPI/M13_M1 --name M13_M1_all
+job_end
+
+job_begin
+	name ppi_up_M13_M1
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_select.py --links /project/home/zyy126com/raw_data/PPI/M13_M1/M13_M1_all_ppi.txt --geneID /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1.upGeneID --outFile /project/home/zyy126com/raw_data/PPI/M13_M1/M13_M1_up_ppi.txt 
+job_end
+
+job_begin
+	name ppi_down_M13_M1
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_select.py --links /project/home/zyy126com/raw_data/PPI/M13_M1/M13_M1_all_ppi.txt --geneID /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1.downGeneID --outFile /project/home/zyy126com/raw_data/PPI/M13_M1/M13_M1_down_ppi.txt 
+job_end
+
+job_begin
+	name ppi_all_A1_M1
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=5g,p=5
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_blast.py --ppi 3702 --seq /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1_diff.fa --score 700 --evalue 1e-10 --identity 60 --ncpu 5 --outDir /project/home/zyy126com/raw_data/PPI/A1_M1 --name A1_M1_all
+job_end
+
+job_begin
+	name ppi_up_A1_M1
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_select.py --links /project/home/zyy126com/raw_data/PPI/A1_M1/A1_M1_all_ppi.txt --geneID /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1.upGeneID --outFile /project/home/zyy126com/raw_data/PPI/A1_M1/A1_M1_up_ppi.txt 
+job_end
+
+job_begin
+	name ppi_down_A1_M1
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_select.py --links /project/home/zyy126com/raw_data/PPI/A1_M1/A1_M1_all_ppi.txt --geneID /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1.downGeneID --outFile /project/home/zyy126com/raw_data/PPI/A1_M1/A1_M1_down_ppi.txt 
+job_end
+
+job_begin
+	name ppi_all_A13_M13
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=5g,p=5
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_blast.py --ppi 3702 --seq /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13_diff.fa --score 700 --evalue 1e-10 --identity 60 --ncpu 5 --outDir /project/home/zyy126com/raw_data/PPI/A13_M13 --name A13_M13_all
+job_end
+
+job_begin
+	name ppi_up_A13_M13
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_select.py --links /project/home/zyy126com/raw_data/PPI/A13_M13/A13_M13_all_ppi.txt --geneID /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13.upGeneID --outFile /project/home/zyy126com/raw_data/PPI/A13_M13/A13_M13_up_ppi.txt 
+job_end
+
+job_begin
+	name ppi_down_A13_M13
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/scripts/ppi_select.py --links /project/home/zyy126com/raw_data/PPI/A13_M13/A13_M13_all_ppi.txt --geneID /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13.downGeneID --outFile /project/home/zyy126com/raw_data/PPI/A13_M13/A13_M13_down_ppi.txt 
+job_end
+
+job_begin
+	name ppiReport
+	anamod PPI_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/ppi/ppiReport.py --compares A13_M13,A1_M1,AZ13_Z1,M13_M1 --projectDir /project/home/zyy126com/raw_data --config /project/home/zyy126com/raw_data/config.json
+job_end
+job_begin
+	name go_pre
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go_pre.py --refGO /database/Reference/arabidopsis_thaliana/go.txt  --outDir /project/home/zyy126com/raw_data/GO --novelGO /project/home/zyy126com/raw_data/Assembl/Novel/go.txt
+job_end
+
+job_begin
+	name go_all_AZ13_Z1
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/raw_data/GO/Rdata --geneLen /project/home/zyy126com/raw_data/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1.diffGeneID --goGene /project/home/zyy126com/raw_data/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/raw_data/GO/AZ13_Z1/ALL 
+job_end
+
+job_begin
+	name goPlot_AZ13_Z1
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go_plot.py --upIds /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1.upGeneID --downIds /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1.downGeneID --goResult /project/home/zyy126com/raw_data/GO/AZ13_Z1/ALL/go_enrich_result.xls --Name AZ13_Z1 --outDir /project/home/zyy126com/raw_data/GO/AZ13_Z1/ALL --Flag y
+job_end
+
+job_begin
+	name go_up_AZ13_Z1
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/raw_data/GO/Rdata --geneLen /project/home/zyy126com/raw_data/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1.upGeneID --goGene /project/home/zyy126com/raw_data/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/raw_data/GO/AZ13_Z1/UP 
+job_end
+
+job_begin
+	name go_down_AZ13_Z1
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/raw_data/GO/Rdata --geneLen /project/home/zyy126com/raw_data/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1.downGeneID --goGene /project/home/zyy126com/raw_data/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/raw_data/GO/AZ13_Z1/DOWN 
+job_end
+
+job_begin
+	name go_all_M13_M1
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/raw_data/GO/Rdata --geneLen /project/home/zyy126com/raw_data/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1.diffGeneID --goGene /project/home/zyy126com/raw_data/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/raw_data/GO/M13_M1/ALL 
+job_end
+
+job_begin
+	name goPlot_M13_M1
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go_plot.py --upIds /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1.upGeneID --downIds /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1.downGeneID --goResult /project/home/zyy126com/raw_data/GO/M13_M1/ALL/go_enrich_result.xls --Name M13_M1 --outDir /project/home/zyy126com/raw_data/GO/M13_M1/ALL --Flag y
+job_end
+
+job_begin
+	name go_up_M13_M1
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/raw_data/GO/Rdata --geneLen /project/home/zyy126com/raw_data/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1.upGeneID --goGene /project/home/zyy126com/raw_data/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/raw_data/GO/M13_M1/UP 
+job_end
+
+job_begin
+	name go_down_M13_M1
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/raw_data/GO/Rdata --geneLen /project/home/zyy126com/raw_data/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1.downGeneID --goGene /project/home/zyy126com/raw_data/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/raw_data/GO/M13_M1/DOWN 
+job_end
+
+job_begin
+	name go_all_A1_M1
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/raw_data/GO/Rdata --geneLen /project/home/zyy126com/raw_data/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1.diffGeneID --goGene /project/home/zyy126com/raw_data/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/raw_data/GO/A1_M1/ALL 
+job_end
+
+job_begin
+	name goPlot_A1_M1
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go_plot.py --upIds /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1.upGeneID --downIds /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1.downGeneID --goResult /project/home/zyy126com/raw_data/GO/A1_M1/ALL/go_enrich_result.xls --Name A1_M1 --outDir /project/home/zyy126com/raw_data/GO/A1_M1/ALL --Flag y
+job_end
+
+job_begin
+	name go_up_A1_M1
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/raw_data/GO/Rdata --geneLen /project/home/zyy126com/raw_data/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1.upGeneID --goGene /project/home/zyy126com/raw_data/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/raw_data/GO/A1_M1/UP 
+job_end
+
+job_begin
+	name go_down_A1_M1
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/raw_data/GO/Rdata --geneLen /project/home/zyy126com/raw_data/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1.downGeneID --goGene /project/home/zyy126com/raw_data/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/raw_data/GO/A1_M1/DOWN 
+job_end
+
+job_begin
+	name go_all_A13_M13
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/raw_data/GO/Rdata --geneLen /project/home/zyy126com/raw_data/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13.diffGeneID --goGene /project/home/zyy126com/raw_data/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/raw_data/GO/A13_M13/ALL 
+job_end
+
+job_begin
+	name goPlot_A13_M13
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go_plot.py --upIds /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13.upGeneID --downIds /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13.downGeneID --goResult /project/home/zyy126com/raw_data/GO/A13_M13/ALL/go_enrich_result.xls --Name A13_M13 --outDir /project/home/zyy126com/raw_data/GO/A13_M13/ALL --Flag y
+job_end
+
+job_begin
+	name go_up_A13_M13
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/raw_data/GO/Rdata --geneLen /project/home/zyy126com/raw_data/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13.upGeneID --goGene /project/home/zyy126com/raw_data/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/raw_data/GO/A13_M13/UP 
+job_end
+
+job_begin
+	name go_down_A13_M13
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/scripts/go.py --Rdata /project/home/zyy126com/raw_data/GO/Rdata --geneLen /project/home/zyy126com/raw_data/Quantification/Stat/geneLength.xls --idFile /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13.downGeneID --goGene /project/home/zyy126com/raw_data/GO/goAllGenes.txt --pType correct  --pValue 0.05 --outDir /project/home/zyy126com/raw_data/GO/A13_M13/DOWN 
+job_end
+
+job_begin
+	name goReport
+	anamod GO_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/go/goReport.py --compares A13_M13,A1_M1,AZ13_Z1,M13_M1 --projectDir /project/home/zyy126com/raw_data --config /project/home/zyy126com/raw_data/config.json
+job_end
+job_begin
+	name kegg_all_AZ13_Z1
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=5g,p=8
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1_diff.fa --intype fasta:nuc --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/raw_data/KEGG/AZ13_Z1/ALL --name AZ13_Z1 --ncpu 8
+job_end
+
+job_begin
+	name kegg_all_html_AZ13_Z1
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/raw_data/KEGG/AZ13_Z1/ALL/AZ13_Z1_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/raw_data/KEGG/AZ13_Z1/ALL --upIDs /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1.upGeneID --downIDs /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1.downGeneID
+job_end
+
+job_begin
+	name kegg_up_AZ13_Z1
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/raw_data/KEGG/AZ13_Z1/ALL/AZ13_Z1_blast_out.xls --intype blast:tab --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/raw_data/KEGG/AZ13_Z1/UP --name AZ13_Z1 --idFile /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1.upGeneID
+job_end
+
+job_begin
+	name kegg_up_html_AZ13_Z1
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/raw_data/KEGG/AZ13_Z1/UP/AZ13_Z1_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/raw_data/KEGG/AZ13_Z1/UP --upIDs /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1.upGeneID --downIDs /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1.downGeneID
+job_end
+
+job_begin
+	name kegg_down_AZ13_Z1
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/raw_data/KEGG/AZ13_Z1/ALL/AZ13_Z1_blast_out.xls --intype blast:tab --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/raw_data/KEGG/AZ13_Z1/DOWN --name AZ13_Z1 --idFile /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1.downGeneID
+job_end
+
+job_begin
+	name kegg_down_html_AZ13_Z1
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/raw_data/KEGG/AZ13_Z1/DOWN/AZ13_Z1_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/raw_data/KEGG/AZ13_Z1/DOWN --upIDs /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1.upGeneID --downIDs /project/home/zyy126com/raw_data/Diff/AZ13_Z1/diff/AZ13_Z1.downGeneID
+job_end
+
+job_begin
+	name kegg_all_M13_M1
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=5g,p=8
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1_diff.fa --intype fasta:nuc --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/raw_data/KEGG/M13_M1/ALL --name M13_M1 --ncpu 8
+job_end
+
+job_begin
+	name kegg_all_html_M13_M1
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/raw_data/KEGG/M13_M1/ALL/M13_M1_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/raw_data/KEGG/M13_M1/ALL --upIDs /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1.upGeneID --downIDs /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1.downGeneID
+job_end
+
+job_begin
+	name kegg_up_M13_M1
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/raw_data/KEGG/M13_M1/ALL/M13_M1_blast_out.xls --intype blast:tab --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/raw_data/KEGG/M13_M1/UP --name M13_M1 --idFile /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1.upGeneID
+job_end
+
+job_begin
+	name kegg_up_html_M13_M1
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/raw_data/KEGG/M13_M1/UP/M13_M1_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/raw_data/KEGG/M13_M1/UP --upIDs /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1.upGeneID --downIDs /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1.downGeneID
+job_end
+
+job_begin
+	name kegg_down_M13_M1
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/raw_data/KEGG/M13_M1/ALL/M13_M1_blast_out.xls --intype blast:tab --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/raw_data/KEGG/M13_M1/DOWN --name M13_M1 --idFile /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1.downGeneID
+job_end
+
+job_begin
+	name kegg_down_html_M13_M1
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/raw_data/KEGG/M13_M1/DOWN/M13_M1_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/raw_data/KEGG/M13_M1/DOWN --upIDs /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1.upGeneID --downIDs /project/home/zyy126com/raw_data/Diff/M13_M1/diff/M13_M1.downGeneID
+job_end
+
+job_begin
+	name kegg_all_A1_M1
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=5g,p=8
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1_diff.fa --intype fasta:nuc --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/raw_data/KEGG/A1_M1/ALL --name A1_M1 --ncpu 8
+job_end
+
+job_begin
+	name kegg_all_html_A1_M1
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/raw_data/KEGG/A1_M1/ALL/A1_M1_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/raw_data/KEGG/A1_M1/ALL --upIDs /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1.upGeneID --downIDs /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1.downGeneID
+job_end
+
+job_begin
+	name kegg_up_A1_M1
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/raw_data/KEGG/A1_M1/ALL/A1_M1_blast_out.xls --intype blast:tab --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/raw_data/KEGG/A1_M1/UP --name A1_M1 --idFile /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1.upGeneID
+job_end
+
+job_begin
+	name kegg_up_html_A1_M1
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/raw_data/KEGG/A1_M1/UP/A1_M1_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/raw_data/KEGG/A1_M1/UP --upIDs /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1.upGeneID --downIDs /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1.downGeneID
+job_end
+
+job_begin
+	name kegg_down_A1_M1
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/raw_data/KEGG/A1_M1/ALL/A1_M1_blast_out.xls --intype blast:tab --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/raw_data/KEGG/A1_M1/DOWN --name A1_M1 --idFile /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1.downGeneID
+job_end
+
+job_begin
+	name kegg_down_html_A1_M1
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/raw_data/KEGG/A1_M1/DOWN/A1_M1_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/raw_data/KEGG/A1_M1/DOWN --upIDs /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1.upGeneID --downIDs /project/home/zyy126com/raw_data/Diff/A1_M1/diff/A1_M1.downGeneID
+job_end
+
+job_begin
+	name kegg_all_A13_M13
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=5g,p=8
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13_diff.fa --intype fasta:nuc --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/raw_data/KEGG/A13_M13/ALL --name A13_M13 --ncpu 8
+job_end
+
+job_begin
+	name kegg_all_html_A13_M13
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/raw_data/KEGG/A13_M13/ALL/A13_M13_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/raw_data/KEGG/A13_M13/ALL --upIDs /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13.upGeneID --downIDs /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13.downGeneID
+job_end
+
+job_begin
+	name kegg_up_A13_M13
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/raw_data/KEGG/A13_M13/ALL/A13_M13_blast_out.xls --intype blast:tab --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/raw_data/KEGG/A13_M13/UP --name A13_M13 --idFile /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13.upGeneID
+job_end
+
+job_begin
+	name kegg_up_html_A13_M13
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/raw_data/KEGG/A13_M13/UP/A13_M13_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/raw_data/KEGG/A13_M13/UP --upIDs /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13.upGeneID --downIDs /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13.downGeneID
+job_end
+
+job_begin
+	name kegg_down_A13_M13
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/kegg_blast.py --inFile /project/home/zyy126com/raw_data/KEGG/A13_M13/ALL/A13_M13_blast_out.xls --intype blast:tab --abbr ath --db K --method h --fdr BH --evalue 1e-05 --outDir /project/home/zyy126com/raw_data/KEGG/A13_M13/DOWN --name A13_M13 --idFile /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13.downGeneID
+job_end
+
+job_begin
+	name kegg_down_html_A13_M13
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/scripts/generate_kegg_html.py --result /project/home/zyy126com/raw_data/KEGG/A13_M13/DOWN/A13_M13_kegg_enrich_result.xls --abbr ath --outDir /project/home/zyy126com/raw_data/KEGG/A13_M13/DOWN --upIDs /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13.upGeneID --downIDs /project/home/zyy126com/raw_data/Diff/A13_M13/diff/A13_M13.downGeneID
+job_end
+
+job_begin
+	name keggReport
+	anamod KEGG_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/kegg/keggReport.py --compares A13_M13,A1_M1,AZ13_Z1,M13_M1 --projectDir /project/home/zyy126com/raw_data --config /project/home/zyy126com/raw_data/config.json
+job_end
+job_begin
+	name as_pre
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd perl /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/calBasesNum.pl /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa /project/home/zyy126com/raw_data/As/ref.hdrs
+job_end
+
+job_begin
+	name as_AZT13_1
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/as.py --inGtf /project/home/zyy126com/raw_data/Assembl/AZT13_1/transcripts.gtf --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --tmap /project/home/zyy126com/raw_data/Assembl/AZT13_1/AZT13_1.AZT13_1.gtf.tmap --hdrs /project/home/zyy126com/raw_data/As/ref.hdrs --name AZT13_1 --outDir /project/home/zyy126com/raw_data/As/AZT13_1
+job_end
+
+job_begin
+	name as_AZT13_2
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/as.py --inGtf /project/home/zyy126com/raw_data/Assembl/AZT13_2/transcripts.gtf --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --tmap /project/home/zyy126com/raw_data/Assembl/AZT13_2/AZT13_2.AZT13_2.gtf.tmap --hdrs /project/home/zyy126com/raw_data/As/ref.hdrs --name AZT13_2 --outDir /project/home/zyy126com/raw_data/As/AZT13_2
+job_end
+
+job_begin
+	name as_AZT1_1
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/as.py --inGtf /project/home/zyy126com/raw_data/Assembl/AZT1_1/transcripts.gtf --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --tmap /project/home/zyy126com/raw_data/Assembl/AZT1_1/AZT1_1.AZT1_1.gtf.tmap --hdrs /project/home/zyy126com/raw_data/As/ref.hdrs --name AZT1_1 --outDir /project/home/zyy126com/raw_data/As/AZT1_1
+job_end
+
+job_begin
+	name as_AZT1_2
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/as.py --inGtf /project/home/zyy126com/raw_data/Assembl/AZT1_2/transcripts.gtf --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --tmap /project/home/zyy126com/raw_data/Assembl/AZT1_2/AZT1_2.AZT1_2.gtf.tmap --hdrs /project/home/zyy126com/raw_data/As/ref.hdrs --name AZT1_2 --outDir /project/home/zyy126com/raw_data/As/AZT1_2
+job_end
+
+job_begin
+	name as_MZT13_1
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/as.py --inGtf /project/home/zyy126com/raw_data/Assembl/MZT13_1/transcripts.gtf --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --tmap /project/home/zyy126com/raw_data/Assembl/MZT13_1/MZT13_1.MZT13_1.gtf.tmap --hdrs /project/home/zyy126com/raw_data/As/ref.hdrs --name MZT13_1 --outDir /project/home/zyy126com/raw_data/As/MZT13_1
+job_end
+
+job_begin
+	name as_MZT13_2
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/as.py --inGtf /project/home/zyy126com/raw_data/Assembl/MZT13_2/transcripts.gtf --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --tmap /project/home/zyy126com/raw_data/Assembl/MZT13_2/MZT13_2.MZT13_2.gtf.tmap --hdrs /project/home/zyy126com/raw_data/As/ref.hdrs --name MZT13_2 --outDir /project/home/zyy126com/raw_data/As/MZT13_2
+job_end
+
+job_begin
+	name as_MZT1_1
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/as.py --inGtf /project/home/zyy126com/raw_data/Assembl/MZT1_1/transcripts.gtf --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --tmap /project/home/zyy126com/raw_data/Assembl/MZT1_1/MZT1_1.MZT1_1.gtf.tmap --hdrs /project/home/zyy126com/raw_data/As/ref.hdrs --name MZT1_1 --outDir /project/home/zyy126com/raw_data/As/MZT1_1
+job_end
+
+job_begin
+	name as_MZT1_2
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/as.py --inGtf /project/home/zyy126com/raw_data/Assembl/MZT1_2/transcripts.gtf --refGtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --tmap /project/home/zyy126com/raw_data/Assembl/MZT1_2/MZT1_2.MZT1_2.gtf.tmap --hdrs /project/home/zyy126com/raw_data/As/ref.hdrs --name MZT1_2 --outDir /project/home/zyy126com/raw_data/As/MZT1_2
+job_end
+
+job_begin
+	name as_sum
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/scripts/as_sum.py --files /project/home/zyy126com/raw_data/As/AZT13_1/AZT13_1.stat,/project/home/zyy126com/raw_data/As/AZT13_2/AZT13_2.stat,/project/home/zyy126com/raw_data/As/AZT1_1/AZT1_1.stat,/project/home/zyy126com/raw_data/As/AZT1_2/AZT1_2.stat,/project/home/zyy126com/raw_data/As/MZT13_1/MZT13_1.stat,/project/home/zyy126com/raw_data/As/MZT13_2/MZT13_2.stat,/project/home/zyy126com/raw_data/As/MZT1_1/MZT1_1.stat,/project/home/zyy126com/raw_data/As/MZT1_2/MZT1_2.stat --name AZT13_1,AZT13_2,AZT1_1,AZT1_2,MZT13_1,MZT13_2,MZT1_1,MZT1_2 --outDir /project/home/zyy126com/raw_data/As
+job_end
+
+job_begin
+	name asReport
+	anamod AS_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/alternative_splicing/asReport.py --samples AZT13_1,AZT13_2,AZT1_1,AZT1_2,MZT13_1,MZT13_2,MZT1_1,MZT1_2 --projectDir /project/home/zyy126com/raw_data --config /project/home/zyy126com/raw_data/config.json
+job_end
+job_begin
+	name prepare_bam_AZT13_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/prepare_bam.py --bam /project/home/zyy126com/raw_data/Align/AZT13_1/AZT13_1_sorted_addGroups.bam --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --name AZT13_1 --outDir /project/home/zyy126com/raw_data/CallVariation/bam/AZT13_1
+job_end
+
+job_begin
+	name prepare_bam_AZT13_2
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/prepare_bam.py --bam /project/home/zyy126com/raw_data/Align/AZT13_2/AZT13_2_sorted_addGroups.bam --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --name AZT13_2 --outDir /project/home/zyy126com/raw_data/CallVariation/bam/AZT13_2
+job_end
+
+job_begin
+	name prepare_bam_AZT1_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/prepare_bam.py --bam /project/home/zyy126com/raw_data/Align/AZT1_1/AZT1_1_sorted_addGroups.bam --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --name AZT1_1 --outDir /project/home/zyy126com/raw_data/CallVariation/bam/AZT1_1
+job_end
+
+job_begin
+	name prepare_bam_AZT1_2
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/prepare_bam.py --bam /project/home/zyy126com/raw_data/Align/AZT1_2/AZT1_2_sorted_addGroups.bam --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --name AZT1_2 --outDir /project/home/zyy126com/raw_data/CallVariation/bam/AZT1_2
+job_end
+
+job_begin
+	name prepare_bam_MZT13_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/prepare_bam.py --bam /project/home/zyy126com/raw_data/Align/MZT13_1/MZT13_1_sorted_addGroups.bam --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --name MZT13_1 --outDir /project/home/zyy126com/raw_data/CallVariation/bam/MZT13_1
+job_end
+
+job_begin
+	name prepare_bam_MZT13_2
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/prepare_bam.py --bam /project/home/zyy126com/raw_data/Align/MZT13_2/MZT13_2_sorted_addGroups.bam --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --name MZT13_2 --outDir /project/home/zyy126com/raw_data/CallVariation/bam/MZT13_2
+job_end
+
+job_begin
+	name prepare_bam_MZT1_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/prepare_bam.py --bam /project/home/zyy126com/raw_data/Align/MZT1_1/MZT1_1_sorted_addGroups.bam --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --name MZT1_1 --outDir /project/home/zyy126com/raw_data/CallVariation/bam/MZT1_1
+job_end
+
+job_begin
+	name prepare_bam_MZT1_2
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=5g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/prepare_bam.py --bam /project/home/zyy126com/raw_data/Align/MZT1_2/MZT1_2_sorted_addGroups.bam --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --name MZT1_2 --outDir /project/home/zyy126com/raw_data/CallVariation/bam/MZT1_2
+job_end
+
+job_begin
+	name HaplotypeCaller_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=9g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/HaplotypeCaller.py --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --bams /project/home/zyy126com/raw_data/CallVariation/bam/AZT13_1/AZT13_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/AZT13_2/AZT13_2_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/AZT1_1/AZT1_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/AZT1_2/AZT1_2_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT13_1/MZT13_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT13_2/MZT13_2_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT1_1/MZT1_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT1_2/MZT1_2_md_split.bam --bed /project/home/zyy126com/raw_data/Log/.tmp/chr_split1.bed --name 1 --outDir /project/home/zyy126com/raw_data/CallVariation/vcf
+job_end
+
+job_begin
+	name HaplotypeCaller_2
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=9g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/HaplotypeCaller.py --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --bams /project/home/zyy126com/raw_data/CallVariation/bam/AZT13_1/AZT13_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/AZT13_2/AZT13_2_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/AZT1_1/AZT1_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/AZT1_2/AZT1_2_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT13_1/MZT13_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT13_2/MZT13_2_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT1_1/MZT1_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT1_2/MZT1_2_md_split.bam --bed /project/home/zyy126com/raw_data/Log/.tmp/chr_split2.bed --name 2 --outDir /project/home/zyy126com/raw_data/CallVariation/vcf
+job_end
+
+job_begin
+	name HaplotypeCaller_3
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=9g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/HaplotypeCaller.py --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --bams /project/home/zyy126com/raw_data/CallVariation/bam/AZT13_1/AZT13_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/AZT13_2/AZT13_2_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/AZT1_1/AZT1_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/AZT1_2/AZT1_2_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT13_1/MZT13_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT13_2/MZT13_2_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT1_1/MZT1_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT1_2/MZT1_2_md_split.bam --bed /project/home/zyy126com/raw_data/Log/.tmp/chr_split3.bed --name 3 --outDir /project/home/zyy126com/raw_data/CallVariation/vcf
+job_end
+
+job_begin
+	name HaplotypeCaller_4
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=9g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/HaplotypeCaller.py --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --bams /project/home/zyy126com/raw_data/CallVariation/bam/AZT13_1/AZT13_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/AZT13_2/AZT13_2_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/AZT1_1/AZT1_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/AZT1_2/AZT1_2_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT13_1/MZT13_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT13_2/MZT13_2_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT1_1/MZT1_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT1_2/MZT1_2_md_split.bam --bed /project/home/zyy126com/raw_data/Log/.tmp/chr_split4.bed --name 4 --outDir /project/home/zyy126com/raw_data/CallVariation/vcf
+job_end
+
+job_begin
+	name HaplotypeCaller_5
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=9g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/HaplotypeCaller.py --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --bams /project/home/zyy126com/raw_data/CallVariation/bam/AZT13_1/AZT13_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/AZT13_2/AZT13_2_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/AZT1_1/AZT1_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/AZT1_2/AZT1_2_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT13_1/MZT13_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT13_2/MZT13_2_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT1_1/MZT1_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT1_2/MZT1_2_md_split.bam --bed /project/home/zyy126com/raw_data/Log/.tmp/chr_split5.bed --name 5 --outDir /project/home/zyy126com/raw_data/CallVariation/vcf
+job_end
+
+job_begin
+	name HaplotypeCaller_6
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=9g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/HaplotypeCaller.py --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --bams /project/home/zyy126com/raw_data/CallVariation/bam/AZT13_1/AZT13_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/AZT13_2/AZT13_2_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/AZT1_1/AZT1_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/AZT1_2/AZT1_2_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT13_1/MZT13_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT13_2/MZT13_2_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT1_1/MZT1_1_md_split.bam,/project/home/zyy126com/raw_data/CallVariation/bam/MZT1_2/MZT1_2_md_split.bam --bed /project/home/zyy126com/raw_data/Log/.tmp/chr_split6.bed --name 6 --outDir /project/home/zyy126com/raw_data/CallVariation/vcf
+job_end
+
+job_begin
+	name merge_SNP
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/merge_vcf.py --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --vcfList /project/home/zyy126com/raw_data/Log/.tmp/SNPList.txt --outvcf /project/home/zyy126com/raw_data/CallVariation/vcf/merged_SNP.vcf
+job_end
+
+job_begin
+	name merge_InDel
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/merge_vcf.py --ref /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa --vcfList /project/home/zyy126com/raw_data/Log/.tmp/InDelList.txt --outvcf /project/home/zyy126com/raw_data/CallVariation/vcf/merged_InDel.vcf
+job_end
+
+job_begin
+	name split_SNP
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/split_vcf.py --vcf /project/home/zyy126com/raw_data/CallVariation/vcf/merged_SNP.vcf --outprefix /project/home/zyy126com/raw_data/CallVariation/vcf/SNP
+job_end
+
+job_begin
+	name split_InDel
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/split_vcf.py --vcf /project/home/zyy126com/raw_data/CallVariation/vcf/merged_InDel.vcf --outprefix /project/home/zyy126com/raw_data/CallVariation/vcf/InDel
+job_end
+
+job_begin
+	name annot_SNP_AZT13_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/raw_data/CallVariation/vcf/SNP.AZT13_1.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/raw_data/CallVariation/Annot/AZT13_1_SNP
+job_end
+
+job_begin
+	name annot_SNP_AZT13_2
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/raw_data/CallVariation/vcf/SNP.AZT13_2.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/raw_data/CallVariation/Annot/AZT13_2_SNP
+job_end
+
+job_begin
+	name annot_SNP_AZT1_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/raw_data/CallVariation/vcf/SNP.AZT1_1.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/raw_data/CallVariation/Annot/AZT1_1_SNP
+job_end
+
+job_begin
+	name annot_SNP_AZT1_2
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/raw_data/CallVariation/vcf/SNP.AZT1_2.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/raw_data/CallVariation/Annot/AZT1_2_SNP
+job_end
+
+job_begin
+	name annot_SNP_MZT13_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/raw_data/CallVariation/vcf/SNP.MZT13_1.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/raw_data/CallVariation/Annot/MZT13_1_SNP
+job_end
+
+job_begin
+	name annot_SNP_MZT13_2
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/raw_data/CallVariation/vcf/SNP.MZT13_2.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/raw_data/CallVariation/Annot/MZT13_2_SNP
+job_end
+
+job_begin
+	name annot_SNP_MZT1_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/raw_data/CallVariation/vcf/SNP.MZT1_1.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/raw_data/CallVariation/Annot/MZT1_1_SNP
+job_end
+
+job_begin
+	name annot_SNP_MZT1_2
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/raw_data/CallVariation/vcf/SNP.MZT1_2.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/raw_data/CallVariation/Annot/MZT1_2_SNP
+job_end
+
+job_begin
+	name annot_InDel_AZT13_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/raw_data/CallVariation/vcf/InDel.AZT13_1.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/raw_data/CallVariation/Annot/AZT13_1_InDel
+job_end
+
+job_begin
+	name annot_InDel_AZT13_2
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/raw_data/CallVariation/vcf/InDel.AZT13_2.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/raw_data/CallVariation/Annot/AZT13_2_InDel
+job_end
+
+job_begin
+	name annot_InDel_AZT1_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/raw_data/CallVariation/vcf/InDel.AZT1_1.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/raw_data/CallVariation/Annot/AZT1_1_InDel
+job_end
+
+job_begin
+	name annot_InDel_AZT1_2
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/raw_data/CallVariation/vcf/InDel.AZT1_2.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/raw_data/CallVariation/Annot/AZT1_2_InDel
+job_end
+
+job_begin
+	name annot_InDel_MZT13_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/raw_data/CallVariation/vcf/InDel.MZT13_1.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/raw_data/CallVariation/Annot/MZT13_1_InDel
+job_end
+
+job_begin
+	name annot_InDel_MZT13_2
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/raw_data/CallVariation/vcf/InDel.MZT13_2.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/raw_data/CallVariation/Annot/MZT13_2_InDel
+job_end
+
+job_begin
+	name annot_InDel_MZT1_1
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/raw_data/CallVariation/vcf/InDel.MZT1_1.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/raw_data/CallVariation/Annot/MZT1_1_InDel
+job_end
+
+job_begin
+	name annot_InDel_MZT1_2
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/scripts/annovar.py --query /project/home/zyy126com/raw_data/CallVariation/vcf/InDel.MZT1_2.avinput --db /database/Reference/arabidopsis_thaliana/varAnnot --outprefix /project/home/zyy126com/raw_data/CallVariation/Annot/MZT1_2_InDel
+job_end
+
+job_begin
+	name variationReport
+	anamod Variation_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/call_variation/variationReport.py --samples AZT13_1,AZT13_2,AZT1_1,AZT1_2,MZT13_1,MZT13_2,MZT1_1,MZT1_2 --projectDir /project/home/zyy126com/raw_data --config /project/home/zyy126com/raw_data/config.json
+job_end
+job_begin
+	name prepare_gtf
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/gtf_pre.py --gtf /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.38_exon.gtf --outDir /project/home/zyy126com/raw_data/BamQc
+job_end
+
+job_begin
+	name mapping_region_AZT13_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/mappingRegion.py --gtfFlag /project/home/zyy126com/raw_data/BamQc/gtfFlag.gtf --bam /project/home/zyy126com/raw_data/Align/AZT13_1/AZT13_1_name_sorted.bam --ssLib NO --outDir /project/home/zyy126com/raw_data/BamQc/MappingRegion/AZT13_1 --name AZT13_1
+job_end
+
+job_begin
+	name mapping_region_AZT13_2
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/mappingRegion.py --gtfFlag /project/home/zyy126com/raw_data/BamQc/gtfFlag.gtf --bam /project/home/zyy126com/raw_data/Align/AZT13_2/AZT13_2_name_sorted.bam --ssLib NO --outDir /project/home/zyy126com/raw_data/BamQc/MappingRegion/AZT13_2 --name AZT13_2
+job_end
+
+job_begin
+	name mapping_region_AZT1_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/mappingRegion.py --gtfFlag /project/home/zyy126com/raw_data/BamQc/gtfFlag.gtf --bam /project/home/zyy126com/raw_data/Align/AZT1_1/AZT1_1_name_sorted.bam --ssLib NO --outDir /project/home/zyy126com/raw_data/BamQc/MappingRegion/AZT1_1 --name AZT1_1
+job_end
+
+job_begin
+	name mapping_region_AZT1_2
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/mappingRegion.py --gtfFlag /project/home/zyy126com/raw_data/BamQc/gtfFlag.gtf --bam /project/home/zyy126com/raw_data/Align/AZT1_2/AZT1_2_name_sorted.bam --ssLib NO --outDir /project/home/zyy126com/raw_data/BamQc/MappingRegion/AZT1_2 --name AZT1_2
+job_end
+
+job_begin
+	name mapping_region_MZT13_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/mappingRegion.py --gtfFlag /project/home/zyy126com/raw_data/BamQc/gtfFlag.gtf --bam /project/home/zyy126com/raw_data/Align/MZT13_1/MZT13_1_name_sorted.bam --ssLib NO --outDir /project/home/zyy126com/raw_data/BamQc/MappingRegion/MZT13_1 --name MZT13_1
+job_end
+
+job_begin
+	name mapping_region_MZT13_2
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/mappingRegion.py --gtfFlag /project/home/zyy126com/raw_data/BamQc/gtfFlag.gtf --bam /project/home/zyy126com/raw_data/Align/MZT13_2/MZT13_2_name_sorted.bam --ssLib NO --outDir /project/home/zyy126com/raw_data/BamQc/MappingRegion/MZT13_2 --name MZT13_2
+job_end
+
+job_begin
+	name mapping_region_MZT1_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/mappingRegion.py --gtfFlag /project/home/zyy126com/raw_data/BamQc/gtfFlag.gtf --bam /project/home/zyy126com/raw_data/Align/MZT1_1/MZT1_1_name_sorted.bam --ssLib NO --outDir /project/home/zyy126com/raw_data/BamQc/MappingRegion/MZT1_1 --name MZT1_1
+job_end
+
+job_begin
+	name mapping_region_MZT1_2
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/mappingRegion.py --gtfFlag /project/home/zyy126com/raw_data/BamQc/gtfFlag.gtf --bam /project/home/zyy126com/raw_data/Align/MZT1_2/MZT1_2_name_sorted.bam --ssLib NO --outDir /project/home/zyy126com/raw_data/BamQc/MappingRegion/MZT1_2 --name MZT1_2
+job_end
+
+job_begin
+	name saturation_AZT13_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=15g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/saturation.py --bed /project/home/zyy126com/raw_data/BamQc/sorted.bed --bam /project/home/zyy126com/raw_data/Align/AZT13_1/AZT13_1_sorted_addGroups.bam --name AZT13_1 --outDir /project/home/zyy126com/raw_data/BamQc/Saturation/AZT13_1
+job_end
+
+job_begin
+	name saturation_AZT13_2
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=15g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/saturation.py --bed /project/home/zyy126com/raw_data/BamQc/sorted.bed --bam /project/home/zyy126com/raw_data/Align/AZT13_2/AZT13_2_sorted_addGroups.bam --name AZT13_2 --outDir /project/home/zyy126com/raw_data/BamQc/Saturation/AZT13_2
+job_end
+
+job_begin
+	name saturation_AZT1_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=15g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/saturation.py --bed /project/home/zyy126com/raw_data/BamQc/sorted.bed --bam /project/home/zyy126com/raw_data/Align/AZT1_1/AZT1_1_sorted_addGroups.bam --name AZT1_1 --outDir /project/home/zyy126com/raw_data/BamQc/Saturation/AZT1_1
+job_end
+
+job_begin
+	name saturation_AZT1_2
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=15g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/saturation.py --bed /project/home/zyy126com/raw_data/BamQc/sorted.bed --bam /project/home/zyy126com/raw_data/Align/AZT1_2/AZT1_2_sorted_addGroups.bam --name AZT1_2 --outDir /project/home/zyy126com/raw_data/BamQc/Saturation/AZT1_2
+job_end
+
+job_begin
+	name saturation_MZT13_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=15g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/saturation.py --bed /project/home/zyy126com/raw_data/BamQc/sorted.bed --bam /project/home/zyy126com/raw_data/Align/MZT13_1/MZT13_1_sorted_addGroups.bam --name MZT13_1 --outDir /project/home/zyy126com/raw_data/BamQc/Saturation/MZT13_1
+job_end
+
+job_begin
+	name saturation_MZT13_2
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=15g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/saturation.py --bed /project/home/zyy126com/raw_data/BamQc/sorted.bed --bam /project/home/zyy126com/raw_data/Align/MZT13_2/MZT13_2_sorted_addGroups.bam --name MZT13_2 --outDir /project/home/zyy126com/raw_data/BamQc/Saturation/MZT13_2
+job_end
+
+job_begin
+	name saturation_MZT1_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=15g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/saturation.py --bed /project/home/zyy126com/raw_data/BamQc/sorted.bed --bam /project/home/zyy126com/raw_data/Align/MZT1_1/MZT1_1_sorted_addGroups.bam --name MZT1_1 --outDir /project/home/zyy126com/raw_data/BamQc/Saturation/MZT1_1
+job_end
+
+job_begin
+	name saturation_MZT1_2
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=15g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/saturation.py --bed /project/home/zyy126com/raw_data/BamQc/sorted.bed --bam /project/home/zyy126com/raw_data/Align/MZT1_2/MZT1_2_sorted_addGroups.bam --name MZT1_2 --outDir /project/home/zyy126com/raw_data/BamQc/Saturation/MZT1_2
+job_end
+
+job_begin
+	name reads_density_AZT13_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=8g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/chromo_depth.py --bam /project/home/zyy126com/raw_data/Align/AZT13_1/AZT13_1_sorted_addGroups.bam --species /database/Reference/arabidopsis_thaliana --fai /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa.fai --pNum 2 --sampleName AZT13_1 --outDir /project/home/zyy126com/raw_data/BamQc/ReadsDensity/AZT13_1
+job_end
+
+job_begin
+	name reads_density_AZT13_2
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=8g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/chromo_depth.py --bam /project/home/zyy126com/raw_data/Align/AZT13_2/AZT13_2_sorted_addGroups.bam --species /database/Reference/arabidopsis_thaliana --fai /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa.fai --pNum 2 --sampleName AZT13_2 --outDir /project/home/zyy126com/raw_data/BamQc/ReadsDensity/AZT13_2
+job_end
+
+job_begin
+	name reads_density_AZT1_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=8g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/chromo_depth.py --bam /project/home/zyy126com/raw_data/Align/AZT1_1/AZT1_1_sorted_addGroups.bam --species /database/Reference/arabidopsis_thaliana --fai /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa.fai --pNum 2 --sampleName AZT1_1 --outDir /project/home/zyy126com/raw_data/BamQc/ReadsDensity/AZT1_1
+job_end
+
+job_begin
+	name reads_density_AZT1_2
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=8g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/chromo_depth.py --bam /project/home/zyy126com/raw_data/Align/AZT1_2/AZT1_2_sorted_addGroups.bam --species /database/Reference/arabidopsis_thaliana --fai /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa.fai --pNum 2 --sampleName AZT1_2 --outDir /project/home/zyy126com/raw_data/BamQc/ReadsDensity/AZT1_2
+job_end
+
+job_begin
+	name reads_density_MZT13_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=8g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/chromo_depth.py --bam /project/home/zyy126com/raw_data/Align/MZT13_1/MZT13_1_sorted_addGroups.bam --species /database/Reference/arabidopsis_thaliana --fai /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa.fai --pNum 2 --sampleName MZT13_1 --outDir /project/home/zyy126com/raw_data/BamQc/ReadsDensity/MZT13_1
+job_end
+
+job_begin
+	name reads_density_MZT13_2
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=8g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/chromo_depth.py --bam /project/home/zyy126com/raw_data/Align/MZT13_2/MZT13_2_sorted_addGroups.bam --species /database/Reference/arabidopsis_thaliana --fai /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa.fai --pNum 2 --sampleName MZT13_2 --outDir /project/home/zyy126com/raw_data/BamQc/ReadsDensity/MZT13_2
+job_end
+
+job_begin
+	name reads_density_MZT1_1
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=8g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/chromo_depth.py --bam /project/home/zyy126com/raw_data/Align/MZT1_1/MZT1_1_sorted_addGroups.bam --species /database/Reference/arabidopsis_thaliana --fai /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa.fai --pNum 2 --sampleName MZT1_1 --outDir /project/home/zyy126com/raw_data/BamQc/ReadsDensity/MZT1_1
+job_end
+
+job_begin
+	name reads_density_MZT1_2
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=8g,p=2
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/scripts/chromo_depth.py --bam /project/home/zyy126com/raw_data/Align/MZT1_2/MZT1_2_sorted_addGroups.bam --species /database/Reference/arabidopsis_thaliana --fai /database/Reference/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.dna_sm.toplevel.fa.fai --pNum 2 --sampleName MZT1_2 --outDir /project/home/zyy126com/raw_data/BamQc/ReadsDensity/MZT1_2
+job_end
+
+job_begin
+	name bamQcReport
+	anamod BamQc_v2
+	sched_options -q all.q -V -l vf=1g,p=1
+	cmd python /data1/pipeline/refRNA_version2.0.1/modules/bam_control/bamQcReport.py --samples AZT13_1,AZT13_2,AZT1_1,AZT1_2,MZT13_1,MZT13_2,MZT1_1,MZT1_2 --projectDir /project/home/zyy126com/raw_data --config /project/home/zyy126com/raw_data/config.json
+job_end
+
+order adap_rm_AZT1_2 after rRNA_rm_AZT1_2
+order adap_rm_AZT1_1 after rRNA_rm_AZT1_1
+order adap_rm_MZT1_2 after rRNA_rm_MZT1_2
+order adap_rm_MZT1_1 after rRNA_rm_MZT1_1
+order adap_rm_AZT13_1 after rRNA_rm_AZT13_1
+order adap_rm_AZT13_2 after rRNA_rm_AZT13_2
+order adap_rm_MZT13_1 after rRNA_rm_MZT13_1
+order adap_rm_MZT13_2 after rRNA_rm_MZT13_2
+order tmkQC_AZT1_2 after adap_rm_AZT1_2
+order tmkQC_AZT1_1 after adap_rm_AZT1_1
+order tmkQC_MZT1_2 after adap_rm_MZT1_2
+order tmkQC_MZT1_1 after adap_rm_MZT1_1
+order tmkQC_AZT13_1 after adap_rm_AZT13_1
+order tmkQC_AZT13_2 after adap_rm_AZT13_2
+order tmkQC_MZT13_1 after adap_rm_MZT13_1
+order tmkQC_MZT13_2 after adap_rm_MZT13_2
+order FastQC_AZT1_2 after tmkQC_AZT1_2
+order FastQC_AZT1_1 after tmkQC_AZT1_1
+order FastQC_MZT1_2 after tmkQC_MZT1_2
+order FastQC_MZT1_1 after tmkQC_MZT1_1
+order FastQC_AZT13_1 after tmkQC_AZT13_1
+order FastQC_AZT13_2 after tmkQC_AZT13_2
+order FastQC_MZT13_1 after tmkQC_MZT13_1
+order FastQC_MZT13_2 after tmkQC_MZT13_2
+order qcReport after FastQC_AZT1_2
+order qcReport after FastQC_AZT1_1
+order qcReport after FastQC_MZT1_2
+order qcReport after FastQC_MZT1_1
+order qcReport after FastQC_AZT13_1
+order qcReport after FastQC_AZT13_2
+order qcReport after FastQC_MZT13_1
+order qcReport after FastQC_MZT13_2
+order align_AZT1_2 after qcReport
+order align_AZT1_1 after qcReport
+order align_MZT1_2 after qcReport
+order align_MZT1_1 after qcReport
+order align_AZT13_1 after qcReport
+order align_AZT13_2 after qcReport
+order align_MZT13_1 after qcReport
+order align_MZT13_2 after qcReport
+order bam_stat_AZT1_2 after qcReport
+order bam_stat_AZT1_1 after qcReport
+order bam_stat_MZT1_2 after qcReport
+order bam_stat_MZT1_1 after qcReport
+order bam_stat_AZT13_1 after qcReport
+order bam_stat_AZT13_2 after qcReport
+order bam_stat_MZT13_1 after qcReport
+order bam_stat_MZT13_2 after qcReport
+order bam_stat_AZT1_2 after align_AZT1_2
+order bam_stat_AZT1_1 after align_AZT1_1
+order bam_stat_MZT1_2 after align_MZT1_2
+order bam_stat_MZT1_1 after align_MZT1_1
+order bam_stat_AZT13_1 after align_AZT13_1
+order bam_stat_AZT13_2 after align_AZT13_2
+order bam_stat_MZT13_1 after align_MZT13_1
+order bam_stat_MZT13_2 after align_MZT13_2
+order alignReport after bam_stat_AZT1_2
+order alignReport after bam_stat_AZT1_1
+order alignReport after bam_stat_MZT1_2
+order alignReport after bam_stat_MZT1_1
+order alignReport after bam_stat_AZT13_1
+order alignReport after bam_stat_AZT13_2
+order alignReport after bam_stat_MZT13_1
+order alignReport after bam_stat_MZT13_2
+order assembl_AZT1_2 after alignReport
+order assembl_AZT1_1 after alignReport
+order assembl_MZT1_2 after alignReport
+order assembl_MZT1_1 after alignReport
+order assembl_AZT13_1 after alignReport
+order assembl_AZT13_2 after alignReport
+order assembl_MZT13_1 after alignReport
+order assembl_MZT13_2 after alignReport
+order stringtie_merge after alignReport
+order gffcompare_all after alignReport
+order novel after alignReport
+order novel_go after alignReport
+order gffcompare_AZT1_2 after assembl_AZT1_2
+order gffcompare_AZT1_1 after assembl_AZT1_1
+order gffcompare_MZT1_2 after assembl_MZT1_2
+order gffcompare_MZT1_1 after assembl_MZT1_1
+order gffcompare_AZT13_1 after assembl_AZT13_1
+order gffcompare_AZT13_2 after assembl_AZT13_2
+order gffcompare_MZT13_1 after assembl_MZT13_1
+order gffcompare_MZT13_2 after assembl_MZT13_2
+order stringtie_merge after assembl_AZT1_2
+order stringtie_merge after assembl_AZT1_1
+order stringtie_merge after assembl_MZT1_2
+order stringtie_merge after assembl_MZT1_1
+order stringtie_merge after assembl_AZT13_1
+order stringtie_merge after assembl_AZT13_2
+order stringtie_merge after assembl_MZT13_1
+order stringtie_merge after assembl_MZT13_2
+order gffcompare_all after stringtie_merge
+order novel after gffcompare_all
+order novel_go after novel
+order assemblReport after novel_go
+order htseq_count_AZT13_1 after assemblReport
+order htseq_count_AZT13_2 after assemblReport
+order htseq_count_AZT1_1 after assemblReport
+order htseq_count_AZT1_2 after assemblReport
+order htseq_count_MZT13_1 after assemblReport
+order htseq_count_MZT13_2 after assemblReport
+order htseq_count_MZT1_1 after assemblReport
+order htseq_count_MZT1_2 after assemblReport
+order count_stat after assemblReport
+order count_stat after htseq_count_AZT13_1
+order count_stat after htseq_count_AZT13_2
+order count_stat after htseq_count_AZT1_1
+order count_stat after htseq_count_AZT1_2
+order count_stat after htseq_count_MZT13_1
+order count_stat after htseq_count_MZT13_2
+order count_stat after htseq_count_MZT1_1
+order count_stat after htseq_count_MZT1_2
+order countReport after count_stat
+order diff_analysis_AZ13_Z1 after countReport
+order diff_analysis_M13_M1 after countReport
+order diff_analysis_A1_M1 after countReport
+order diff_analysis_A13_M13 after countReport
+order extract_diff_seq_AZ13_Z1 after countReport
+order extract_diff_seq_M13_M1 after countReport
+order extract_diff_seq_A1_M1 after countReport
+order extract_diff_seq_A13_M13 after countReport
+order cluster_AZ13_Z1 after countReport
+order cluster_M13_M1 after countReport
+order cluster_A1_M1 after countReport
+order cluster_A13_M13 after countReport
+order extract_diff_seq_AZ13_Z1 after diff_analysis_AZ13_Z1
+order cluster_AZ13_Z1 after diff_analysis_AZ13_Z1
+order extract_diff_seq_M13_M1 after diff_analysis_M13_M1
+order cluster_M13_M1 after diff_analysis_M13_M1
+order extract_diff_seq_A1_M1 after diff_analysis_A1_M1
+order cluster_A1_M1 after diff_analysis_A1_M1
+order extract_diff_seq_A13_M13 after diff_analysis_A13_M13
+order cluster_A13_M13 after diff_analysis_A13_M13
+order diffReport after extract_diff_seq_AZ13_Z1
+order diffReport after extract_diff_seq_M13_M1
+order diffReport after extract_diff_seq_A1_M1
+order diffReport after extract_diff_seq_A13_M13
+order diffReport after cluster_AZ13_Z1
+order diffReport after cluster_M13_M1
+order diffReport after cluster_A1_M1
+order diffReport after cluster_A13_M13
+order ppi_all_AZ13_Z1 after diffReport
+order ppi_all_M13_M1 after diffReport
+order ppi_all_A1_M1 after diffReport
+order ppi_all_A13_M13 after diffReport
+order ppi_up_AZ13_Z1 after diffReport
+order ppi_down_AZ13_Z1 after diffReport
+order ppi_up_M13_M1 after diffReport
+order ppi_down_M13_M1 after diffReport
+order ppi_up_A1_M1 after diffReport
+order ppi_down_A1_M1 after diffReport
+order ppi_up_A13_M13 after diffReport
+order ppi_down_A13_M13 after diffReport
+order ppi_up_AZ13_Z1 after ppi_all_AZ13_Z1
+order ppi_down_AZ13_Z1 after ppi_all_AZ13_Z1
+order ppi_up_M13_M1 after ppi_all_M13_M1
+order ppi_down_M13_M1 after ppi_all_M13_M1
+order ppi_up_A1_M1 after ppi_all_A1_M1
+order ppi_down_A1_M1 after ppi_all_A1_M1
+order ppi_up_A13_M13 after ppi_all_A13_M13
+order ppi_down_A13_M13 after ppi_all_A13_M13
+order ppiReport after ppi_up_AZ13_Z1
+order ppiReport after ppi_down_AZ13_Z1
+order ppiReport after ppi_up_M13_M1
+order ppiReport after ppi_down_M13_M1
+order ppiReport after ppi_up_A1_M1
+order ppiReport after ppi_down_A1_M1
+order ppiReport after ppi_up_A13_M13
+order ppiReport after ppi_down_A13_M13
+order go_pre after diffReport
+order go_all_AZ13_Z1 after diffReport
+order go_all_M13_M1 after diffReport
+order go_all_A1_M1 after diffReport
+order go_all_A13_M13 after diffReport
+order go_up_AZ13_Z1 after diffReport
+order go_down_AZ13_Z1 after diffReport
+order go_up_M13_M1 after diffReport
+order go_down_M13_M1 after diffReport
+order go_up_A1_M1 after diffReport
+order go_down_A1_M1 after diffReport
+order go_up_A13_M13 after diffReport
+order go_down_A13_M13 after diffReport
+order goPlot_AZ13_Z1 after diffReport
+order goPlot_M13_M1 after diffReport
+order goPlot_A1_M1 after diffReport
+order goPlot_A13_M13 after diffReport
+order go_all_AZ13_Z1 after go_pre
+order goPlot_AZ13_Z1 after go_all_AZ13_Z1
+order go_up_AZ13_Z1 after go_pre
+order go_down_AZ13_Z1 after go_pre
+order go_all_M13_M1 after go_pre
+order goPlot_M13_M1 after go_all_M13_M1
+order go_up_M13_M1 after go_pre
+order go_down_M13_M1 after go_pre
+order go_all_A1_M1 after go_pre
+order goPlot_A1_M1 after go_all_A1_M1
+order go_up_A1_M1 after go_pre
+order go_down_A1_M1 after go_pre
+order go_all_A13_M13 after go_pre
+order goPlot_A13_M13 after go_all_A13_M13
+order go_up_A13_M13 after go_pre
+order go_down_A13_M13 after go_pre
+order goReport after go_all_AZ13_Z1
+order goReport after go_up_AZ13_Z1
+order goReport after go_down_AZ13_Z1
+order goReport after go_all_M13_M1
+order goReport after go_up_M13_M1
+order goReport after go_down_M13_M1
+order goReport after go_all_A1_M1
+order goReport after go_up_A1_M1
+order goReport after go_down_A1_M1
+order goReport after go_all_A13_M13
+order goReport after go_up_A13_M13
+order goReport after go_down_A13_M13
+order goReport after goPlot_AZ13_Z1
+order goReport after goPlot_M13_M1
+order goReport after goPlot_A1_M1
+order goReport after goPlot_A13_M13
+order kegg_all_AZ13_Z1 after diffReport
+order kegg_up_AZ13_Z1 after diffReport
+order kegg_down_AZ13_Z1 after diffReport
+order kegg_all_M13_M1 after diffReport
+order kegg_up_M13_M1 after diffReport
+order kegg_down_M13_M1 after diffReport
+order kegg_all_A1_M1 after diffReport
+order kegg_up_A1_M1 after diffReport
+order kegg_down_A1_M1 after diffReport
+order kegg_all_A13_M13 after diffReport
+order kegg_up_A13_M13 after diffReport
+order kegg_down_A13_M13 after diffReport
+order kegg_all_html_AZ13_Z1 after diffReport
+order kegg_up_html_AZ13_Z1 after diffReport
+order kegg_down_html_AZ13_Z1 after diffReport
+order kegg_all_html_M13_M1 after diffReport
+order kegg_up_html_M13_M1 after diffReport
+order kegg_down_html_M13_M1 after diffReport
+order kegg_all_html_A1_M1 after diffReport
+order kegg_up_html_A1_M1 after diffReport
+order kegg_down_html_A1_M1 after diffReport
+order kegg_all_html_A13_M13 after diffReport
+order kegg_up_html_A13_M13 after diffReport
+order kegg_down_html_A13_M13 after diffReport
+order kegg_all_html_AZ13_Z1 after kegg_all_AZ13_Z1
+order kegg_up_AZ13_Z1 after kegg_all_AZ13_Z1
+order kegg_up_html_AZ13_Z1 after kegg_up_AZ13_Z1
+order kegg_down_AZ13_Z1 after kegg_all_AZ13_Z1
+order kegg_down_html_AZ13_Z1 after kegg_down_AZ13_Z1
+order kegg_all_html_M13_M1 after kegg_all_M13_M1
+order kegg_up_M13_M1 after kegg_all_M13_M1
+order kegg_up_html_M13_M1 after kegg_up_M13_M1
+order kegg_down_M13_M1 after kegg_all_M13_M1
+order kegg_down_html_M13_M1 after kegg_down_M13_M1
+order kegg_all_html_A1_M1 after kegg_all_A1_M1
+order kegg_up_A1_M1 after kegg_all_A1_M1
+order kegg_up_html_A1_M1 after kegg_up_A1_M1
+order kegg_down_A1_M1 after kegg_all_A1_M1
+order kegg_down_html_A1_M1 after kegg_down_A1_M1
+order kegg_all_html_A13_M13 after kegg_all_A13_M13
+order kegg_up_A13_M13 after kegg_all_A13_M13
+order kegg_up_html_A13_M13 after kegg_up_A13_M13
+order kegg_down_A13_M13 after kegg_all_A13_M13
+order kegg_down_html_A13_M13 after kegg_down_A13_M13
+order keggReport after kegg_all_html_AZ13_Z1
+order keggReport after kegg_up_html_AZ13_Z1
+order keggReport after kegg_down_html_AZ13_Z1
+order keggReport after kegg_all_html_M13_M1
+order keggReport after kegg_up_html_M13_M1
+order keggReport after kegg_down_html_M13_M1
+order keggReport after kegg_all_html_A1_M1
+order keggReport after kegg_up_html_A1_M1
+order keggReport after kegg_down_html_A1_M1
+order keggReport after kegg_all_html_A13_M13
+order keggReport after kegg_up_html_A13_M13
+order keggReport after kegg_down_html_A13_M13
+order as_pre after assemblReport
+order as_AZT13_1 after assemblReport
+order as_AZT13_2 after assemblReport
+order as_AZT1_1 after assemblReport
+order as_AZT1_2 after assemblReport
+order as_MZT13_1 after assemblReport
+order as_MZT13_2 after assemblReport
+order as_MZT1_1 after assemblReport
+order as_MZT1_2 after assemblReport
+order as_sum after assemblReport
+order as_AZT13_1 after as_pre
+order as_AZT13_2 after as_pre
+order as_AZT1_1 after as_pre
+order as_AZT1_2 after as_pre
+order as_MZT13_1 after as_pre
+order as_MZT13_2 after as_pre
+order as_MZT1_1 after as_pre
+order as_MZT1_2 after as_pre
+order as_sum after as_AZT13_1
+order as_sum after as_AZT13_2
+order as_sum after as_AZT1_1
+order as_sum after as_AZT1_2
+order as_sum after as_MZT13_1
+order as_sum after as_MZT13_2
+order as_sum after as_MZT1_1
+order as_sum after as_MZT1_2
+order asReport after as_sum
+order prepare_bam_AZT13_1 after alignReport
+order prepare_bam_AZT13_2 after alignReport
+order prepare_bam_AZT1_1 after alignReport
+order prepare_bam_AZT1_2 after alignReport
+order prepare_bam_MZT13_1 after alignReport
+order prepare_bam_MZT13_2 after alignReport
+order prepare_bam_MZT1_1 after alignReport
+order prepare_bam_MZT1_2 after alignReport
+order HaplotypeCaller_1 after alignReport
+order HaplotypeCaller_2 after alignReport
+order HaplotypeCaller_3 after alignReport
+order HaplotypeCaller_4 after alignReport
+order HaplotypeCaller_5 after alignReport
+order HaplotypeCaller_6 after alignReport
+order merge_SNP after alignReport
+order merge_InDel after alignReport
+order split_SNP after alignReport
+order split_InDel after alignReport
+order annot_SNP_AZT13_1 after alignReport
+order annot_SNP_AZT13_2 after alignReport
+order annot_SNP_AZT1_1 after alignReport
+order annot_SNP_AZT1_2 after alignReport
+order annot_SNP_MZT13_1 after alignReport
+order annot_SNP_MZT13_2 after alignReport
+order annot_SNP_MZT1_1 after alignReport
+order annot_SNP_MZT1_2 after alignReport
+order annot_InDel_AZT13_1 after alignReport
+order annot_InDel_AZT13_2 after alignReport
+order annot_InDel_AZT1_1 after alignReport
+order annot_InDel_AZT1_2 after alignReport
+order annot_InDel_MZT13_1 after alignReport
+order annot_InDel_MZT13_2 after alignReport
+order annot_InDel_MZT1_1 after alignReport
+order annot_InDel_MZT1_2 after alignReport
+order HaplotypeCaller_1 after prepare_bam_AZT13_1
+order HaplotypeCaller_1 after prepare_bam_AZT13_2
+order HaplotypeCaller_1 after prepare_bam_AZT1_1
+order HaplotypeCaller_1 after prepare_bam_AZT1_2
+order HaplotypeCaller_1 after prepare_bam_MZT13_1
+order HaplotypeCaller_1 after prepare_bam_MZT13_2
+order HaplotypeCaller_1 after prepare_bam_MZT1_1
+order HaplotypeCaller_1 after prepare_bam_MZT1_2
+order HaplotypeCaller_2 after prepare_bam_AZT13_1
+order HaplotypeCaller_2 after prepare_bam_AZT13_2
+order HaplotypeCaller_2 after prepare_bam_AZT1_1
+order HaplotypeCaller_2 after prepare_bam_AZT1_2
+order HaplotypeCaller_2 after prepare_bam_MZT13_1
+order HaplotypeCaller_2 after prepare_bam_MZT13_2
+order HaplotypeCaller_2 after prepare_bam_MZT1_1
+order HaplotypeCaller_2 after prepare_bam_MZT1_2
+order HaplotypeCaller_3 after prepare_bam_AZT13_1
+order HaplotypeCaller_3 after prepare_bam_AZT13_2
+order HaplotypeCaller_3 after prepare_bam_AZT1_1
+order HaplotypeCaller_3 after prepare_bam_AZT1_2
+order HaplotypeCaller_3 after prepare_bam_MZT13_1
+order HaplotypeCaller_3 after prepare_bam_MZT13_2
+order HaplotypeCaller_3 after prepare_bam_MZT1_1
+order HaplotypeCaller_3 after prepare_bam_MZT1_2
+order HaplotypeCaller_4 after prepare_bam_AZT13_1
+order HaplotypeCaller_4 after prepare_bam_AZT13_2
+order HaplotypeCaller_4 after prepare_bam_AZT1_1
+order HaplotypeCaller_4 after prepare_bam_AZT1_2
+order HaplotypeCaller_4 after prepare_bam_MZT13_1
+order HaplotypeCaller_4 after prepare_bam_MZT13_2
+order HaplotypeCaller_4 after prepare_bam_MZT1_1
+order HaplotypeCaller_4 after prepare_bam_MZT1_2
+order HaplotypeCaller_5 after prepare_bam_AZT13_1
+order HaplotypeCaller_5 after prepare_bam_AZT13_2
+order HaplotypeCaller_5 after prepare_bam_AZT1_1
+order HaplotypeCaller_5 after prepare_bam_AZT1_2
+order HaplotypeCaller_5 after prepare_bam_MZT13_1
+order HaplotypeCaller_5 after prepare_bam_MZT13_2
+order HaplotypeCaller_5 after prepare_bam_MZT1_1
+order HaplotypeCaller_5 after prepare_bam_MZT1_2
+order HaplotypeCaller_6 after prepare_bam_AZT13_1
+order HaplotypeCaller_6 after prepare_bam_AZT13_2
+order HaplotypeCaller_6 after prepare_bam_AZT1_1
+order HaplotypeCaller_6 after prepare_bam_AZT1_2
+order HaplotypeCaller_6 after prepare_bam_MZT13_1
+order HaplotypeCaller_6 after prepare_bam_MZT13_2
+order HaplotypeCaller_6 after prepare_bam_MZT1_1
+order HaplotypeCaller_6 after prepare_bam_MZT1_2
+order merge_SNP after HaplotypeCaller_1
+order merge_SNP after HaplotypeCaller_2
+order merge_SNP after HaplotypeCaller_3
+order merge_SNP after HaplotypeCaller_4
+order merge_SNP after HaplotypeCaller_5
+order merge_SNP after HaplotypeCaller_6
+order merge_InDel after HaplotypeCaller_1
+order merge_InDel after HaplotypeCaller_2
+order merge_InDel after HaplotypeCaller_3
+order merge_InDel after HaplotypeCaller_4
+order merge_InDel after HaplotypeCaller_5
+order merge_InDel after HaplotypeCaller_6
+order split_SNP after merge_SNP
+order split_InDel after merge_InDel
+order annot_SNP_AZT13_1 after split_SNP
+order annot_SNP_AZT13_2 after split_SNP
+order annot_SNP_AZT1_1 after split_SNP
+order annot_SNP_AZT1_2 after split_SNP
+order annot_SNP_MZT13_1 after split_SNP
+order annot_SNP_MZT13_2 after split_SNP
+order annot_SNP_MZT1_1 after split_SNP
+order annot_SNP_MZT1_2 after split_SNP
+order annot_InDel_AZT13_1 after split_InDel
+order annot_InDel_AZT13_2 after split_InDel
+order annot_InDel_AZT1_1 after split_InDel
+order annot_InDel_AZT1_2 after split_InDel
+order annot_InDel_MZT13_1 after split_InDel
+order annot_InDel_MZT13_2 after split_InDel
+order annot_InDel_MZT1_1 after split_InDel
+order annot_InDel_MZT1_2 after split_InDel
+order variationReport after annot_SNP_AZT13_1
+order variationReport after annot_SNP_AZT13_2
+order variationReport after annot_SNP_AZT1_1
+order variationReport after annot_SNP_AZT1_2
+order variationReport after annot_SNP_MZT13_1
+order variationReport after annot_SNP_MZT13_2
+order variationReport after annot_SNP_MZT1_1
+order variationReport after annot_SNP_MZT1_2
+order variationReport after annot_InDel_AZT13_1
+order variationReport after annot_InDel_AZT13_2
+order variationReport after annot_InDel_AZT1_1
+order variationReport after annot_InDel_AZT1_2
+order variationReport after annot_InDel_MZT13_1
+order variationReport after annot_InDel_MZT13_2
+order variationReport after annot_InDel_MZT1_1
+order variationReport after annot_InDel_MZT1_2
+order prepare_gtf after alignReport
+order mapping_region_AZT13_1 after alignReport
+order mapping_region_AZT13_2 after alignReport
+order mapping_region_AZT1_1 after alignReport
+order mapping_region_AZT1_2 after alignReport
+order mapping_region_MZT13_1 after alignReport
+order mapping_region_MZT13_2 after alignReport
+order mapping_region_MZT1_1 after alignReport
+order mapping_region_MZT1_2 after alignReport
+order saturation_AZT13_1 after alignReport
+order saturation_AZT13_2 after alignReport
+order saturation_AZT1_1 after alignReport
+order saturation_AZT1_2 after alignReport
+order saturation_MZT13_1 after alignReport
+order saturation_MZT13_2 after alignReport
+order saturation_MZT1_1 after alignReport
+order saturation_MZT1_2 after alignReport
+order reads_density_AZT13_1 after alignReport
+order reads_density_AZT13_2 after alignReport
+order reads_density_AZT1_1 after alignReport
+order reads_density_AZT1_2 after alignReport
+order reads_density_MZT13_1 after alignReport
+order reads_density_MZT13_2 after alignReport
+order reads_density_MZT1_1 after alignReport
+order reads_density_MZT1_2 after alignReport
+order mapping_region_AZT13_1 after prepare_gtf
+order mapping_region_AZT13_2 after prepare_gtf
+order mapping_region_AZT1_1 after prepare_gtf
+order mapping_region_AZT1_2 after prepare_gtf
+order mapping_region_MZT13_1 after prepare_gtf
+order mapping_region_MZT13_2 after prepare_gtf
+order mapping_region_MZT1_1 after prepare_gtf
+order mapping_region_MZT1_2 after prepare_gtf
+order saturation_AZT13_1 after prepare_gtf
+order saturation_AZT13_2 after prepare_gtf
+order saturation_AZT1_1 after prepare_gtf
+order saturation_AZT1_2 after prepare_gtf
+order saturation_MZT13_1 after prepare_gtf
+order saturation_MZT13_2 after prepare_gtf
+order saturation_MZT1_1 after prepare_gtf
+order saturation_MZT1_2 after prepare_gtf
+order bamQcReport after mapping_region_AZT13_1
+order bamQcReport after mapping_region_AZT13_2
+order bamQcReport after mapping_region_AZT1_1
+order bamQcReport after mapping_region_AZT1_2
+order bamQcReport after mapping_region_MZT13_1
+order bamQcReport after mapping_region_MZT13_2
+order bamQcReport after mapping_region_MZT1_1
+order bamQcReport after mapping_region_MZT1_2
+order bamQcReport after saturation_AZT13_1
+order bamQcReport after saturation_AZT13_2
+order bamQcReport after saturation_AZT1_1
+order bamQcReport after saturation_AZT1_2
+order bamQcReport after saturation_MZT13_1
+order bamQcReport after saturation_MZT13_2
+order bamQcReport after saturation_MZT1_1
+order bamQcReport after saturation_MZT1_2
+order bamQcReport after reads_density_AZT13_1
+order bamQcReport after reads_density_AZT13_2
+order bamQcReport after reads_density_AZT1_1
+order bamQcReport after reads_density_AZT1_2
+order bamQcReport after reads_density_MZT13_1
+order bamQcReport after reads_density_MZT13_2
+order bamQcReport after reads_density_MZT1_1
+order bamQcReport after reads_density_MZT1_2
+
